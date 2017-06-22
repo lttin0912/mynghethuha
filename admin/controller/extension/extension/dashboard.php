@@ -23,8 +23,8 @@ class ControllerExtensionExtensionDashboard extends Controller {
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'access', 'extension/dashboard/' . $this->request->get['extension']);
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'modify', 'extension/dashboard/' . $this->request->get['extension']);
 
-			// Call install_ method if it exsits
-			$this->load->controller('extension/dashboard/' . $this->request->get['extension'] . '/install_');
+			// Call _install_ method if it exsits
+			$this->load->controller('extension/dashboard/' . $this->request->get['extension'] . '/_install_');
 
 			$this->session->data['success'] = $this->language->get('text_success');
 		}
@@ -105,7 +105,7 @@ class ControllerExtensionExtensionDashboard extends Controller {
 					'width'      => $this->config->get('dashboard_' . $extension . '_width'),	
 					'status'     => $this->config->get('dashboard_' . $extension . '_status') ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),					
 					'sort_order' => $this->config->get('dashboard_' . $extension . '_sort_order'),
-					'install_'    => $this->url->link('extension/extension/dashboard/install_', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
+					'_install_'    => $this->url->link('extension/extension/dashboard/_install_', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'uninstall'  => $this->url->link('extension/extension/dashboard/uninstall', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'installed'  => in_array($extension, $extensions),
 					'edit'       => $this->url->link('extension/dashboard/' . $extension, 'token=' . $this->session->data['token'], true)

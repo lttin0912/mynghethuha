@@ -2,122 +2,117 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c468eda-b042-46e8-b3cf-03534db6287a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.cmsblock.1.1498149067" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.currency.1498149067" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.language.1498149067" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.product.bestseller.1.0.1.10.1498149067" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/cli_install.php" afterPath="$PROJECT_DIR$/install_/cli_install.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/3rd_party/extension.php" afterPath="$PROJECT_DIR$/install_/controller/3rd_party/extension.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/3rd_party/maxmind.php" afterPath="$PROJECT_DIR$/install_/controller/3rd_party/maxmind.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/3rd_party/openbay.php" afterPath="$PROJECT_DIR$/install_/controller/3rd_party/openbay.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/common/column_left.php" afterPath="$PROJECT_DIR$/install_/controller/common/column_left.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/common/footer.php" afterPath="$PROJECT_DIR$/install_/controller/common/footer.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/common/header.php" afterPath="$PROJECT_DIR$/install_/controller/common/header.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/error/not_found.php" afterPath="$PROJECT_DIR$/install_/controller/error/not_found.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/install/step_1.php" afterPath="$PROJECT_DIR$/install_/controller/install/step_1.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/install/step_2.php" afterPath="$PROJECT_DIR$/install_/controller/install/step_2.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/install/step_3.php" afterPath="$PROJECT_DIR$/install_/controller/install/step_3.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/install/step_4.php" afterPath="$PROJECT_DIR$/install_/controller/install/step_4.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/startup/database.php" afterPath="$PROJECT_DIR$/install_/controller/startup/database.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/startup/language.php" afterPath="$PROJECT_DIR$/install_/controller/startup/language.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/startup/router.php" afterPath="$PROJECT_DIR$/install_/controller/startup/router.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/startup/upgrade.php" afterPath="$PROJECT_DIR$/install_/controller/startup/upgrade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/controller/upgrade/upgrade.php" afterPath="$PROJECT_DIR$/install_/controller/upgrade/upgrade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/index.php" afterPath="$PROJECT_DIR$/install_/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/3rd_party/maxmind.php" afterPath="$PROJECT_DIR$/install_/language/en-gb/3rd_party/maxmind.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/3rd_party/openbay.php" afterPath="$PROJECT_DIR$/install_/language/en-gb/3rd_party/openbay.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/common/column_left.php" afterPath="$PROJECT_DIR$/install_/language/en-gb/common/column_left.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/common/footer.php" afterPath="$PROJECT_DIR$/install_/language/en-gb/common/footer.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/common/header.php" afterPath="$PROJECT_DIR$/install_/language/en-gb/common/header.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/en-gb.php" afterPath="$PROJECT_DIR$/install_/language/en-gb/en-gb.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/en-gb.png" afterPath="$PROJECT_DIR$/install_/language/en-gb/en-gb.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/install/step_1.php" afterPath="$PROJECT_DIR$/install_/language/en-gb/install/step_1.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/install/step_2.php" afterPath="$PROJECT_DIR$/install_/language/en-gb/install/step_2.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/install/step_3.php" afterPath="$PROJECT_DIR$/install_/language/en-gb/install/step_3.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/install/step_4.php" afterPath="$PROJECT_DIR$/install_/language/en-gb/install/step_4.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/language/en-gb/upgrade/upgrade.php" afterPath="$PROJECT_DIR$/install_/language/en-gb/upgrade/upgrade.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/model/3rd_party/maxmind.php" afterPath="$PROJECT_DIR$/install_/model/3rd_party/maxmind.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/model/install/install.php" afterPath="$PROJECT_DIR$/install_/model/install/install.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/model/upgrade/1000.php" afterPath="$PROJECT_DIR$/install_/model/upgrade/1000.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/model/upgrade/1001.php" afterPath="$PROJECT_DIR$/install_/model/upgrade/1001.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/model/upgrade/1002.php" afterPath="$PROJECT_DIR$/install_/model/upgrade/1002.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/model/upgrade/1003.php" afterPath="$PROJECT_DIR$/install_/model/upgrade/1003.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/model/upgrade/1004.php" afterPath="$PROJECT_DIR$/install_/model/upgrade/1004.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/model/upgrade/1005.php" afterPath="$PROJECT_DIR$/install_/model/upgrade/1005.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/model/upgrade/1006.php" afterPath="$PROJECT_DIR$/install_/model/upgrade/1006.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/model/upgrade/1007.php" afterPath="$PROJECT_DIR$/install_/model/upgrade/1007.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/model/upgrade/1008.php" afterPath="$PROJECT_DIR$/install_/model/upgrade/1008.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/opencart.sql" afterPath="$PROJECT_DIR$/install_/opencart.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/php.ini" afterPath="$PROJECT_DIR$/install_/php.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/image/amazon.png" afterPath="$PROJECT_DIR$/install_/view/image/amazon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/image/background.png" afterPath="$PROJECT_DIR$/install_/view/image/background.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/image/ebay.png" afterPath="$PROJECT_DIR$/install_/view/image/ebay.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/image/heading.png" afterPath="$PROJECT_DIR$/install_/view/image/heading.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/image/logo.png" afterPath="$PROJECT_DIR$/install_/view/image/logo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/image/maxmind.gif" afterPath="$PROJECT_DIR$/install_/view/image/maxmind.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/image/openbay_pro.gif" afterPath="$PROJECT_DIR$/install_/view/image/openbay_pro.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/bootstrap/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/install_/view/javascript/bootstrap/css/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/bootstrap/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/install_/view/javascript/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/install_/view/javascript/bootstrap/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/install_/view/javascript/bootstrap/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/install_/view/javascript/bootstrap/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/install_/view/javascript/bootstrap/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/common.js" afterPath="$PROJECT_DIR$/install_/view/javascript/common.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/cufon/Aller_400.font.js" afterPath="$PROJECT_DIR$/install_/view/javascript/cufon/Aller_400.font.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/cufon/Lacuna_Regular_400.font.js" afterPath="$PROJECT_DIR$/install_/view/javascript/cufon/Lacuna_Regular_400.font.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/cufon/TitilliumText15L_400.font.js" afterPath="$PROJECT_DIR$/install_/view/javascript/cufon/TitilliumText15L_400.font.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/cufon/Trebuchet_MS_400.font.js" afterPath="$PROJECT_DIR$/install_/view/javascript/cufon/Trebuchet_MS_400.font.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/cufon/Trebuchet_MS_italic_400.font.js" afterPath="$PROJECT_DIR$/install_/view/javascript/cufon/Trebuchet_MS_italic_400.font.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/cufon/Verdana_400.font.js" afterPath="$PROJECT_DIR$/install_/view/javascript/cufon/Verdana_400.font.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/cufon/cufon-yui.js" afterPath="$PROJECT_DIR$/install_/view/javascript/cufon/cufon-yui.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/css/font-awesome.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/css/font-awesome.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/fonts/FontAwesome.otf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/bordered-pulled.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/core.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/fixed-width.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/font-awesome.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/icons.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/larger.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/list.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/mixins.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/path.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/rotated-flipped.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/spinning.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/spinning.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/stacked.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/variables.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_core.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_fixed-width.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_icons.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_larger.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_list.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_mixins.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_path.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_spinning.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_spinning.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_stacked.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_variables.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/font-awesome.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/jquery/jquery-2.1.1.min.js" afterPath="$PROJECT_DIR$/install_/view/javascript/jquery/jquery-2.1.1.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/javascript/jquery/jquery-2.1.1.min.map" afterPath="$PROJECT_DIR$/install_/view/javascript/jquery/jquery-2.1.1.min.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/stylesheet/stylesheet.css" afterPath="$PROJECT_DIR$/install_/view/stylesheet/stylesheet.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/template/3rd_party/maxmind.tpl" afterPath="$PROJECT_DIR$/install_/view/template/3rd_party/maxmind.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/template/3rd_party/openbay.tpl" afterPath="$PROJECT_DIR$/install_/view/template/3rd_party/openbay.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/template/common/column_left.tpl" afterPath="$PROJECT_DIR$/install_/view/template/common/column_left.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/template/common/footer.tpl" afterPath="$PROJECT_DIR$/install_/view/template/common/footer.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/template/common/header.tpl" afterPath="$PROJECT_DIR$/install_/view/template/common/header.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/template/error/not_found.tpl" afterPath="$PROJECT_DIR$/install_/view/template/error/not_found.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/template/install/step_1.tpl" afterPath="$PROJECT_DIR$/install_/view/template/install/step_1.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/template/install/step_2.tpl" afterPath="$PROJECT_DIR$/install_/view/template/install/step_2.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/template/install/step_3.tpl" afterPath="$PROJECT_DIR$/install_/view/template/install/step_3.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/template/install/step_4.tpl" afterPath="$PROJECT_DIR$/install_/view/template/install/step_4.tpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/install/view/template/upgrade/upgrade.tpl" afterPath="$PROJECT_DIR$/install_/view/template/upgrade/upgrade.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/cli_install.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/3rd_party/extension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/3rd_party/maxmind.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/3rd_party/openbay.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/common/column_left.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/common/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/common/header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/error/not_found.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/install/step_1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/install/step_2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/install/step_3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/install/step_4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/startup/database.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/startup/language.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/startup/router.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/startup/upgrade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/controller/upgrade/upgrade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/3rd_party/maxmind.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/3rd_party/openbay.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/common/column_left.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/common/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/common/header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/en-gb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/en-gb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/install/step_1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/install/step_2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/install/step_3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/install/step_4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/language/en-gb/upgrade/upgrade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/model/3rd_party/maxmind.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/model/install/install.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/model/upgrade/1000.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/model/upgrade/1001.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/model/upgrade/1002.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/model/upgrade/1003.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/model/upgrade/1004.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/model/upgrade/1005.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/model/upgrade/1006.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/model/upgrade/1007.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/model/upgrade/1008.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/opencart.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/php.ini" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/image/amazon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/image/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/image/ebay.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/image/heading.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/image/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/image/maxmind.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/image/openbay_pro.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/bootstrap/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/cufon/Aller_400.font.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/cufon/Lacuna_Regular_400.font.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/cufon/TitilliumText15L_400.font.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/cufon/Trebuchet_MS_400.font.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/cufon/Trebuchet_MS_italic_400.font.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/cufon/Verdana_400.font.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/cufon/cufon-yui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/core.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/icons.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/larger.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/path.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/spinning.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_spinning.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/font-awesome/scss/font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/jquery/jquery-2.1.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/javascript/jquery/jquery-2.1.1.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/stylesheet/stylesheet.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/template/3rd_party/maxmind.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/template/3rd_party/openbay.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/template/common/column_left.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/template/common/footer.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/template/common/header.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/template/error/not_found.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/template/install/step_1.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/template/install/step_2.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/template/install/step_3.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/template/install/step_4.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/install_/view/template/upgrade/upgrade.tpl" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/common/dashboard.php" afterPath="$PROJECT_DIR$/admin/controller/common/dashboard.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/design/translation.php" afterPath="$PROJECT_DIR$/admin/controller/design/translation.php" />
@@ -142,8 +137,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/language/fr-gb/extension/openbay.php" afterPath="$PROJECT_DIR$/admin/language/fr-gb/extension/openbay.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/language/fr-gb/extension/openbay/fba_settings.php" afterPath="$PROJECT_DIR$/admin/language/fr-gb/extension/openbay/fba_settings.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jquery-ui/external/jquery/jquery.js" afterPath="$PROJECT_DIR$/admin/view/javascript/jquery/jquery-ui/external/jquery/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/design/translation.tpl" afterPath="$PROJECT_DIR$/admin/view/template/design/translation.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/config/install.php" afterPath="$PROJECT_DIR$/system/config/install.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/startup.php" afterPath="$PROJECT_DIR$/system/startup.php" />
@@ -192,8 +185,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="228">
+              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -231,12 +224,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/database/oc_grand.sql" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/admin/controller/blog/article.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -509,12 +506,20 @@
       <option name="presentableId" value="Default" />
       <updated>1498143344468</updated>
       <workItem from="1498143345545" duration="1363000" />
-      <workItem from="1498147527261" duration="69000" />
+      <workItem from="1498147527261" duration="478000" />
     </task>
+    <task id="LOCAL-00001" summary="update source">
+      <created>1498147677883</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1498147677883</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1698000" />
+    <option name="totallyTimeSpent" value="2107000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="228" y="37" width="1102" height="782" extended-state="0" />
@@ -525,6 +530,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5638149" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -535,7 +541,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5638149" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -545,6 +550,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update source" />
+    <option name="LAST_COMMIT_MESSAGE" value="update source" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -629,8 +638,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        <state relative-caret-position="228">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
           <folding />
         </state>
       </provider>

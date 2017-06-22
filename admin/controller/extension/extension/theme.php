@@ -23,8 +23,8 @@ class ControllerExtensionExtensionTheme extends Controller {
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'access', 'extension/theme/' . $this->request->get['extension']);
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'modify', 'extension/theme/' . $this->request->get['extension']);
 
-			// Call install_ method if it exsits
-			$this->load->controller('extension/theme/' . $this->request->get['extension'] . '/install_');
+			// Call _install_ method if it exsits
+			$this->load->controller('extension/theme/' . $this->request->get['extension'] . '/_install_');
 
 			$this->session->data['success'] = $this->language->get('text_success');
 		}
@@ -120,7 +120,7 @@ class ControllerExtensionExtensionTheme extends Controller {
 				
 				$data['extensions'][] = array(
 					'name'      => $this->language->get('heading_title'),
-					'install_'   => $this->url->link('extension/extension/theme/install_', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
+					'_install_'   => $this->url->link('extension/extension/theme/_install_', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'uninstall' => $this->url->link('extension/extension/theme/uninstall', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'installed' => in_array($extension, $extensions),
 					'store'     => $store_data

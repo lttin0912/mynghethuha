@@ -23,8 +23,8 @@ class ControllerExtensionExtensionPayment extends Controller {
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'access', 'extension/payment/' . $this->request->get['extension']);
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'modify', 'extension/payment/' . $this->request->get['extension']);
 
-			// Call install_ method if it exsits
-			$this->load->controller('extension/payment/' . $this->request->get['extension'] . '/install_');
+			// Call _install_ method if it exsits
+			$this->load->controller('extension/payment/' . $this->request->get['extension'] . '/_install_');
 
 			$this->session->data['success'] = $this->language->get('text_success');
 		}
@@ -113,7 +113,7 @@ class ControllerExtensionExtensionPayment extends Controller {
 					'link'       => $link,
 					'status'     => $this->config->get($extension . '_status') ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
 					'sort_order' => $this->config->get($extension . '_sort_order'),
-					'install_'   => $this->url->link('extension/extension/payment/install_', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
+					'_install_'   => $this->url->link('extension/extension/payment/_install_', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'uninstall' => $this->url->link('extension/extension/payment/uninstall', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'installed' => in_array($extension, $extensions),
 					'edit'      => $this->url->link('extension/payment/' . $extension, 'token=' . $this->session->data['token'], true)

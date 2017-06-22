@@ -23,8 +23,8 @@ class ControllerExtensionExtensionFraud extends Controller {
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'access', 'extension/fraud/' . $this->request->get['extension']);
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'modify', 'extension/fraud/' . $this->request->get['extension']);
 
-			// Call install_ method if it exsits
-			$this->load->controller('extension/fraud/' . $this->request->get['extension'] . '/install_');
+			// Call _install_ method if it exsits
+			$this->load->controller('extension/fraud/' . $this->request->get['extension'] . '/_install_');
 
 			$this->session->data['success'] = $this->language->get('text_success');
 		}
@@ -100,7 +100,7 @@ class ControllerExtensionExtensionFraud extends Controller {
 				$data['extensions'][] = array(
 					'name'      => $this->language->get('heading_title'),
 					'status'    => $this->config->get($extension . '_status') ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
-					'install_'   => $this->url->link('extension/extension/fraud/install_', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
+					'_install_'   => $this->url->link('extension/extension/fraud/_install_', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'uninstall' => $this->url->link('extension/extension/fraud/uninstall', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'installed' => in_array($extension, $extensions),
 					'edit'      => $this->url->link('extension/fraud/' . $extension, 'token=' . $this->session->data['token'], true)

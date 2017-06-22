@@ -8537,7 +8537,7 @@ jQuery.ajaxSetup({
 	}
 });
 
-// Detect, normalize options and install_ callbacks for jsonp requests
+// Detect, normalize options and _install_ callbacks for jsonp requests
 jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 
 	var callbackName, overwritten, responseContainer,

@@ -65,7 +65,7 @@ class ControllerDesignTranslation extends Controller {
 				'code'      => $translation['code'],
 				'progress'  => $translation['progress'],
 				'image'     => 'https://d1ztvzf22lmr1j.cloudfront.net/images/flags/' . $translation['code'] . '.png',
-				'install_'   => $this->url->link('design/translation/install_', 'token=' . $this->session->data['token'] . '&code=' . $translation['code'], true),
+				'_install_'   => $this->url->link('design/translation/_install_', 'token=' . $this->session->data['token'] . '&code=' . $translation['code'], true),
 				'uninstall' => $this->url->link('design/translation/uninstall', 'token=' . $this->session->data['token'] . '&code=' . $translation['code'], true),
 				'installed' => '',
 			);
