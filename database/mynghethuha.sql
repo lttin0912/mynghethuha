@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.4.15.7
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2017 at 04:41 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 7.0.8
+-- Generation Time: Jun 22, 2017 at 04:18 PM
+-- Server version: 5.6.36
+-- PHP Version: 5.4.42
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `oc_grand`
+-- Database: `mynghethuha`
 --
 
 -- --------------------------------------------------------
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `oc_address`
 --
 
-CREATE TABLE `oc_address` (
+CREATE TABLE IF NOT EXISTS `oc_address` (
   `address_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `firstname` varchar(32) NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE `oc_address` (
   `country_id` int(11) NOT NULL DEFAULT '0',
   `zone_id` int(11) NOT NULL DEFAULT '0',
   `custom_field` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_address`
@@ -56,7 +56,7 @@ INSERT INTO `oc_address` (`address_id`, `customer_id`, `firstname`, `lastname`, 
 -- Table structure for table `oc_affiliate`
 --
 
-CREATE TABLE `oc_affiliate` (
+CREATE TABLE IF NOT EXISTS `oc_affiliate` (
   `affiliate_id` int(11) NOT NULL,
   `firstname` varchar(32) NOT NULL,
   `lastname` varchar(32) NOT NULL,
@@ -96,7 +96,7 @@ CREATE TABLE `oc_affiliate` (
 -- Table structure for table `oc_affiliate_activity`
 --
 
-CREATE TABLE `oc_affiliate_activity` (
+CREATE TABLE IF NOT EXISTS `oc_affiliate_activity` (
   `affiliate_activity_id` int(11) NOT NULL,
   `affiliate_id` int(11) NOT NULL,
   `key` varchar(64) NOT NULL,
@@ -111,7 +111,7 @@ CREATE TABLE `oc_affiliate_activity` (
 -- Table structure for table `oc_affiliate_login`
 --
 
-CREATE TABLE `oc_affiliate_login` (
+CREATE TABLE IF NOT EXISTS `oc_affiliate_login` (
   `affiliate_login_id` int(11) NOT NULL,
   `email` varchar(96) NOT NULL,
   `ip` varchar(40) NOT NULL,
@@ -126,7 +126,7 @@ CREATE TABLE `oc_affiliate_login` (
 -- Table structure for table `oc_affiliate_transaction`
 --
 
-CREATE TABLE `oc_affiliate_transaction` (
+CREATE TABLE IF NOT EXISTS `oc_affiliate_transaction` (
   `affiliate_transaction_id` int(11) NOT NULL,
   `affiliate_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
@@ -141,14 +141,14 @@ CREATE TABLE `oc_affiliate_transaction` (
 -- Table structure for table `oc_api`
 --
 
-CREATE TABLE `oc_api` (
+CREATE TABLE IF NOT EXISTS `oc_api` (
   `api_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
   `key` text NOT NULL,
   `status` tinyint(1) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_api`
@@ -156,7 +156,8 @@ CREATE TABLE `oc_api` (
 
 INSERT INTO `oc_api` (`api_id`, `name`, `key`, `status`, `date_added`, `date_modified`) VALUES
 (1, 'Default', 'ACf52xtrxt4KpMIEBimwpsw56dLa88pgBpCYxnORIV5KfMlSm75ESwkDkNrLI3OwxYadrySWOtIcdrMfGcpySs6MOEAItgGroB6DUdGQXBlOz0Ka74nAciPEEksR3sHbpqvXGEwHVysMLZ9csMbtEUzGL0A6oLGWcIEnTUgSk9LwWetiBQXDcbyfyIW22zM1MEUfVwaPyaOKFq8gzO1uyyqgMyj3IHwMkgAe35ydiJX2RlI9pYskSbXzHRTMGQV8', 1, '2016-12-06 08:39:36', '2016-12-06 08:39:36'),
-(2, 'Default', 'zXr03Atbc2TgLOuqd7WCvCwUULBjPnVJTBraZxXAqmN82ymda1IGmzro2WXWqUGXmWLQz1T5HU9aUpxFUO0D1uiyg0A0NCNkPVAzvkXssHLcUS8Th1y30VX6qo30kWJnoa4cwzKBZIlM2lrair5tDzgZcmkCjmUMPr5C7vgySbD5jaHTFpyEIq2zKHFlE1zUsUFZaw5qFEPiSlI2sN524sF2taLDx7rPVgciU3GB1MmOmuIUF8STsf9pJadErDEr', 1, '2017-02-14 01:56:46', '2017-02-14 01:56:46');
+(2, 'Default', 'zXr03Atbc2TgLOuqd7WCvCwUULBjPnVJTBraZxXAqmN82ymda1IGmzro2WXWqUGXmWLQz1T5HU9aUpxFUO0D1uiyg0A0NCNkPVAzvkXssHLcUS8Th1y30VX6qo30kWJnoa4cwzKBZIlM2lrair5tDzgZcmkCjmUMPr5C7vgySbD5jaHTFpyEIq2zKHFlE1zUsUFZaw5qFEPiSlI2sN524sF2taLDx7rPVgciU3GB1MmOmuIUF8STsf9pJadErDEr', 1, '2017-02-14 01:56:46', '2017-02-14 01:56:46'),
+(3, 'Default', 'zYTVkDUkcysrpIvq8Jq12BwJnoRyh5pqRUyCi2ugu1X0l5H2TrqpkjWJWUclRlHy34xkov2VQNHszgyld3UTu3NBFa89RuaBLg3MmyZ3FUSl7yeKr6gXa641IUqX2O1DrvaE8VoQDrKrDuSsI1V2Ritt4c2wPkR8oll1X4X8I8dX6xZWWDgYrNoFpQLLhB7YJ2GE0kW5GgWa5TgMZm8RypGtqyfjjwxLK4CxJSMKAanQFBMUGwXDNVob5yObTHde', 1, '2017-06-22 16:04:03', '2017-06-22 16:04:03');
 
 -- --------------------------------------------------------
 
@@ -164,7 +165,7 @@ INSERT INTO `oc_api` (`api_id`, `name`, `key`, `status`, `date_added`, `date_mod
 -- Table structure for table `oc_api_ip`
 --
 
-CREATE TABLE `oc_api_ip` (
+CREATE TABLE IF NOT EXISTS `oc_api_ip` (
   `api_ip_id` int(11) NOT NULL,
   `api_id` int(11) NOT NULL,
   `ip` varchar(40) NOT NULL
@@ -176,7 +177,7 @@ CREATE TABLE `oc_api_ip` (
 -- Table structure for table `oc_api_session`
 --
 
-CREATE TABLE `oc_api_session` (
+CREATE TABLE IF NOT EXISTS `oc_api_session` (
   `api_session_id` int(11) NOT NULL,
   `api_id` int(11) NOT NULL,
   `token` varchar(32) NOT NULL,
@@ -193,7 +194,7 @@ CREATE TABLE `oc_api_session` (
 -- Table structure for table `oc_article`
 --
 
-CREATE TABLE `oc_article` (
+CREATE TABLE IF NOT EXISTS `oc_article` (
   `article_id` int(11) NOT NULL,
   `sort_order` int(11) NOT NULL DEFAULT '0',
   `status` tinyint(1) NOT NULL DEFAULT '0',
@@ -201,7 +202,7 @@ CREATE TABLE `oc_article` (
   `date_modified` datetime NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `author` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_article`
@@ -224,7 +225,7 @@ INSERT INTO `oc_article` (`article_id`, `sort_order`, `status`, `date_added`, `d
 -- Table structure for table `oc_article_description`
 --
 
-CREATE TABLE `oc_article_description` (
+CREATE TABLE IF NOT EXISTS `oc_article_description` (
   `article_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -242,22 +243,32 @@ CREATE TABLE `oc_article_description` (
 INSERT INTO `oc_article_description` (`article_id`, `language_id`, `name`, `description`, `intro_text`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
 (5, 1, 'Fram nonummy nibh euismod', '&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer...', 'Fram nonummy nibh euismod', '', ''),
 (5, 2, 'Fram nonummy nibh euismod', '&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer...', 'Fram nonummy nibh euismod', '', ''),
+(5, 3, 'Fram nonummy nibh euismod', '&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer...', 'Fram nonummy nibh euismod', '', ''),
 (9, 1, 'Foluptate velit essecillum', '&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer...', 'Foluptate velit essecillum', '', ''),
 (9, 2, 'Foluptate velit essecillum', '&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer...', 'Foluptate velit essecillum', '', ''),
+(9, 3, 'Foluptate velit essecillum', '&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer...', 'Foluptate velit essecillum', '', ''),
 (10, 1, 'The Annual Dining Sale has begun!', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Find everything you need for modern dining - tables, chairs, stools,storage and accessories - and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'The Annual Dining Sale has begun!', '', ''),
 (10, 2, 'The Annual Dining Sale has begun!', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Find everything you need for modern dining - tables, chairs, stools,storage and accessories - and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'The Annual Dining Sale has begun!', '', ''),
+(10, 3, 'The Annual Dining Sale has begun!', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Find everything you need for modern dining - tables, chairs, stools,storage and accessories - and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'The Annual Dining Sale has begun!', '', ''),
 (12, 1, 'Fashion Meets Furniture', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Fashion Meets Furniture', '', ''),
 (12, 2, 'Fashion Meets Furniture', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Fashion Meets Furniture', '', ''),
+(12, 3, 'Fashion Meets Furniture', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Fashion Meets Furniture', '', ''),
 (13, 1, 'Excepteur sint occaecat ', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Excepteur sint occaecat ', '', ''),
 (13, 2, 'Excepteur sint occaecat ', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Excepteur sint occaecat ', '', ''),
+(13, 3, 'Excepteur sint occaecat ', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Excepteur sint occaecat ', '', ''),
 (14, 1, 'The Annual Dining Sale has begun!', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'The Annual Dining Sale has begun!', '', ''),
 (14, 2, 'The Annual Dining Sale has begun!', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'The Annual Dining Sale has begun!', '', ''),
+(14, 3, 'The Annual Dining Sale has begun!', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'The Annual Dining Sale has begun!', '', ''),
 (15, 1, 'Fashion Meets Degital', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Fashion Meets Degital', '', ''),
 (15, 2, 'Fashion Meets Degital', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Fashion Meets Degital', '', ''),
+(15, 3, 'Fashion Meets Degital', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Fashion Meets Degital', '', ''),
 (16, 1, 'Furniture Meets Fashion', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Furniture Meets Fashion', '', ''),
-(16, 2, 'Furniture Meets Fashion', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Furniture Meets Fashion', '', ''),
+(16, 2, 'Furniture Meets Fashion', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Furniture Meets Fashion', '', '');
+INSERT INTO `oc_article_description` (`article_id`, `language_id`, `name`, `description`, `intro_text`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+(16, 3, 'Furniture Meets Fashion', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'The next vignette featured two colorful outfits inspired by Hans Christian Andersens character Gerda, who discovers an enchanted flower garden while looking for her friend Kay.', 'Furniture Meets Fashion', '', ''),
 (17, 1, 'The Onnuel Xining Dale has begun!', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'The Onnuel Xining Dale has begun!', '', ''),
-(17, 2, 'The Onnuel Xining Dale has begun!', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'The Onnuel Xining Dale has begun!', '', '');
+(17, 2, 'The Onnuel Xining Dale has begun!', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'The Onnuel Xining Dale has begun!', '', ''),
+(17, 3, 'The Onnuel Xining Dale has begun!', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'Find everything you need for modern dining tables, chairs, stools, storage and accessories and save 15% during the Annual Dining Sale. The sale even includes the new Odin Extension Table.', 'The Onnuel Xining Dale has begun!', '', '');
 
 -- --------------------------------------------------------
 
@@ -265,11 +276,11 @@ INSERT INTO `oc_article_description` (`article_id`, `language_id`, `name`, `desc
 -- Table structure for table `oc_article_list`
 --
 
-CREATE TABLE `oc_article_list` (
+CREATE TABLE IF NOT EXISTS `oc_article_list` (
   `article_list_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_article_list`
@@ -285,7 +296,7 @@ INSERT INTO `oc_article_list` (`article_list_id`, `name`, `status`) VALUES
 -- Table structure for table `oc_article_to_list`
 --
 
-CREATE TABLE `oc_article_to_list` (
+CREATE TABLE IF NOT EXISTS `oc_article_to_list` (
   `article_list_id` int(11) NOT NULL,
   `article_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -312,7 +323,7 @@ INSERT INTO `oc_article_to_list` (`article_list_id`, `article_id`) VALUES
 -- Table structure for table `oc_article_to_store`
 --
 
-CREATE TABLE `oc_article_to_store` (
+CREATE TABLE IF NOT EXISTS `oc_article_to_store` (
   `article_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -364,11 +375,11 @@ INSERT INTO `oc_article_to_store` (`article_id`, `store_id`) VALUES
 -- Table structure for table `oc_attribute`
 --
 
-CREATE TABLE `oc_attribute` (
+CREATE TABLE IF NOT EXISTS `oc_attribute` (
   `attribute_id` int(11) NOT NULL,
   `attribute_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_attribute`
@@ -393,7 +404,7 @@ INSERT INTO `oc_attribute` (`attribute_id`, `attribute_group_id`, `sort_order`) 
 -- Table structure for table `oc_attribute_description`
 --
 
-CREATE TABLE `oc_attribute_description` (
+CREATE TABLE IF NOT EXISTS `oc_attribute_description` (
   `attribute_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
@@ -404,28 +415,17 @@ CREATE TABLE `oc_attribute_description` (
 --
 
 INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) VALUES
-(1, 1, 'Description'),
-(2, 1, 'No. of Cores'),
-(4, 1, 'test 1'),
-(5, 1, 'test 2'),
-(6, 1, 'test 3'),
-(7, 1, 'test 4'),
-(8, 1, 'test 5'),
-(9, 1, 'test 6'),
-(10, 1, 'test 7'),
-(11, 1, 'test 8'),
-(3, 1, 'Clockspeed'),
-(1, 2, 'Description'),
-(2, 2, 'No. of Cores'),
-(4, 2, 'test 1'),
-(5, 2, 'test 2'),
-(6, 2, 'test 3'),
-(7, 2, 'test 4'),
-(8, 2, 'test 5'),
-(9, 2, 'test 6'),
-(10, 2, 'test 7'),
-(11, 2, 'test 8'),
-(3, 2, 'Clockspeed');
+(1, 3, 'Description'),
+(2, 3, 'No. of Cores'),
+(4, 3, 'test 1'),
+(5, 3, 'test 2'),
+(6, 3, 'test 3'),
+(7, 3, 'test 4'),
+(8, 3, 'test 5'),
+(9, 3, 'test 6'),
+(10, 3, 'test 7'),
+(11, 3, 'test 8'),
+(3, 3, 'Clockspeed');
 
 -- --------------------------------------------------------
 
@@ -433,10 +433,10 @@ INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) V
 -- Table structure for table `oc_attribute_group`
 --
 
-CREATE TABLE `oc_attribute_group` (
+CREATE TABLE IF NOT EXISTS `oc_attribute_group` (
   `attribute_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_attribute_group`
@@ -454,7 +454,7 @@ INSERT INTO `oc_attribute_group` (`attribute_group_id`, `sort_order`) VALUES
 -- Table structure for table `oc_attribute_group_description`
 --
 
-CREATE TABLE `oc_attribute_group_description` (
+CREATE TABLE IF NOT EXISTS `oc_attribute_group_description` (
   `attribute_group_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
@@ -465,14 +465,10 @@ CREATE TABLE `oc_attribute_group_description` (
 --
 
 INSERT INTO `oc_attribute_group_description` (`attribute_group_id`, `language_id`, `name`) VALUES
-(3, 1, 'Memory'),
-(4, 1, 'Technical'),
-(5, 1, 'Motherboard'),
-(6, 1, 'Processor'),
-(3, 2, 'Memory'),
-(4, 2, 'Technical'),
-(5, 2, 'Motherboard'),
-(6, 2, 'Processor');
+(3, 3, 'Memory'),
+(4, 3, 'Technical'),
+(5, 3, 'Motherboard'),
+(6, 3, 'Processor');
 
 -- --------------------------------------------------------
 
@@ -480,11 +476,11 @@ INSERT INTO `oc_attribute_group_description` (`attribute_group_id`, `language_id
 -- Table structure for table `oc_banner`
 --
 
-CREATE TABLE `oc_banner` (
+CREATE TABLE IF NOT EXISTS `oc_banner` (
   `banner_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
   `status` tinyint(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_banner`
@@ -502,7 +498,7 @@ INSERT INTO `oc_banner` (`banner_id`, `name`, `status`) VALUES
 -- Table structure for table `oc_banner_image`
 --
 
-CREATE TABLE `oc_banner_image` (
+CREATE TABLE IF NOT EXISTS `oc_banner_image` (
   `banner_image_id` int(11) NOT NULL,
   `banner_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -510,7 +506,7 @@ CREATE TABLE `oc_banner_image` (
   `link` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=166 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_banner_image`
@@ -551,7 +547,23 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `language_id`, `t
 (146, 9, 2, 'Logo 5', '', 'catalog/demo/manufacturer/5.jpg', 0),
 (147, 9, 2, 'Logo 6', '', 'catalog/demo/manufacturer/2.jpg', 0),
 (148, 9, 2, 'Logo 7', '', 'catalog/demo/manufacturer/4.jpg', 0),
-(149, 9, 2, 'Logo 8', '', 'catalog/demo/manufacturer/3.jpg', 0);
+(149, 9, 2, 'Logo 8', '', 'catalog/demo/manufacturer/3.jpg', 0),
+(150, 8, 3, 'Logo8', '', 'catalog/demo/manufacturer/7.png', 0),
+(151, 8, 3, 'Logo7', '', 'catalog/demo/manufacturer/9.png', 0),
+(152, 8, 3, 'Logo1', '', 'catalog/demo/manufacturer/8.png', 0),
+(153, 8, 3, 'Logo2', '', 'catalog/demo/manufacturer/10.png', 0),
+(154, 8, 3, 'Logo3', '', 'catalog/demo/manufacturer/9.png', 0),
+(155, 8, 3, 'Logo4', '', 'catalog/demo/manufacturer/8.png', 0),
+(156, 8, 3, 'Logo5', '', 'catalog/demo/manufacturer/7.png', 0),
+(157, 8, 3, 'Logo6', '', 'catalog/demo/manufacturer/10.png', 0),
+(158, 9, 3, 'Logo 1', '', 'catalog/demo/manufacturer/1.jpg', 0),
+(159, 9, 3, 'Logo 2', '', 'catalog/demo/manufacturer/2.jpg', 0),
+(160, 9, 3, 'Logo 3', '', 'catalog/demo/manufacturer/3.jpg', 0),
+(161, 9, 3, 'Logo 4', '', 'catalog/demo/manufacturer/4.jpg', 0),
+(162, 9, 3, 'Logo 5', '', 'catalog/demo/manufacturer/5.jpg', 0),
+(163, 9, 3, 'Logo 6', '', 'catalog/demo/manufacturer/2.jpg', 0),
+(164, 9, 3, 'Logo 7', '', 'catalog/demo/manufacturer/4.jpg', 0),
+(165, 9, 3, 'Logo 8', '', 'catalog/demo/manufacturer/3.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -559,8 +571,8 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `language_id`, `t
 -- Table structure for table `oc_cart`
 --
 
-CREATE TABLE `oc_cart` (
-  `cart_id` int(11) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `oc_cart` (
+  `cart_id` int(11) unsigned NOT NULL,
   `api_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `session_id` varchar(32) NOT NULL,
@@ -569,7 +581,7 @@ CREATE TABLE `oc_cart` (
   `option` text NOT NULL,
   `quantity` int(5) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_cart`
@@ -584,7 +596,7 @@ INSERT INTO `oc_cart` (`cart_id`, `api_id`, `customer_id`, `session_id`, `produc
 -- Table structure for table `oc_category`
 --
 
-CREATE TABLE `oc_category` (
+CREATE TABLE IF NOT EXISTS `oc_category` (
   `category_id` int(11) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `parent_id` int(11) NOT NULL DEFAULT '0',
@@ -597,7 +609,7 @@ CREATE TABLE `oc_category` (
   `thumbnail_image` varchar(255) DEFAULT NULL,
   `homethumb_image` varchar(255) DEFAULT NULL,
   `featured` tinyint(1) DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=252 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_category`
@@ -740,7 +752,7 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 -- Table structure for table `oc_category_description`
 --
 
-CREATE TABLE `oc_category_description` (
+CREATE TABLE IF NOT EXISTS `oc_category_description` (
   `category_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -1012,7 +1024,136 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (250, 1, 'Sofa', '', 'Sofa', '', ''),
 (250, 2, 'Sofa', '', 'Sofa', '', ''),
 (251, 1, 'Wood', '', 'Wood', '', ''),
-(251, 2, 'Wood', '', 'Wood', '', '');
+(251, 2, 'Wood', '', 'Wood', '', ''),
+(243, 3, 'Heeled sandals', '', 'Heeled sandals', '', ''),
+(123, 3, 'Bedroom', '', 'Bedroom', '', ''),
+(124, 3, 'Chair', '', 'Chair', '', ''),
+(125, 3, 'Living room', '', 'Living room', '', ''),
+(127, 3, 'Sofa', '', 'Sofa', '', ''),
+(126, 3, 'Dining Room', '', 'Dining Room', '', ''),
+(128, 3, 'Beds', '', 'Beds', '', ''),
+(129, 3, 'Platform Beds', '', 'Platform Beds', '', ''),
+(130, 3, 'Storage Beds', '', 'Storage Beds', '', ''),
+(131, 3, 'Regular Beds', '', 'Regular Beds', '', ''),
+(132, 3, 'Sleigh Beds', '', 'Sleigh Beds', '', ''),
+(133, 3, 'Modern beds', '', 'Modern beds', '', ''),
+(134, 3, 'Nightstands', '', 'Nightstands', '', ''),
+(135, 3, 'Brown Finish', '', 'Brown Finish', '', ''),
+(136, 3, 'Distressed', '', 'Distressed', '', ''),
+(137, 3, 'Cherry Finish', '', 'Cherry Finish', '', ''),
+(138, 3, 'Weathered', '', 'Weathered', '', ''),
+(139, 3, 'Laundry', '', 'Laundry', '', ''),
+(140, 3, 'Headboards', '', 'Headboards', '', ''),
+(141, 3, 'Upholstered', '', 'Upholstered', '', ''),
+(142, 3, 'Tufted', '', 'Tufted', '', ''),
+(143, 3, 'Storage', '', 'Storage', '', ''),
+(144, 3, 'Padded', '', 'Padded', '', ''),
+(145, 3, 'Outdoor', '', 'Outdoor', '', ''),
+(146, 3, 'Living Chairs', '', 'Living Chairs', '', ''),
+(147, 3, 'Armchairs', '', 'Armchairs', '', ''),
+(148, 3, 'Mattress', '', 'Mattress', '', ''),
+(149, 3, 'Bunk bed', '', 'Bunk bed', '', ''),
+(150, 3, 'Sideboard', '', 'Sideboard', '', ''),
+(151, 3, 'Living Tables', '', 'Living Tables', '', ''),
+(152, 3, 'Bedspread', '', 'Bedspread', '', ''),
+(153, 3, 'Chest', '', 'Chest', '', ''),
+(154, 3, 'Trunk', '', 'Trunk', '', ''),
+(155, 3, 'Wardrobe', '', 'Wardrobe', '', ''),
+(156, 3, 'Ottomans', '', 'Ottomans', '', ''),
+(157, 3, 'Bootees Bags', '', 'Bootees Bags', '', ''),
+(158, 3, 'Shelf', '', 'Shelf', '', ''),
+(159, 3, 'Jackets', '', 'Jackets', '', ''),
+(160, 3, 'Shoes', '', 'Shoes', '', ''),
+(161, 3, 'Sink', '', 'Sink', '', ''),
+(162, 3, 'Shorts', '', 'Shorts', '', ''),
+(163, 3, 'Dresses', '', 'Dresses', '', ''),
+(164, 3, 'Trousers', '', 'Trousers', '', ''),
+(165, 3, 'Skirts', '', 'Skirts', '', ''),
+(166, 3, 'Dining tables', '', 'Dining tables', '', ''),
+(167, 3, 'Crochet', '', 'Crochet', '', ''),
+(168, 3, 'Sleeveless', '', 'Sleeveless', '', ''),
+(169, 3, 'Stripes', '', 'Stripes', '', ''),
+(170, 3, 'Sweaters', '', 'Sweaters', '', ''),
+(171, 3, 'Dining chairs', '', 'Dining chairs', '', ''),
+(172, 3, 'Hoodies', '', 'Hoodies', '', ''),
+(173, 3, 'Ankle', '', 'Ankle', '', ''),
+(174, 3, 'Footwear', '', 'Footwear', '', ''),
+(175, 3, 'Wedges', '', 'Wedges', '', ''),
+(176, 3, 'Dining sets', '', 'Dining sets', '', ''),
+(177, 3, 'Long Sleeve', '', 'Long Sleeve', '', ''),
+(178, 3, 'Short Sleeve', '', 'Short Sleeve', '', ''),
+(179, 3, 'Polo Short Sleeve', '', 'Polo Short Sleeve', '', ''),
+(180, 3, 'Heeled sandals', '', 'Heeled sandals', '', ''),
+(181, 3, 'Furniture', '', 'Furniture', '', ''),
+(182, 3, 'Wood', '', 'Wood', '', ''),
+(183, 3, 'Sofa', '', 'Sofa', '', ''),
+(184, 3, 'Mahogany', '', 'Mahogany', '', ''),
+(185, 3, 'Glass', '', 'Glass', '', ''),
+(186, 3, 'Storage', '', 'Storage', '', ''),
+(187, 3, 'Blazers', '', 'Blazers', '', ''),
+(188, 3, 'Jackets', '', 'Jackets', '', ''),
+(189, 3, 'Raincoats', '', 'Raincoats', '', ''),
+(190, 3, 'Trousers', '', 'Trousers', '', ''),
+(191, 3, 'Armchair', '', 'Armchair', '', ''),
+(192, 3, 'Seating', '', 'Seating', '', ''),
+(193, 3, 'Sleeping or lying', '', 'Sleeping or lying', '', ''),
+(194, 3, 'Entertainment', '', 'Entertainment', '', ''),
+(195, 3, 'Tables', '', 'Tables', '', ''),
+(196, 3, 'Storage', '', 'Storage', '', ''),
+(197, 3, 'Sets', '', 'Sets', '', ''),
+(242, 3, 'Dining sets', '', 'Dining sets', '', ''),
+(198, 3, 'Bedroom', '', 'Bedroom', '', ''),
+(199, 3, 'Modern beds', '', 'Modern beds', '', ''),
+(200, 3, 'Platform Beds', '', 'Platform Beds', '', ''),
+(201, 3, 'Regular Beds', '', 'Regular Beds', '', ''),
+(202, 3, 'Sleigh Beds', '', 'Sleigh Beds', '', ''),
+(203, 3, 'Storage Beds', '', 'Storage Beds', '', ''),
+(204, 3, 'Headboards', '', 'Headboards', '', ''),
+(205, 3, 'Outdoor', '', 'Outdoor', '', ''),
+(206, 3, 'Padded', '', 'Padded', '', ''),
+(207, 3, 'Storage', '', 'Storage', '', ''),
+(208, 3, 'Tufted', '', 'Tufted', '', ''),
+(209, 3, 'Upholstered', '', 'Upholstered', '', ''),
+(210, 3, 'Nightstands', '', 'Nightstands', '', ''),
+(211, 3, 'Brown Finish', '', 'Brown Finish', '', ''),
+(212, 3, 'Cherry Finish', '', 'Cherry Finish', '', ''),
+(213, 3, 'Distressed', '', 'Distressed', '', ''),
+(214, 3, 'Laundry', '', 'Laundry', '', ''),
+(215, 3, 'Weathered', '', 'Weathered', '', ''),
+(216, 3, 'Living Chairs', '', 'Living Chairs', '', ''),
+(217, 3, 'Armchairs', '', 'Armchairs', '', ''),
+(218, 3, 'Bunk bed', '', 'Bunk bed', '', ''),
+(219, 3, 'Mattress', '', 'Mattress', '', ''),
+(220, 3, 'Sideboard', '', 'Sideboard', '', ''),
+(221, 3, 'Modern beds', '', 'Modern beds', '', ''),
+(222, 3, 'Living Tables', '', 'Living Tables', '', ''),
+(223, 3, 'Bedspread', '', 'Bedspread', '', ''),
+(224, 3, 'Chest', '', 'Chest', '', ''),
+(225, 3, 'Trunk', '', 'Trunk', '', ''),
+(226, 3, 'Wardrobe', '', 'Wardrobe', '', ''),
+(227, 3, 'Ottomans', '', 'Ottomans', '', ''),
+(228, 3, 'Bootees Bags', '', 'Bootees Bags', '', ''),
+(229, 3, 'Jackets', '', 'Jackets', '', ''),
+(230, 3, 'Shelf', '', 'Shelf', '', ''),
+(231, 3, 'Shoes', '', 'Shoes', '', ''),
+(232, 3, 'Sink', '', 'Sink', '', ''),
+(233, 3, 'Dresses', '', 'Dresses', '', ''),
+(234, 3, 'Shorts', '', 'Shorts', '', ''),
+(235, 3, 'Skirts', '', 'Skirts', '', ''),
+(236, 3, 'Trousers', '', 'Trousers', '', ''),
+(237, 3, 'Dining chairs', '', 'Dining chairs', '', ''),
+(238, 3, 'Ankle', '', 'Ankle', '', ''),
+(239, 3, 'Footwear', '', 'Footwear', '', ''),
+(240, 3, 'Hoodies', '', 'Hoodies', '', ''),
+(241, 3, 'Wedges', '', 'Wedges', '', ''),
+(244, 3, 'Long Sleeve', '', 'Long Sleeve', '', ''),
+(245, 3, 'Polo Short Sleeve', '', 'Polo Short Sleeve', '', ''),
+(246, 3, 'Short Sleeve', '', 'Short Sleeve', '', ''),
+(247, 3, 'Furniture', '', 'Furniture', '', ''),
+(248, 3, 'Glass', '', 'Glass', '', ''),
+(249, 3, 'Mahogany', '', 'Mahogany', '', ''),
+(250, 3, 'Sofa', '', 'Sofa', '', ''),
+(251, 3, 'Wood', '', 'Wood', '', '');
 
 -- --------------------------------------------------------
 
@@ -1020,7 +1161,7 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 -- Table structure for table `oc_category_filter`
 --
 
-CREATE TABLE `oc_category_filter` (
+CREATE TABLE IF NOT EXISTS `oc_category_filter` (
   `category_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -1508,7 +1649,7 @@ INSERT INTO `oc_category_filter` (`category_id`, `filter_id`) VALUES
 -- Table structure for table `oc_category_path`
 --
 
-CREATE TABLE `oc_category_path` (
+CREATE TABLE IF NOT EXISTS `oc_category_path` (
   `category_id` int(11) NOT NULL,
   `path_id` int(11) NOT NULL,
   `level` int(11) NOT NULL
@@ -1867,7 +2008,7 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 -- Table structure for table `oc_category_to_layout`
 --
 
-CREATE TABLE `oc_category_to_layout` (
+CREATE TABLE IF NOT EXISTS `oc_category_to_layout` (
   `category_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `layout_id` int(11) NOT NULL
@@ -2401,7 +2542,7 @@ INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VAL
 -- Table structure for table `oc_category_to_store`
 --
 
-CREATE TABLE `oc_category_to_store` (
+CREATE TABLE IF NOT EXISTS `oc_category_to_store` (
   `category_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -2686,7 +2827,7 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 -- Table structure for table `oc_cmsblock`
 --
 
-CREATE TABLE `oc_cmsblock` (
+CREATE TABLE IF NOT EXISTS `oc_cmsblock` (
   `cmsblock_id` int(11) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `sort_order` tinyint(1) DEFAULT NULL,
@@ -2694,7 +2835,7 @@ CREATE TABLE `oc_cmsblock` (
   `link` varchar(255) DEFAULT NULL,
   `type` tinyint(1) DEFAULT NULL,
   `banner_store` varchar(255) DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_cmsblock`
@@ -2724,14 +2865,14 @@ INSERT INTO `oc_cmsblock` (`cmsblock_id`, `status`, `sort_order`, `identify`, `l
 -- Table structure for table `oc_cmsblock_description`
 --
 
-CREATE TABLE `oc_cmsblock_description` (
+CREATE TABLE IF NOT EXISTS `oc_cmsblock_description` (
   `cmsblock_des_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `cmsblock_id` int(11) NOT NULL,
   `title` varchar(64) NOT NULL,
   `sub_title` varchar(64) DEFAULT NULL,
   `description` text
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=231 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_cmsblock_description`
@@ -2769,7 +2910,23 @@ INSERT INTO `oc_cmsblock_description` (`cmsblock_des_id`, `language_id`, `cmsblo
 (221, 1, 34, 'Banner Center Home4', NULL, '																				&lt;div class=&quot;banner-center&quot;&gt;\r\n	&lt;div class=&quot;row&quot;&gt;\r\n		&lt;div class=&quot;col-md-4 col-sm-4 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;banner-image&quot;&gt;\r\n				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block3-home4.png&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n				&lt;span class=&quot;sale&quot;&gt;-25%&lt;/span&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n		&lt;div class=&quot;col-md-8 col-sm-8 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;banner-content&quot;&gt;\r\n				&lt;h3&gt;Chairs &amp;amp; Chaises&lt;/h3&gt;\r\n				&lt;h2&gt;Ethen Accent Chair - Laguna&lt;/h2&gt;\r\n				&lt;p&gt;Vacation at Home. With its dashingly refined good looks, the Ethen accent chair \r\nis perfectly suited for any room that can use a dose of vibrant colour. \r\nTight-back upholstery from top to bottom gives the chair.&lt;/p&gt;\r\n				&lt;a href=&quot;#&quot;&gt;Shop now&lt;/a&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;																		'),
 (222, 2, 34, 'Banner Center Home4', NULL, '																				&lt;div class=&quot;banner-center&quot;&gt;\r\n	&lt;div class=&quot;row&quot;&gt;\r\n		&lt;div class=&quot;col-md-4 col-sm-4 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;banner-image&quot;&gt;\r\n				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block3-home4.png&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n				&lt;span class=&quot;sale&quot;&gt;-25%&lt;/span&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n		&lt;div class=&quot;col-md-8 col-sm-8 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;banner-content&quot;&gt;\r\n				&lt;h3&gt;Chairs &amp;amp; Chaises&lt;/h3&gt;\r\n				&lt;h2&gt;Ethen Accent Chair - Laguna&lt;/h2&gt;\r\n				&lt;p&gt;Vacation at Home. With its dashingly refined good looks, the Ethen accent chair \r\nis perfectly suited for any room that can use a dose of vibrant colour. \r\nTight-back upholstery from top to bottom gives the chair.&lt;/p&gt;\r\n				&lt;a href=&quot;#&quot;&gt;Shop now&lt;/a&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;																		'),
 (226, 2, 35, 'Banner Right Home4', NULL, '										&lt;div class=&quot;banner-right&quot;&gt;\r\n	&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block4-home4.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n&lt;/div&gt;									'),
-(225, 1, 35, 'Banner Right Home4', NULL, '										&lt;div class=&quot;banner-right&quot;&gt;\r\n	&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block4-home4.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n&lt;/div&gt;									');
+(225, 1, 35, 'Banner Right Home4', NULL, '										&lt;div class=&quot;banner-right&quot;&gt;\r\n	&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block4-home4.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n&lt;/div&gt;									'),
+(163, 3, 21, 'Banner Center1 Home1', NULL, '&lt;div class=&quot;banner-center1&quot;&gt;\r\n	&lt;div class=&quot;container&quot;&gt;\r\n		&lt;div class=&quot;static-content&quot;&gt;\r\n			&lt;h2 class=&quot;title&quot;&gt;Sofas and Sectionals&lt;/h2&gt;\r\n			&lt;p class=&quot;s-title&quot;&gt;BEGUILE FABRIC SOFA IN LAGUNA&lt;/p&gt;\r\n			&lt;span class=&quot;desc&quot;&gt;Dominate your decor with the expertly designed Beguile Collection. Exquisitely crafted with gently sloping arms, comfortable plush seat cushions, and adeptly tufted back cushion buttons.&lt;/span&gt;\r\n			&lt;a href=&quot;&quot;&gt;shop now&lt;/a&gt;\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;'),
+(177, 3, 20, 'Banner Center Home1', NULL, '&lt;div class=&quot;banner-center&quot;&gt;\r\n	&lt;div class=&quot;row&quot;&gt;\r\n		&lt;div class=&quot;col-md-4 col-sm-4 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;col col-1&quot;&gt;\r\n				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/1.jpg&quot; class=&quot;f-img&quot; alt=&quot;img-1&quot;&gt;&lt;/a&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n		&lt;div class=&quot;col-md-4 col-sm-4 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;col col-2&quot;&gt;\r\n				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/2.jpg&quot; class=&quot;f-img&quot; alt=&quot;img-1&quot;&gt;&lt;/a&gt;\r\n			&lt;/div&gt;\r\n			&lt;div class=&quot;col col-3&quot;&gt;\r\n				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/4.jpg&quot; class=&quot;f-img&quot; alt=&quot;img-1&quot;&gt;&lt;/a&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n		&lt;div class=&quot;col-md-4 col-sm-4 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;col col-4&quot;&gt;\r\n				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/3.jpg&quot; class=&quot;f-img&quot; alt=&quot;img-1&quot;&gt;&lt;/a&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;'),
+(229, 3, 22, 'Banner Static Bottom', NULL, '&lt;div class=&quot;banner-bottom&quot;&gt;\r\n	&lt;div class=&quot;container&quot;&gt;\r\n		&lt;div class=&quot;title&quot;&gt;&lt;h3 class=&quot;desc&quot;&gt;Buying furniture on &lt;span&gt;GRAND&lt;/span&gt; furniture is simple!&lt;/h3&gt;&lt;/div&gt;\r\n		&lt;div class=&quot;row&quot;&gt;\r\n			&lt;div class=&quot;col-md-4 col-sm-4 col-xs-12&quot;&gt;\r\n				&lt;div class=&quot;col col1&quot;&gt;\r\n					&lt;div class=&quot;banner-image&quot;&gt;&lt;img src=&quot;image/catalog/demo/icon/7.png&quot; class=&quot;png-7&quot; alt=&quot;Discover&quot;&gt;&lt;/div&gt;\r\n					&lt;h2&gt;Discover Great Furniture&lt;/h2&gt;\r\n					&lt;p&gt;Browse listings of gently used furniture finds by category or brand.&lt;/p&gt;\r\n				&lt;/div&gt;	\r\n			&lt;/div&gt;\r\n			&lt;div class=&quot;col-md-4 col-sm-4 col-xs-12&quot;&gt;\r\n				&lt;div class=&quot;col col2&quot;&gt;\r\n					&lt;div class=&quot;banner-image&quot;&gt;&lt;img src=&quot;image/catalog/demo/icon/8.png&quot; class=&quot;png-8&quot; alt=&quot;order&quot;&gt;&lt;/div&gt;\r\n					&lt;h2&gt;Place your order&lt;/h2&gt;\r\n					&lt;p&gt;Reserve the product before someone else gets to it!&lt;/p&gt;\r\n				&lt;/div&gt;	\r\n			&lt;/div&gt;\r\n			&lt;div class=&quot;col-md-4 col-sm-4 col-xs-12&quot;&gt;\r\n				&lt;div class=&quot;col col3&quot;&gt;\r\n					&lt;div class=&quot;banner-image&quot;&gt;&lt;img src=&quot;image/catalog/demo/icon/9.png&quot; class=&quot;png-9&quot; alt=&quot;Delivery&quot;&gt;&lt;/div&gt;\r\n					&lt;h2&gt;Schedule Delivery&lt;/h2&gt;\r\n					&lt;p&gt;Select a delivery date that works for you then sit back &amp;amp; relax - we''ll arrange the rest.&lt;/p&gt;\r\n				&lt;/div&gt;	\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;			\r\n	&lt;/div&gt;\r\n&lt;/div&gt;									'),
+(211, 3, 24, 'Banner Left', NULL, '																				&lt;div class=&quot;banner-left&quot;&gt;\r\n&lt;a href=&quot;#&quot;&gt;\r\n&lt;img src=&quot;image/catalog/demo/img-block/ads-sidebar.jpg&quot; alt=&quot;image&quot;&gt;\r\n&lt;/a&gt;\r\n&lt;/div&gt;																											'),
+(205, 3, 27, 'Banner Static1 Home3', NULL, '										&lt;div class=&quot;banner-static1&quot;&gt;\r\n	&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block2-home3.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n&lt;/div&gt;									'),
+(207, 3, 32, 'Banner Center Home3', NULL, '&lt;div class=&quot;banner-center&quot;&gt;\r\n	&lt;div class=&quot;image&quot;&gt;\r\n		&lt;a href=&quot;#&quot;&gt;\r\n			&lt;img src=&quot;image/catalog/demo/img-block/block3-home3.jpg&quot; alt=&quot;image&quot;&gt;\r\n			&lt;span class=&quot;text&quot;&gt;\r\n				&lt;span class=&quot;text1&quot;&gt;MODERN RELAXATION&lt;/span&gt;\r\n				&lt;span class=&quot;text2&quot;&gt;Unique Style , Innovative Design&lt;/span&gt;\r\n				&lt;span class=&quot;text3&quot;&gt;Your favorite lounging spot sofa&lt;/span&gt;\r\n			&lt;/span&gt;\r\n		&lt;/a&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;'),
+(149, 3, 30, 'Header Icon', NULL, '&lt;div class=&quot;header-icon&quot;&gt;\r\n	&lt;div class=&quot;col col1&quot;&gt;\r\n		&lt;em class=&quot;lnr lnr-phone&quot;&gt;&lt;/em&gt;\r\n		&lt;div class=&quot;header-content&quot;&gt;\r\n			&lt;h2&gt;Free shipping&lt;/h2&gt;\r\n			&lt;p&gt;Free shipping on all order&lt;/p&gt;\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n	&lt;div class=&quot;col col2&quot;&gt;\r\n		&lt;em class=&quot;lnr lnr-rocket&quot;&gt;&lt;/em&gt;\r\n		&lt;div class=&quot;header-content&quot;&gt;\r\n			&lt;h2&gt;Suppost 24/7&lt;/h2&gt;\r\n			&lt;p&gt;We support online 24 hours a day&lt;/p&gt;\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;																		'),
+(209, 3, 31, 'Footer Icon', NULL, '																				&lt;ul class=&quot;link-follow&quot;&gt;\r\n	&lt;li class=&quot;first&quot;&gt;\r\n		&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/plazathemes&quot;&gt;\r\n			&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;\r\n		&lt;/a&gt;\r\n	&lt;/li&gt;\r\n	&lt;li&gt;\r\n		&lt;a class=&quot;google &quot; href=&quot;#&quot;&gt;\r\n			&lt;i class=&quot;fa fa-google-plus&quot;&gt;&lt;/i&gt;\r\n		&lt;/a&gt;\r\n	&lt;/li&gt;\r\n	&lt;li&gt;\r\n		&lt;a class=&quot;facebook &quot; href=&quot;https://www.facebook.com/plazathemes&quot;&gt;\r\n			&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;\r\n		&lt;/a&gt;\r\n	&lt;/li&gt;\r\n	&lt;li&gt;\r\n		&lt;a class=&quot;youtube &quot; href=&quot;https://www.youtube.com/user/plazathemes&quot;&gt;\r\n			&lt;i class=&quot;fa fa-youtube&quot;&gt;&lt;/i&gt;\r\n		&lt;/a&gt;\r\n	&lt;/li&gt;\r\n	&lt;li&gt;\r\n		&lt;a class=&quot;instagram &quot; href=&quot;#&quot;&gt;\r\n			&lt;i class=&quot;fa fa-instagram&quot;&gt;&lt;/i&gt;\r\n		&lt;/a&gt;\r\n	&lt;/li&gt;\r\n&lt;/ul&gt;																		'),
+(197, 3, 23, 'Banner Right', NULL, '										&lt;div class=&quot;banner-right&quot;&gt;\r\n&lt;a href=&quot;#&quot;&gt;\r\n&lt;img src=&quot;image/catalog/demo/img-block/ads-sidebar-right.jpg&quot; alt=&quot;image&quot;&gt;\r\n&lt;/a&gt;\r\n&lt;/div&gt;																		'),
+(187, 3, 25, 'Banner  Static Home2', NULL, '&lt;div class=&quot;banner-static&quot;&gt;\r\n	&lt;div class=&quot;container&quot;&gt;\r\n		&lt;div class=&quot;row&quot;&gt;\r\n			&lt;div class=&quot;col-md-3 col-sm-6 col-sms-12&quot;&gt;\r\n				&lt;div class=&quot;col col1&quot;&gt;\r\n					&lt;div class=&quot;images&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block-home2.png&quot; alt=&quot;block3&quot;&gt;&lt;/div&gt;\r\n					&lt;div class=&quot;banner-content&quot;&gt;\r\n						&lt;h2&gt;Meticulous Craftsmanship&lt;/h2&gt;\r\n						&lt;p&gt;VALUE FOR EVERY RUPEE&lt;/p&gt;\r\n					&lt;/div&gt;\r\n				&lt;/div&gt;\r\n			&lt;/div&gt;\r\n			&lt;div class=&quot;col-md-3 col-sm-6 col-sms-12&quot;&gt;\r\n				&lt;div class=&quot;col col2&quot;&gt;\r\n					&lt;div class=&quot;images&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block1-home2.png&quot; alt=&quot;block3&quot;&gt;&lt;/div&gt;\r\n					&lt;div class=&quot;banner-content&quot;&gt;\r\n						&lt;h2&gt;After Sales Care&lt;/h2&gt;\r\n						&lt;p&gt;PEACE OF MIND TO YOU&lt;/p&gt;\r\n					&lt;/div&gt;\r\n				&lt;/div&gt;\r\n			&lt;/div&gt;\r\n			&lt;div class=&quot;col-md-3 col-sm-6 col-sms-12&quot;&gt;\r\n				&lt;div class=&quot;col col3&quot;&gt;\r\n					&lt;div class=&quot;images&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block2-home2.png&quot; alt=&quot;block3&quot;&gt;&lt;/div&gt;\r\n					&lt;div class=&quot;banner-content&quot;&gt;\r\n						&lt;h2&gt;Free Shipping&lt;/h2&gt;\r\n						&lt;p&gt;DELIVERY TO YOUR DOOR&lt;/p&gt;\r\n					&lt;/div&gt;\r\n				&lt;/div&gt;\r\n			&lt;/div&gt;\r\n			&lt;div class=&quot;col-md-3 col-sm-6 col-sms-12&quot;&gt;\r\n				&lt;div class=&quot;col col4&quot;&gt;\r\n					&lt;div class=&quot;images&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block3-home2.png&quot; alt=&quot;block3&quot;&gt;&lt;/div&gt;\r\n					&lt;div class=&quot;banner-content&quot;&gt;\r\n						&lt;h2&gt;Premium Furniture Designs&lt;/h2&gt;\r\n						&lt;p&gt;CREATE SMART TRENDY DECOR&lt;/p&gt;\r\n					&lt;/div&gt;\r\n				&lt;/div&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;'),
+(191, 3, 26, 'Banner Center Home2', NULL, '&lt;div class=&quot;banner-center&quot;&gt;\r\n	&lt;div class=&quot;row&quot;&gt;\r\n		&lt;div class=&quot;col-md-8 col-sm-8 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;row&quot;&gt;\r\n				&lt;div class=&quot;col-md-6 col-sm-6 col-sm-12&quot;&gt;\r\n					&lt;div class=&quot;col col1&quot;&gt;\r\n						&lt;div class=&quot;image&quot;&gt;\r\n							&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block4-home2.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n						&lt;/div&gt;\r\n					&lt;/div&gt;\r\n				&lt;/div&gt;\r\n				&lt;div class=&quot;col-md-6 col-sm-6 col-sms-12&quot;&gt;\r\n					&lt;div class=&quot;col col2&quot;&gt;\r\n						&lt;div class=&quot;image&quot;&gt;\r\n							&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block5-home2.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n						&lt;/div&gt;\r\n					&lt;/div&gt;\r\n				&lt;/div&gt;\r\n			&lt;/div&gt;\r\n			&lt;div class=&quot;col col3&quot;&gt;\r\n				&lt;div class=&quot;image&quot;&gt;\r\n					&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block6-home2.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n				&lt;/div&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n		&lt;div class=&quot;col-md-4 col-sm-4 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;col col4&quot;&gt;\r\n				&lt;div class=&quot;image&quot;&gt;\r\n					&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block7-home2.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n				&lt;/div&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;'),
+(201, 3, 28, 'Banner Static Home3', NULL, '&lt;div class=&quot;banner-static&quot;&gt;\r\n	&lt;div class=&quot;row&quot;&gt;\r\n		&lt;div class=&quot;col-sm-6 col-xs-12&quot;&gt;\r\n			&lt;div class=&quot;col col1&quot;&gt;\r\n				&lt;div class=&quot;image&quot;&gt;\r\n					&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block-home3.jpg&quot; alt=&quot;image&quot;&gt;&lt;span class=&quot;text&quot;&gt; &lt;span class=&quot;text1&quot;&gt;The world’s most popular office sofa&lt;/span&gt;&lt;span class=&quot;text2&quot;&gt;G64 - Over 1.3 Million Sold Worldwide&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;\r\n				&lt;/div&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n		&lt;div class=&quot;col-sm-6 col-xs-12&quot;&gt;\r\n			&lt;div class=&quot;col col2&quot;&gt;\r\n				&lt;div class=&quot;image&quot;&gt;\r\n					&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block1-home3.jpg&quot; alt=&quot;image&quot;&gt;&lt;span class=&quot;text&quot;&gt; &lt;span class=&quot;text1&quot;&gt;Sofa &amp;amp; Sofa Sets&lt;/span&gt;&lt;span class=&quot;text2&quot;&gt;Up to 50% off&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;\r\n				&lt;/div&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;'),
+(227, 3, 29, 'Banner Static Home4', NULL, '&lt;div class=&quot;banner-static&quot;&gt;\r\n	&lt;div class=&quot;row&quot;&gt;\r\n		&lt;div class=&quot;col-md-12 col-sm-6 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;col col1&quot;&gt;\r\n				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block-home4.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n		&lt;div class=&quot;col-md-12 col-sm-6 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;col col2&quot;&gt;\r\n				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block1-home4.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;'),
+(215, 3, 33, 'Banner Static1 Home4', NULL, '&lt;div class=&quot;banner-static1&quot;&gt;\r\n	&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block2-home4.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n&lt;/div&gt;'),
+(221, 3, 34, 'Banner Center Home4', NULL, '																				&lt;div class=&quot;banner-center&quot;&gt;\r\n	&lt;div class=&quot;row&quot;&gt;\r\n		&lt;div class=&quot;col-md-4 col-sm-4 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;banner-image&quot;&gt;\r\n				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block3-home4.png&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n				&lt;span class=&quot;sale&quot;&gt;-25%&lt;/span&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n		&lt;div class=&quot;col-md-8 col-sm-8 col-sms-12&quot;&gt;\r\n			&lt;div class=&quot;banner-content&quot;&gt;\r\n				&lt;h3&gt;Chairs &amp;amp; Chaises&lt;/h3&gt;\r\n				&lt;h2&gt;Ethen Accent Chair - Laguna&lt;/h2&gt;\r\n				&lt;p&gt;Vacation at Home. With its dashingly refined good looks, the Ethen accent chair \r\nis perfectly suited for any room that can use a dose of vibrant colour. \r\nTight-back upholstery from top to bottom gives the chair.&lt;/p&gt;\r\n				&lt;a href=&quot;#&quot;&gt;Shop now&lt;/a&gt;\r\n			&lt;/div&gt;\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;																		'),
+(225, 3, 35, 'Banner Right Home4', NULL, '										&lt;div class=&quot;banner-right&quot;&gt;\r\n	&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/catalog/demo/img-block/block4-home4.jpg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;\r\n&lt;/div&gt;									');
 
 -- --------------------------------------------------------
 
@@ -2777,7 +2934,7 @@ INSERT INTO `oc_cmsblock_description` (`cmsblock_des_id`, `language_id`, `cmsblo
 -- Table structure for table `oc_cmsblock_to_store`
 --
 
-CREATE TABLE `oc_cmsblock_to_store` (
+CREATE TABLE IF NOT EXISTS `oc_cmsblock_to_store` (
   `cmsblock_id` int(11) DEFAULT NULL,
   `store_id` tinyint(4) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -2788,7 +2945,7 @@ CREATE TABLE `oc_cmsblock_to_store` (
 -- Table structure for table `oc_country`
 --
 
-CREATE TABLE `oc_country` (
+CREATE TABLE IF NOT EXISTS `oc_country` (
   `country_id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
   `iso_code_2` varchar(2) NOT NULL,
@@ -2796,7 +2953,7 @@ CREATE TABLE `oc_country` (
   `address_format` text NOT NULL,
   `postcode_required` tinyint(1) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=258 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_country`
@@ -3063,7 +3220,7 @@ INSERT INTO `oc_country` (`country_id`, `name`, `iso_code_2`, `iso_code_3`, `add
 -- Table structure for table `oc_coupon`
 --
 
-CREATE TABLE `oc_coupon` (
+CREATE TABLE IF NOT EXISTS `oc_coupon` (
   `coupon_id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
   `code` varchar(20) NOT NULL,
@@ -3078,16 +3235,16 @@ CREATE TABLE `oc_coupon` (
   `uses_customer` varchar(11) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_coupon`
 --
 
 INSERT INTO `oc_coupon` (`coupon_id`, `name`, `code`, `type`, `discount`, `logged`, `shipping`, `total`, `date_start`, `date_end`, `uses_total`, `uses_customer`, `status`, `date_added`) VALUES
-(4, '-10% Discount', '2222', 'P', '10.0000', 0, 0, '0.0000', '2014-01-01', '2020-01-01', 10, '10', 0, '2009-01-27 13:55:03'),
-(5, 'Free Shipping', '3333', 'P', '0.0000', 0, 1, '100.0000', '2014-01-01', '2014-02-01', 10, '10', 0, '2009-03-14 21:13:53'),
-(6, '-10.00 Discount', '1111', 'F', '10.0000', 0, 0, '10.0000', '2014-01-01', '2020-01-01', 100000, '10000', 0, '2009-03-14 21:15:18');
+(4, '-10% Discount', '2222', 'P', 10.0000, 0, 0, 0.0000, '2014-01-01', '2020-01-01', 10, '10', 0, '2009-01-27 13:55:03'),
+(5, 'Free Shipping', '3333', 'P', 0.0000, 0, 1, 100.0000, '2014-01-01', '2014-02-01', 10, '10', 0, '2009-03-14 21:13:53'),
+(6, '-10.00 Discount', '1111', 'F', 10.0000, 0, 0, 10.0000, '2014-01-01', '2020-01-01', 100000, '10000', 0, '2009-03-14 21:15:18');
 
 -- --------------------------------------------------------
 
@@ -3095,7 +3252,7 @@ INSERT INTO `oc_coupon` (`coupon_id`, `name`, `code`, `type`, `discount`, `logge
 -- Table structure for table `oc_coupon_category`
 --
 
-CREATE TABLE `oc_coupon_category` (
+CREATE TABLE IF NOT EXISTS `oc_coupon_category` (
   `coupon_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -3106,7 +3263,7 @@ CREATE TABLE `oc_coupon_category` (
 -- Table structure for table `oc_coupon_history`
 --
 
-CREATE TABLE `oc_coupon_history` (
+CREATE TABLE IF NOT EXISTS `oc_coupon_history` (
   `coupon_history_id` int(11) NOT NULL,
   `coupon_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
@@ -3121,7 +3278,7 @@ CREATE TABLE `oc_coupon_history` (
 -- Table structure for table `oc_coupon_product`
 --
 
-CREATE TABLE `oc_coupon_product` (
+CREATE TABLE IF NOT EXISTS `oc_coupon_product` (
   `coupon_product_id` int(11) NOT NULL,
   `coupon_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL
@@ -3133,7 +3290,7 @@ CREATE TABLE `oc_coupon_product` (
 -- Table structure for table `oc_currency`
 --
 
-CREATE TABLE `oc_currency` (
+CREATE TABLE IF NOT EXISTS `oc_currency` (
   `currency_id` int(11) NOT NULL,
   `title` varchar(32) NOT NULL,
   `code` varchar(3) NOT NULL,
@@ -3143,16 +3300,14 @@ CREATE TABLE `oc_currency` (
   `value` float(15,8) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_currency`
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Pound Sterling', 'GBP', '£', '', '2', 0.80180001, 1, '2017-03-25 02:39:21'),
-(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2017-03-25 04:37:42'),
-(3, 'Euro', 'EUR', '', '€', '2', 0.92580003, 1, '2017-03-25 02:39:21');
+(4, 'VNĐ', 'VND', '', ' VNĐ', '', 1.00000000, 1, '2017-06-22 16:16:33');
 
 -- --------------------------------------------------------
 
@@ -3160,7 +3315,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 -- Table structure for table `oc_customer`
 --
 
-CREATE TABLE `oc_customer` (
+CREATE TABLE IF NOT EXISTS `oc_customer` (
   `customer_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL DEFAULT '0',
@@ -3184,7 +3339,7 @@ CREATE TABLE `oc_customer` (
   `token` text NOT NULL,
   `code` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_customer`
@@ -3201,7 +3356,7 @@ INSERT INTO `oc_customer` (`customer_id`, `customer_group_id`, `store_id`, `lang
 -- Table structure for table `oc_customer_activity`
 --
 
-CREATE TABLE `oc_customer_activity` (
+CREATE TABLE IF NOT EXISTS `oc_customer_activity` (
   `customer_activity_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `key` varchar(64) NOT NULL,
@@ -3216,11 +3371,11 @@ CREATE TABLE `oc_customer_activity` (
 -- Table structure for table `oc_customer_group`
 --
 
-CREATE TABLE `oc_customer_group` (
+CREATE TABLE IF NOT EXISTS `oc_customer_group` (
   `customer_group_id` int(11) NOT NULL,
   `approval` int(1) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_customer_group`
@@ -3235,7 +3390,7 @@ INSERT INTO `oc_customer_group` (`customer_group_id`, `approval`, `sort_order`) 
 -- Table structure for table `oc_customer_group_description`
 --
 
-CREATE TABLE `oc_customer_group_description` (
+CREATE TABLE IF NOT EXISTS `oc_customer_group_description` (
   `customer_group_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
@@ -3247,7 +3402,8 @@ CREATE TABLE `oc_customer_group_description` (
 --
 
 INSERT INTO `oc_customer_group_description` (`customer_group_id`, `language_id`, `name`, `description`) VALUES
-(1, 1, 'Default', 'test');
+(1, 1, 'Default', 'test'),
+(1, 3, 'Default', 'test');
 
 -- --------------------------------------------------------
 
@@ -3255,7 +3411,7 @@ INSERT INTO `oc_customer_group_description` (`customer_group_id`, `language_id`,
 -- Table structure for table `oc_customer_history`
 --
 
-CREATE TABLE `oc_customer_history` (
+CREATE TABLE IF NOT EXISTS `oc_customer_history` (
   `customer_history_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `comment` text NOT NULL,
@@ -3268,12 +3424,12 @@ CREATE TABLE `oc_customer_history` (
 -- Table structure for table `oc_customer_ip`
 --
 
-CREATE TABLE `oc_customer_ip` (
+CREATE TABLE IF NOT EXISTS `oc_customer_ip` (
   `customer_ip_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_customer_ip`
@@ -3290,14 +3446,14 @@ INSERT INTO `oc_customer_ip` (`customer_ip_id`, `customer_id`, `ip`, `date_added
 -- Table structure for table `oc_customer_login`
 --
 
-CREATE TABLE `oc_customer_login` (
+CREATE TABLE IF NOT EXISTS `oc_customer_login` (
   `customer_login_id` int(11) NOT NULL,
   `email` varchar(96) NOT NULL,
   `ip` varchar(40) NOT NULL,
   `total` int(4) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_customer_login`
@@ -3312,7 +3468,7 @@ INSERT INTO `oc_customer_login` (`customer_login_id`, `email`, `ip`, `total`, `d
 -- Table structure for table `oc_customer_online`
 --
 
-CREATE TABLE `oc_customer_online` (
+CREATE TABLE IF NOT EXISTS `oc_customer_online` (
   `ip` varchar(40) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `url` text NOT NULL,
@@ -3326,7 +3482,7 @@ CREATE TABLE `oc_customer_online` (
 -- Table structure for table `oc_customer_reward`
 --
 
-CREATE TABLE `oc_customer_reward` (
+CREATE TABLE IF NOT EXISTS `oc_customer_reward` (
   `customer_reward_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL DEFAULT '0',
   `order_id` int(11) NOT NULL DEFAULT '0',
@@ -3341,7 +3497,7 @@ CREATE TABLE `oc_customer_reward` (
 -- Table structure for table `oc_customer_search`
 --
 
-CREATE TABLE `oc_customer_search` (
+CREATE TABLE IF NOT EXISTS `oc_customer_search` (
   `customer_search_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -3361,7 +3517,7 @@ CREATE TABLE `oc_customer_search` (
 -- Table structure for table `oc_customer_transaction`
 --
 
-CREATE TABLE `oc_customer_transaction` (
+CREATE TABLE IF NOT EXISTS `oc_customer_transaction` (
   `customer_transaction_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
@@ -3376,7 +3532,7 @@ CREATE TABLE `oc_customer_transaction` (
 -- Table structure for table `oc_customer_wishlist`
 --
 
-CREATE TABLE `oc_customer_wishlist` (
+CREATE TABLE IF NOT EXISTS `oc_customer_wishlist` (
   `customer_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `date_added` datetime NOT NULL
@@ -3396,7 +3552,7 @@ INSERT INTO `oc_customer_wishlist` (`customer_id`, `product_id`, `date_added`) V
 -- Table structure for table `oc_custom_field`
 --
 
-CREATE TABLE `oc_custom_field` (
+CREATE TABLE IF NOT EXISTS `oc_custom_field` (
   `custom_field_id` int(11) NOT NULL,
   `type` varchar(32) NOT NULL,
   `value` text NOT NULL,
@@ -3412,7 +3568,7 @@ CREATE TABLE `oc_custom_field` (
 -- Table structure for table `oc_custom_field_customer_group`
 --
 
-CREATE TABLE `oc_custom_field_customer_group` (
+CREATE TABLE IF NOT EXISTS `oc_custom_field_customer_group` (
   `custom_field_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
   `required` tinyint(1) NOT NULL
@@ -3424,7 +3580,7 @@ CREATE TABLE `oc_custom_field_customer_group` (
 -- Table structure for table `oc_custom_field_description`
 --
 
-CREATE TABLE `oc_custom_field_description` (
+CREATE TABLE IF NOT EXISTS `oc_custom_field_description` (
   `custom_field_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL
@@ -3436,7 +3592,7 @@ CREATE TABLE `oc_custom_field_description` (
 -- Table structure for table `oc_custom_field_value`
 --
 
-CREATE TABLE `oc_custom_field_value` (
+CREATE TABLE IF NOT EXISTS `oc_custom_field_value` (
   `custom_field_value_id` int(11) NOT NULL,
   `custom_field_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
@@ -3448,7 +3604,7 @@ CREATE TABLE `oc_custom_field_value` (
 -- Table structure for table `oc_custom_field_value_description`
 --
 
-CREATE TABLE `oc_custom_field_value_description` (
+CREATE TABLE IF NOT EXISTS `oc_custom_field_value_description` (
   `custom_field_value_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `custom_field_id` int(11) NOT NULL,
@@ -3461,7 +3617,7 @@ CREATE TABLE `oc_custom_field_value_description` (
 -- Table structure for table `oc_download`
 --
 
-CREATE TABLE `oc_download` (
+CREATE TABLE IF NOT EXISTS `oc_download` (
   `download_id` int(11) NOT NULL,
   `filename` varchar(160) NOT NULL,
   `mask` varchar(128) NOT NULL,
@@ -3474,7 +3630,7 @@ CREATE TABLE `oc_download` (
 -- Table structure for table `oc_download_description`
 --
 
-CREATE TABLE `oc_download_description` (
+CREATE TABLE IF NOT EXISTS `oc_download_description` (
   `download_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
@@ -3486,14 +3642,14 @@ CREATE TABLE `oc_download_description` (
 -- Table structure for table `oc_event`
 --
 
-CREATE TABLE `oc_event` (
+CREATE TABLE IF NOT EXISTS `oc_event` (
   `event_id` int(11) NOT NULL,
   `code` varchar(32) NOT NULL,
   `trigger` text NOT NULL,
   `action` text NOT NULL,
   `status` tinyint(1) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_event`
@@ -3508,11 +3664,11 @@ INSERT INTO `oc_event` (`event_id`, `code`, `trigger`, `action`, `status`, `date
 -- Table structure for table `oc_extension`
 --
 
-CREATE TABLE `oc_extension` (
+CREATE TABLE IF NOT EXISTS `oc_extension` (
   `extension_id` int(11) NOT NULL,
   `type` varchar(32) NOT NULL,
   `code` varchar(32) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_extension`
@@ -3583,11 +3739,11 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 -- Table structure for table `oc_filter`
 --
 
-CREATE TABLE `oc_filter` (
+CREATE TABLE IF NOT EXISTS `oc_filter` (
   `filter_id` int(11) NOT NULL,
   `filter_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_filter`
@@ -3618,7 +3774,7 @@ INSERT INTO `oc_filter` (`filter_id`, `filter_group_id`, `sort_order`) VALUES
 -- Table structure for table `oc_filter_description`
 --
 
-CREATE TABLE `oc_filter_description` (
+CREATE TABLE IF NOT EXISTS `oc_filter_description` (
   `filter_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `filter_group_id` int(11) NOT NULL,
@@ -3663,7 +3819,24 @@ INSERT INTO `oc_filter_description` (`filter_id`, `language_id`, `filter_group_i
 (8, 2, 1, 'Orange'),
 (16, 2, 2, 'Giorgio Armani'),
 (17, 1, 2, 'Ermenegildo zegna'),
-(17, 2, 2, 'Ermenegildo zegna');
+(17, 2, 2, 'Ermenegildo zegna'),
+(8, 3, 1, 'Orange'),
+(7, 3, 1, 'Pink'),
+(6, 3, 1, 'Yellow'),
+(5, 3, 1, 'Brown'),
+(16, 3, 2, 'Giorgio Armani'),
+(15, 3, 2, 'Prada'),
+(14, 3, 2, 'Versace'),
+(13, 3, 2, 'Ferragamo'),
+(4, 3, 1, 'Black'),
+(3, 3, 1, 'Green'),
+(2, 3, 1, 'Blue'),
+(12, 3, 2, 'Christian dior'),
+(11, 3, 2, 'Louis vuitton'),
+(10, 3, 2, 'Chanel'),
+(9, 3, 2, 'Hermes'),
+(1, 3, 1, 'Red'),
+(17, 3, 2, 'Ermenegildo zegna');
 
 -- --------------------------------------------------------
 
@@ -3671,10 +3844,10 @@ INSERT INTO `oc_filter_description` (`filter_id`, `language_id`, `filter_group_i
 -- Table structure for table `oc_filter_group`
 --
 
-CREATE TABLE `oc_filter_group` (
+CREATE TABLE IF NOT EXISTS `oc_filter_group` (
   `filter_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_filter_group`
@@ -3690,7 +3863,7 @@ INSERT INTO `oc_filter_group` (`filter_group_id`, `sort_order`) VALUES
 -- Table structure for table `oc_filter_group_description`
 --
 
-CREATE TABLE `oc_filter_group_description` (
+CREATE TABLE IF NOT EXISTS `oc_filter_group_description` (
   `filter_group_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
@@ -3704,7 +3877,9 @@ INSERT INTO `oc_filter_group_description` (`filter_group_id`, `language_id`, `na
 (1, 2, 'Color'),
 (2, 2, 'Manufacture'),
 (1, 1, 'Color'),
-(2, 1, 'Manufacture');
+(2, 1, 'Manufacture'),
+(1, 3, 'Color'),
+(2, 3, 'Manufacture');
 
 -- --------------------------------------------------------
 
@@ -3712,13 +3887,13 @@ INSERT INTO `oc_filter_group_description` (`filter_group_id`, `language_id`, `na
 -- Table structure for table `oc_geo_zone`
 --
 
-CREATE TABLE `oc_geo_zone` (
+CREATE TABLE IF NOT EXISTS `oc_geo_zone` (
   `geo_zone_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
   `description` varchar(255) NOT NULL,
   `date_modified` datetime NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_geo_zone`
@@ -3734,12 +3909,12 @@ INSERT INTO `oc_geo_zone` (`geo_zone_id`, `name`, `description`, `date_modified`
 -- Table structure for table `oc_information`
 --
 
-CREATE TABLE `oc_information` (
+CREATE TABLE IF NOT EXISTS `oc_information` (
   `information_id` int(11) NOT NULL,
   `bottom` int(1) NOT NULL DEFAULT '0',
   `sort_order` int(3) NOT NULL DEFAULT '0',
   `status` tinyint(1) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_information`
@@ -3757,7 +3932,7 @@ INSERT INTO `oc_information` (`information_id`, `bottom`, `sort_order`, `status`
 -- Table structure for table `oc_information_description`
 --
 
-CREATE TABLE `oc_information_description` (
+CREATE TABLE IF NOT EXISTS `oc_information_description` (
   `information_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `title` varchar(64) NOT NULL,
@@ -3779,7 +3954,11 @@ INSERT INTO `oc_information_description` (`information_id`, `language_id`, `titl
 (4, 2, 'About Us', '&lt;p&gt;\r\n	About Us &amp;nbsp;ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;\r\n', 'About Us', '', ''),
 (6, 2, 'Delivery Information', '&lt;p&gt;\r\n	Delivery Information&amp;nbsp;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;/p&gt;\r\n', 'Delivery Information', '', ''),
 (3, 2, 'Privacy Policy', '&lt;p&gt;\r\n	Privacy Policy&amp;nbsp;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;/p&gt;\r\n', 'Privacy Policy', '', ''),
-(5, 2, 'Terms &amp; Conditions', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions&amp;nbsp;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;/p&gt;\r\n', 'Terms &amp; Conditions', '', '');
+(5, 2, 'Terms &amp; Conditions', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions&amp;nbsp;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;/p&gt;\r\n', 'Terms &amp; Conditions', '', ''),
+(4, 3, 'About Us', '&lt;p&gt;\r\n	About Us&amp;nbsp;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;/p&gt;\r\n', 'About Us', '', ''),
+(5, 3, 'Terms &amp; Conditions', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions&amp;nbsp;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;/p&gt;\r\n', 'Terms &amp; Conditions', '', ''),
+(3, 3, 'Privacy Policy', '&lt;p&gt;\r\n	Privacy Policy&amp;nbsp;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;/p&gt;\r\n', 'Privacy Policy', '', ''),
+(6, 3, 'Delivery Information', '&lt;p&gt;\r\n	Delivery Information&amp;nbsp;&lt;span style=&quot;line-height: 17.1428px;&quot;&gt;ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;/p&gt;\r\n', 'Delivery Information', '', '');
 
 -- --------------------------------------------------------
 
@@ -3787,7 +3966,7 @@ INSERT INTO `oc_information_description` (`information_id`, `language_id`, `titl
 -- Table structure for table `oc_information_to_layout`
 --
 
-CREATE TABLE `oc_information_to_layout` (
+CREATE TABLE IF NOT EXISTS `oc_information_to_layout` (
   `information_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `layout_id` int(11) NOT NULL
@@ -3829,7 +4008,7 @@ INSERT INTO `oc_information_to_layout` (`information_id`, `store_id`, `layout_id
 -- Table structure for table `oc_information_to_store`
 --
 
-CREATE TABLE `oc_information_to_store` (
+CREATE TABLE IF NOT EXISTS `oc_information_to_store` (
   `information_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -3870,7 +4049,7 @@ INSERT INTO `oc_information_to_store` (`information_id`, `store_id`) VALUES
 -- Table structure for table `oc_language`
 --
 
-CREATE TABLE `oc_language` (
+CREATE TABLE IF NOT EXISTS `oc_language` (
   `language_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
   `code` varchar(5) NOT NULL,
@@ -3879,15 +4058,14 @@ CREATE TABLE `oc_language` (
   `directory` varchar(32) NOT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   `status` tinyint(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_language`
 --
 
 INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `directory`, `sort_order`, `status`) VALUES
-(1, 'English', 'en-gb', 'en-US,en_US.UTF-8,en_US,en-gb,english', 'gb.png', 'english', 1, 1),
-(2, 'French', 'fr-gb', 'fr_US.UTF-8,fr_US,fr-gb,french', '', '', 1, 1);
+(3, 'Vietnamese', 'vi-vn', 'vi_VN.UTF-8,vi_VN,vi-vn,vietnamese', '', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -3895,10 +4073,10 @@ INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `di
 -- Table structure for table `oc_layout`
 --
 
-CREATE TABLE `oc_layout` (
+CREATE TABLE IF NOT EXISTS `oc_layout` (
   `layout_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_layout`
@@ -3936,13 +4114,13 @@ INSERT INTO `oc_layout` (`layout_id`, `name`) VALUES
 -- Table structure for table `oc_layout_module`
 --
 
-CREATE TABLE `oc_layout_module` (
+CREATE TABLE IF NOT EXISTS `oc_layout_module` (
   `layout_module_id` int(11) NOT NULL,
   `layout_id` int(11) NOT NULL,
   `code` varchar(64) NOT NULL,
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=809 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_layout_module`
@@ -4098,21 +4276,18 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 -- Table structure for table `oc_layout_route`
 --
 
-CREATE TABLE `oc_layout_route` (
+CREATE TABLE IF NOT EXISTS `oc_layout_route` (
   `layout_route_id` int(11) NOT NULL,
   `layout_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `route` varchar(64) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=530 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_layout_route`
 --
 
 INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `route`) VALUES
-(509, 16, 3, 'common/home'),
-(500, 15, 2, 'common/home'),
-(491, 14, 1, 'common/home'),
 (517, 1, 0, 'common/home'),
 (520, 23, 0, 'product/manufacturer'),
 (519, 4, 0, ''),
@@ -4120,28 +4295,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (518, 3, 0, 'product/category'),
 (522, 24, 0, 'product/manufacturer/%'),
 (521, 24, 0, 'product/special'),
-(524, 22, 0, 'product/product'),
-(492, 25, 1, 'product/category'),
-(494, 26, 1, 'product/product'),
-(495, 27, 1, ''),
-(496, 28, 1, 'product/manufacturer'),
-(527, 29, 1, 'product/search'),
-(526, 29, 1, 'product/manufacturer/%'),
-(525, 29, 1, 'product/special'),
-(501, 30, 2, 'product/category'),
-(502, 31, 2, ''),
-(503, 32, 2, 'product/manufacturer'),
-(504, 33, 2, 'product/special'),
-(505, 33, 2, 'product/manufacturer/%'),
-(506, 33, 2, 'product/search'),
-(528, 34, 2, 'product/product'),
-(510, 38, 3, 'product/special'),
-(511, 38, 3, 'product/manufacturer/%'),
-(512, 38, 3, 'product/search'),
-(529, 39, 3, 'product/product'),
-(514, 35, 3, 'product/category'),
-(515, 36, 3, ''),
-(516, 37, 3, 'product/manufacturer');
+(524, 22, 0, 'product/product');
 
 -- --------------------------------------------------------
 
@@ -4149,19 +4303,19 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 -- Table structure for table `oc_length_class`
 --
 
-CREATE TABLE `oc_length_class` (
+CREATE TABLE IF NOT EXISTS `oc_length_class` (
   `length_class_id` int(11) NOT NULL,
   `value` decimal(15,8) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_length_class`
 --
 
 INSERT INTO `oc_length_class` (`length_class_id`, `value`) VALUES
-(1, '1.00000000'),
-(2, '10.00000000'),
-(3, '0.39370000');
+(1, 1.00000000),
+(2, 10.00000000),
+(3, 0.39370000);
 
 -- --------------------------------------------------------
 
@@ -4169,7 +4323,7 @@ INSERT INTO `oc_length_class` (`length_class_id`, `value`) VALUES
 -- Table structure for table `oc_length_class_description`
 --
 
-CREATE TABLE `oc_length_class_description` (
+CREATE TABLE IF NOT EXISTS `oc_length_class_description` (
   `length_class_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `title` varchar(32) NOT NULL,
@@ -4183,7 +4337,10 @@ CREATE TABLE `oc_length_class_description` (
 INSERT INTO `oc_length_class_description` (`length_class_id`, `language_id`, `title`, `unit`) VALUES
 (1, 1, 'Centimeter', 'cm'),
 (2, 1, 'Millimeter', 'mm'),
-(3, 1, 'Inch', 'in');
+(3, 1, 'Inch', 'in'),
+(1, 3, 'Centimeter', 'cm'),
+(2, 3, 'Millimeter', 'mm'),
+(3, 3, 'Inch', 'in');
 
 -- --------------------------------------------------------
 
@@ -4191,7 +4348,7 @@ INSERT INTO `oc_length_class_description` (`length_class_id`, `language_id`, `ti
 -- Table structure for table `oc_location`
 --
 
-CREATE TABLE `oc_location` (
+CREATE TABLE IF NOT EXISTS `oc_location` (
   `location_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
   `address` text NOT NULL,
@@ -4209,12 +4366,12 @@ CREATE TABLE `oc_location` (
 -- Table structure for table `oc_manufacturer`
 --
 
-CREATE TABLE `oc_manufacturer` (
+CREATE TABLE IF NOT EXISTS `oc_manufacturer` (
   `manufacturer_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_manufacturer`
@@ -4234,7 +4391,7 @@ INSERT INTO `oc_manufacturer` (`manufacturer_id`, `name`, `image`, `sort_order`)
 -- Table structure for table `oc_manufacturer_to_store`
 --
 
-CREATE TABLE `oc_manufacturer_to_store` (
+CREATE TABLE IF NOT EXISTS `oc_manufacturer_to_store` (
   `manufacturer_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -4275,7 +4432,7 @@ INSERT INTO `oc_manufacturer_to_store` (`manufacturer_id`, `store_id`) VALUES
 -- Table structure for table `oc_marketing`
 --
 
-CREATE TABLE `oc_marketing` (
+CREATE TABLE IF NOT EXISTS `oc_marketing` (
   `marketing_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
   `description` text NOT NULL,
@@ -4290,7 +4447,7 @@ CREATE TABLE `oc_marketing` (
 -- Table structure for table `oc_menu`
 --
 
-CREATE TABLE `oc_menu` (
+CREATE TABLE IF NOT EXISTS `oc_menu` (
   `menu_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `type` varchar(6) NOT NULL,
@@ -4305,7 +4462,7 @@ CREATE TABLE `oc_menu` (
 -- Table structure for table `oc_menu_description`
 --
 
-CREATE TABLE `oc_menu_description` (
+CREATE TABLE IF NOT EXISTS `oc_menu_description` (
   `menu_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
@@ -4317,7 +4474,7 @@ CREATE TABLE `oc_menu_description` (
 -- Table structure for table `oc_menu_module`
 --
 
-CREATE TABLE `oc_menu_module` (
+CREATE TABLE IF NOT EXISTS `oc_menu_module` (
   `menu_module_id` int(11) NOT NULL,
   `menu_id` int(11) NOT NULL,
   `code` varchar(64) NOT NULL,
@@ -4330,7 +4487,7 @@ CREATE TABLE `oc_menu_module` (
 -- Table structure for table `oc_modification`
 --
 
-CREATE TABLE `oc_modification` (
+CREATE TABLE IF NOT EXISTS `oc_modification` (
   `modification_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
   `code` varchar(64) NOT NULL,
@@ -4340,7 +4497,7 @@ CREATE TABLE `oc_modification` (
   `xml` mediumtext NOT NULL,
   `status` tinyint(1) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_modification`
@@ -4361,12 +4518,12 @@ INSERT INTO `oc_modification` (`modification_id`, `name`, `code`, `author`, `ver
 -- Table structure for table `oc_module`
 --
 
-CREATE TABLE `oc_module` (
+CREATE TABLE IF NOT EXISTS `oc_module` (
   `module_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=139 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_module`
@@ -4434,7 +4591,7 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 -- Table structure for table `oc_ocslideshow`
 --
 
-CREATE TABLE `oc_ocslideshow` (
+CREATE TABLE IF NOT EXISTS `oc_ocslideshow` (
   `ocslideshow_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
   `status` tinyint(1) NOT NULL,
@@ -4444,7 +4601,7 @@ CREATE TABLE `oc_ocslideshow` (
   `nextback` tinyint(1) DEFAULT NULL,
   `contrl` tinyint(1) DEFAULT NULL,
   `effect` varchar(64) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_ocslideshow`
@@ -4462,7 +4619,7 @@ INSERT INTO `oc_ocslideshow` (`ocslideshow_id`, `name`, `status`, `auto`, `delay
 -- Table structure for table `oc_ocslideshow_image`
 --
 
-CREATE TABLE `oc_ocslideshow_image` (
+CREATE TABLE IF NOT EXISTS `oc_ocslideshow_image` (
   `ocslideshow_image_id` int(11) NOT NULL,
   `ocslideshow_id` int(11) NOT NULL,
   `link` varchar(255) NOT NULL,
@@ -4470,7 +4627,7 @@ CREATE TABLE `oc_ocslideshow_image` (
   `banner_store` varchar(110) DEFAULT '0',
   `image` varchar(255) NOT NULL,
   `small_image` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=238 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_ocslideshow_image`
@@ -4492,7 +4649,7 @@ INSERT INTO `oc_ocslideshow_image` (`ocslideshow_image_id`, `ocslideshow_id`, `l
 -- Table structure for table `oc_ocslideshow_image_description`
 --
 
-CREATE TABLE `oc_ocslideshow_image_description` (
+CREATE TABLE IF NOT EXISTS `oc_ocslideshow_image_description` (
   `ocslideshow_image_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `ocslideshow_id` int(11) NOT NULL,
@@ -4529,11 +4686,11 @@ INSERT INTO `oc_ocslideshow_image_description` (`ocslideshow_image_id`, `languag
 -- Table structure for table `oc_option`
 --
 
-CREATE TABLE `oc_option` (
+CREATE TABLE IF NOT EXISTS `oc_option` (
   `option_id` int(11) NOT NULL,
   `type` varchar(32) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_option`
@@ -4558,7 +4715,7 @@ INSERT INTO `oc_option` (`option_id`, `type`, `sort_order`) VALUES
 -- Table structure for table `oc_option_description`
 --
 
-CREATE TABLE `oc_option_description` (
+CREATE TABLE IF NOT EXISTS `oc_option_description` (
   `option_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL
@@ -4579,7 +4736,18 @@ INSERT INTO `oc_option_description` (`option_id`, `language_id`, `name`) VALUES
 (9, 1, 'Time'),
 (10, 1, 'Date &amp; Time'),
 (12, 1, 'Delivery Date'),
-(11, 1, 'Size');
+(11, 1, 'Size'),
+(1, 3, 'Radio'),
+(2, 3, 'Checkbox'),
+(4, 3, 'Text'),
+(6, 3, 'Textarea'),
+(8, 3, 'Date'),
+(7, 3, 'File'),
+(5, 3, 'Select'),
+(9, 3, 'Time'),
+(10, 3, 'Date &amp; Time'),
+(12, 3, 'Delivery Date'),
+(11, 3, 'Size');
 
 -- --------------------------------------------------------
 
@@ -4587,12 +4755,12 @@ INSERT INTO `oc_option_description` (`option_id`, `language_id`, `name`) VALUES
 -- Table structure for table `oc_option_value`
 --
 
-CREATE TABLE `oc_option_value` (
+CREATE TABLE IF NOT EXISTS `oc_option_value` (
   `option_value_id` int(11) NOT NULL,
   `option_id` int(11) NOT NULL,
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_option_value`
@@ -4620,7 +4788,7 @@ INSERT INTO `oc_option_value` (`option_value_id`, `option_id`, `image`, `sort_or
 -- Table structure for table `oc_option_value_description`
 --
 
-CREATE TABLE `oc_option_value_description` (
+CREATE TABLE IF NOT EXISTS `oc_option_value_description` (
   `option_value_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `option_id` int(11) NOT NULL,
@@ -4645,7 +4813,21 @@ INSERT INTO `oc_option_value_description` (`option_value_id`, `language_id`, `op
 (24, 1, 2, 'Checkbox 2'),
 (48, 1, 11, 'Large'),
 (47, 1, 11, 'Medium'),
-(46, 1, 11, 'Small');
+(46, 1, 11, 'Small'),
+(43, 3, 1, 'Large'),
+(32, 3, 1, 'Small'),
+(45, 3, 2, 'Checkbox 4'),
+(44, 3, 2, 'Checkbox 3'),
+(31, 3, 1, 'Medium'),
+(42, 3, 5, 'Yellow'),
+(41, 3, 5, 'Green'),
+(39, 3, 5, 'Red'),
+(40, 3, 5, 'Blue'),
+(23, 3, 2, 'Checkbox 1'),
+(24, 3, 2, 'Checkbox 2'),
+(48, 3, 11, 'Large'),
+(47, 3, 11, 'Medium'),
+(46, 3, 11, 'Small');
 
 -- --------------------------------------------------------
 
@@ -4653,7 +4835,7 @@ INSERT INTO `oc_option_value_description` (`option_value_id`, `language_id`, `op
 -- Table structure for table `oc_order`
 --
 
-CREATE TABLE `oc_order` (
+CREATE TABLE IF NOT EXISTS `oc_order` (
   `order_id` int(11) NOT NULL,
   `invoice_no` int(11) NOT NULL DEFAULT '0',
   `invoice_prefix` varchar(26) NOT NULL,
@@ -4715,18 +4897,7 @@ CREATE TABLE `oc_order` (
   `accept_language` varchar(255) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_order`
---
-
-INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `custom_field`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_country`, `payment_country_id`, `payment_zone`, `payment_zone_id`, `payment_address_format`, `payment_custom_field`, `payment_method`, `payment_code`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_country`, `shipping_country_id`, `shipping_zone`, `shipping_zone_id`, `shipping_address_format`, `shipping_custom_field`, `shipping_method`, `shipping_code`, `comment`, `total`, `order_status_id`, `affiliate_id`, `commission`, `marketing_id`, `tracking`, `language_id`, `currency_id`, `currency_code`, `currency_value`, `ip`, `forwarded_ip`, `user_agent`, `accept_language`, `date_added`, `date_modified`) VALUES
-(1, 0, 'INV-2013-00', 0, 'Genius 1 - Mega Shop Responsive Opencart Theme', 'http://tt_genius1.com/', 1, 1, 'minh', 'nguyễn', 'demo@towerthemes.com', '0123456798', '', '', 'minh', 'nguyễn', '', '15-12 t05 timecity', '', 'hai ba trung', '084', 'United Kingdom', 222, 'Cambridgeshire', 3525, '', '[]', 'Cash On Delivery', 'cod', 'minh', 'nguyễn', '', '15-12 t05 timecity', '', 'hai ba trung', '084', 'United Kingdom', 222, 'Cambridgeshire', 3525, '', '[]', 'Flat Shipping Rate', 'flat.flat', '', '950.1880', 1, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36', 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2', '2016-12-09 11:13:58', '2016-12-09 11:14:00'),
-(2, 0, 'INV-2013-00', 1, 'Genius 2 - Mega Shop Responsive Opencart Theme ', 'http://tt_genius2.com/', 1, 1, 'minh', 'nguyễn', 'demo@towerthemes.com', '0123456798', '', '', 'minh', 'nguyễn', '', '15-12 t05 timecity', '', 'hai ba trung', '084', 'United Kingdom', 222, 'Cambridgeshire', 3525, '', '[]', 'Cash On Delivery', 'cod', 'minh', 'nguyễn', '', '15-12 t05 timecity', '', 'hai ba trung', '084', 'United Kingdom', 222, 'Cambridgeshire', 3525, '', '[]', 'Flat Shipping Rate', 'flat.flat', '', '853.1880', 1, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36', 'vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2', '2016-12-19 15:46:44', '2016-12-19 15:46:46'),
-(3, 0, 'INV-2013-00', 0, 'Grand 1 - Mega Shop Responsive Opencart Theme', 'http://tt_grand1.com/', 2, 1, 'demo', 'plaza', 'demo@plazathemes.com', '1234567890', '', '', 'demo', 'plaza', '', 'plaza', 'plaza', 'plaza', 'plaza', 'United Kingdom', 222, 'Berkshire', 3519, '', '[]', 'Cash On Delivery', 'cod', 'demo', 'plaza', '', 'plaza', 'plaza', 'plaza', 'plaza', 'United Kingdom', 222, 'Berkshire', 3519, '', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1868.0000', 1, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'en-US,en;q=0.8', '2017-02-28 16:49:27', '2017-02-28 16:49:29'),
-(4, 0, 'INV-2013-00', 1, 'Grand 2 - Mega Shop Responsive Opencart Theme ', 'http://tt_grand2.com/', 3, 1, 'plaza', 'themes', 'demo1@towerthemes.com', '1234567890', '', '', 'plaza', 'themes', '', 'plaza', '', 'plaza', 'plaza1234', 'United Kingdom', 222, 'Berkshire', 3519, '', '[]', 'Cash On Delivery', 'cod', 'plaza', 'themes', '', 'plaza', '', 'plaza', 'plaza1234', 'United Kingdom', 222, 'Berkshire', 3519, '', '[]', 'Flat Shipping Rate', 'flat.flat', '', '258.0000', 1, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'en-US,en;q=0.8', '2017-03-13 15:16:32', '2017-03-13 15:16:34'),
-(5, 0, 'INV-2013-00', 3, 'Grand 4 - Mega Shop Responsive Opencart Theme ', 'http://tt_grand4.com/', 2, 1, 'demo', 'plaza', 'demo@plazathemes.com', '1234567890', '', '', 'demo', 'plaza', '', 'plaza', 'plaza', 'plaza', 'plaza', 'United Kingdom', 222, 'Berkshire', 3519, '', '[]', 'Cash On Delivery', 'cod', 'demo', 'plaza', '', 'plaza', 'plaza', 'plaza', 'plaza', 'United Kingdom', 222, 'Berkshire', 3519, '', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1048.0000', 1, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '127.0.0.1', '', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'en-US,en;q=0.8', '2017-03-20 09:28:15', '2017-03-20 09:28:17');
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -4734,7 +4905,7 @@ INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, 
 -- Table structure for table `oc_order_custom_field`
 --
 
-CREATE TABLE `oc_order_custom_field` (
+CREATE TABLE IF NOT EXISTS `oc_order_custom_field` (
   `order_custom_field_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
   `custom_field_id` int(11) NOT NULL,
@@ -4751,25 +4922,14 @@ CREATE TABLE `oc_order_custom_field` (
 -- Table structure for table `oc_order_history`
 --
 
-CREATE TABLE `oc_order_history` (
+CREATE TABLE IF NOT EXISTS `oc_order_history` (
   `order_history_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
   `order_status_id` int(11) NOT NULL,
   `notify` tinyint(1) NOT NULL DEFAULT '0',
   `comment` text NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_order_history`
---
-
-INSERT INTO `oc_order_history` (`order_history_id`, `order_id`, `order_status_id`, `notify`, `comment`, `date_added`) VALUES
-(1, 1, 1, 0, '', '2016-12-09 11:14:00'),
-(2, 2, 1, 0, '', '2016-12-19 15:46:46'),
-(3, 3, 1, 0, '', '2017-02-28 16:49:29'),
-(4, 4, 1, 0, '', '2017-03-13 15:16:34'),
-(5, 5, 1, 0, '', '2017-03-20 09:28:17');
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -4777,7 +4937,7 @@ INSERT INTO `oc_order_history` (`order_history_id`, `order_id`, `order_status_id
 -- Table structure for table `oc_order_option`
 --
 
-CREATE TABLE `oc_order_option` (
+CREATE TABLE IF NOT EXISTS `oc_order_option` (
   `order_option_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
   `order_product_id` int(11) NOT NULL,
@@ -4786,24 +4946,7 @@ CREATE TABLE `oc_order_option` (
   `name` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `type` varchar(32) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_order_option`
---
-
-INSERT INTO `oc_order_option` (`order_option_id`, `order_id`, `order_product_id`, `product_option_id`, `product_option_value_id`, `name`, `value`, `type`) VALUES
-(1, 1, 2, 236, 28, 'Size', 'Medium', 'select'),
-(2, 2, 6, 230, 17, 'Radio', 'Small', 'radio'),
-(3, 2, 6, 233, 24, 'Checkbox', 'Checkbox 1', 'checkbox'),
-(4, 2, 6, 229, 0, 'Text', 'test', 'text'),
-(5, 2, 6, 231, 20, 'Select', 'Blue', 'select'),
-(6, 2, 6, 232, 0, 'Textarea', 'sdhjk,mdsfdfsdfsdfsdfdsfdsfsdfsdfdsfsdfsdf', 'textarea'),
-(7, 2, 6, 227, 0, 'File', '754bec35e5aeb17e903b8cd22d513612e66ec950', 'file'),
-(8, 2, 6, 228, 0, 'Date', '2011-02-21', 'date'),
-(9, 2, 6, 235, 0, 'Time', '22:26', 'time'),
-(10, 2, 6, 234, 0, 'Date &amp; Time', '2011-02-22 22:25', 'datetime'),
-(11, 5, 20, 226, 15, 'Select', 'Red', 'select');
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -4811,7 +4954,7 @@ INSERT INTO `oc_order_option` (`order_option_id`, `order_id`, `order_product_id`
 -- Table structure for table `oc_order_product`
 --
 
-CREATE TABLE `oc_order_product` (
+CREATE TABLE IF NOT EXISTS `oc_order_product` (
   `order_product_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -4822,34 +4965,7 @@ CREATE TABLE `oc_order_product` (
   `total` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `tax` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `reward` int(8) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_order_product`
---
-
-INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `product_id`, `name`, `model`, `quantity`, `price`, `total`, `tax`, `reward`) VALUES
-(1, 1, 63, 'Pedefinealm', 'Product 2d', 1, '279.9900', '279.9900', '57.9980', 0),
-(2, 1, 64, 'Pogedonealm', 'Product 8s', 1, '110.0000', '110.0000', '24.0000', 0),
-(3, 1, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '22.2000', 0),
-(4, 1, 34, 'iPod Shuffle', 'Product 7', 1, '100.0000', '100.0000', '22.0000', 0),
-(5, 1, 61, 'Mapofessons', 'Product 18d', 1, '225.0000', '225.0000', '0.0000', 800),
-(6, 2, 60, 'Apple HD Display', 'Product 15s', 2, '123.0000', '246.0000', '26.6000', 200),
-(7, 2, 29, 'Palm Treo Pro', 'Product 2', 1, '279.9900', '279.9900', '57.9980', 0),
-(8, 2, 36, 'iPod Nano', 'Product 9', 1, '70.0000', '70.0000', '16.0000', 0),
-(9, 2, 32, 'iPod Touch', 'Product 5', 1, '100.0000', '100.0000', '22.0000', 0),
-(10, 3, 28, 'Etiam Gravida', '5', 1, '320.0000', '320.0000', '0.0000', 400),
-(11, 3, 41, 'Fusce Aliquam', '6', 1, '280.0000', '280.0000', '0.0000', 0),
-(12, 3, 54, 'Letraset Sheets', '7', 1, '250.0000', '250.0000', '0.0000', 0),
-(13, 3, 40, 'Lorem Ipsum', '8', 1, '340.0000', '340.0000', '0.0000', 0),
-(14, 3, 48, 'Nunc Facilisis', '10', 1, '120.0000', '120.0000', '0.0000', 0),
-(15, 3, 36, 'Primis In Faucibus', '11', 1, '150.0000', '150.0000', '0.0000', 0),
-(16, 3, 34, 'Proin Lectus Ipsum', '12', 1, '400.0000', '400.0000', '0.0000', 0),
-(17, 4, 54, 'Letraset Sheets', '7', 1, '250.0000', '250.0000', '0.0000', 0),
-(18, 5, 36, 'Primis In Faucibus', '11', 1, '150.0000', '150.0000', '0.0000', 0),
-(19, 5, 43, 'Lorem Ipsum Passages', '9', 1, '400.0000', '400.0000', '0.0000', 600),
-(20, 5, 30, 'Donec Ac Tempus', '3', 1, '90.0000', '90.0000', '0.0000', 200),
-(21, 5, 34, 'Proin Lectus Ipsum', '12', 1, '400.0000', '400.0000', '0.0000', 0);
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -4857,7 +4973,7 @@ INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `product_id`, `n
 -- Table structure for table `oc_order_recurring`
 --
 
-CREATE TABLE `oc_order_recurring` (
+CREATE TABLE IF NOT EXISTS `oc_order_recurring` (
   `order_recurring_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
   `reference` varchar(255) NOT NULL,
@@ -4886,7 +5002,7 @@ CREATE TABLE `oc_order_recurring` (
 -- Table structure for table `oc_order_recurring_transaction`
 --
 
-CREATE TABLE `oc_order_recurring_transaction` (
+CREATE TABLE IF NOT EXISTS `oc_order_recurring_transaction` (
   `order_recurring_transaction_id` int(11) NOT NULL,
   `order_recurring_id` int(11) NOT NULL,
   `reference` varchar(255) NOT NULL,
@@ -4901,11 +5017,11 @@ CREATE TABLE `oc_order_recurring_transaction` (
 -- Table structure for table `oc_order_status`
 --
 
-CREATE TABLE `oc_order_status` (
+CREATE TABLE IF NOT EXISTS `oc_order_status` (
   `order_status_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_order_status`
@@ -4925,7 +5041,21 @@ INSERT INTO `oc_order_status` (`order_status_id`, `language_id`, `name`) VALUES
 (1, 1, 'Pending'),
 (16, 1, 'Voided'),
 (15, 1, 'Processed'),
-(14, 1, 'Expired');
+(14, 1, 'Expired'),
+(2, 3, 'Processing'),
+(3, 3, 'Shipped'),
+(7, 3, 'Canceled'),
+(5, 3, 'Complete'),
+(8, 3, 'Denied'),
+(9, 3, 'Canceled Reversal'),
+(10, 3, 'Failed'),
+(11, 3, 'Refunded'),
+(12, 3, 'Reversed'),
+(13, 3, 'Chargeback'),
+(1, 3, 'Pending'),
+(16, 3, 'Voided'),
+(15, 3, 'Processed'),
+(14, 3, 'Expired');
 
 -- --------------------------------------------------------
 
@@ -4933,45 +5063,14 @@ INSERT INTO `oc_order_status` (`order_status_id`, `language_id`, `name`) VALUES
 -- Table structure for table `oc_order_total`
 --
 
-CREATE TABLE `oc_order_total` (
+CREATE TABLE IF NOT EXISTS `oc_order_total` (
   `order_total_id` int(10) NOT NULL,
   `order_id` int(11) NOT NULL,
   `code` varchar(32) NOT NULL,
   `title` varchar(255) NOT NULL,
   `value` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_order_total`
---
-
-INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `value`, `sort_order`) VALUES
-(1, 1, 'sub_total', 'Sub-Total', '815.9900', 1),
-(2, 1, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(3, 1, 'tax', 'Eco Tax (-2.00)', '10.0000', 5),
-(4, 1, 'tax', 'VAT (20%)', '119.1980', 5),
-(5, 1, 'total', 'Total', '950.1880', 9),
-(6, 2, 'sub_total', 'Sub-Total', '695.9900', 1),
-(7, 2, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(8, 2, 'tax', 'Eco Tax (-2.00)', '12.0000', 5),
-(9, 2, 'tax', 'VAT (20%)', '140.1980', 5),
-(10, 2, 'total', 'Total', '853.1880', 9),
-(11, 3, 'sub_total', 'Sub-Total', '1860.0000', 1),
-(12, 3, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(13, 3, 'tax', 'Eco Tax (-2.00)', '2.0000', 5),
-(14, 3, 'tax', 'VAT (20%)', '1.0000', 5),
-(15, 3, 'total', 'Total', '1868.0000', 9),
-(16, 4, 'sub_total', 'Sub-Total', '250.0000', 1),
-(17, 4, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(18, 4, 'tax', 'Eco Tax (-2.00)', '2.0000', 5),
-(19, 4, 'tax', 'VAT (20%)', '1.0000', 5),
-(20, 4, 'total', 'Total', '258.0000', 9),
-(21, 5, 'sub_total', 'Sub-Total', '1040.0000', 1),
-(22, 5, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(23, 5, 'tax', 'Eco Tax (-2.00)', '2.0000', 5),
-(24, 5, 'tax', 'VAT (20%)', '1.0000', 5),
-(25, 5, 'total', 'Total', '1048.0000', 9);
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -4979,7 +5078,7 @@ INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `va
 -- Table structure for table `oc_order_voucher`
 --
 
-CREATE TABLE `oc_order_voucher` (
+CREATE TABLE IF NOT EXISTS `oc_order_voucher` (
   `order_voucher_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
   `voucher_id` int(11) NOT NULL,
@@ -5000,7 +5099,7 @@ CREATE TABLE `oc_order_voucher` (
 -- Table structure for table `oc_product`
 --
 
-CREATE TABLE `oc_product` (
+CREATE TABLE IF NOT EXISTS `oc_product` (
   `product_id` int(11) NOT NULL,
   `model` varchar(64) NOT NULL,
   `sku` varchar(64) NOT NULL,
@@ -5032,27 +5131,27 @@ CREATE TABLE `oc_product` (
   `viewed` int(5) NOT NULL DEFAULT '0',
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product`
 --
 
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`) VALUES
-(28, '5', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/6.jpg', 8, 1, '320.0000', 200, 0, '2017-02-27', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 4, '2009-02-03 16:06:50', '2017-03-21 09:27:32'),
-(30, '3', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/10.jpg', 9, 1, '330.0000', 0, 0, '2017-02-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 19, '2009-02-03 16:59:00', '2017-03-21 09:25:20'),
-(32, '13', '', '', '', '', '', '', '', 999999, 7, 'catalog/demo/product/1/14.jpg', 8, 1, '380.0000', 0, 0, '2017-02-27', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 4, '2009-02-03 17:07:26', '2017-03-21 09:34:58'),
-(34, '12', '', '', '', '', '', '', '', 999997, 7, 'catalog/demo/product/1/23.jpg', 8, 1, '400.0000', 0, 0, '2017-02-27', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 4, '2009-02-03 18:07:54', '2017-03-21 09:34:00'),
-(36, '11', '', '', '', '', '', '', '', 999997, 7, 'catalog/demo/product/1/18.jpg', 8, 0, '330.0000', 100, 0, '2017-02-27', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 1, '2009-02-03 18:09:19', '2017-03-21 09:33:02'),
-(40, '8', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/21.jpg', 8, 1, '340.0000', 0, 0, '2017-02-27', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 3, '2009-02-03 21:07:12', '2017-03-01 10:30:18'),
-(41, '6', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/14.jpg', 8, 1, '280.0000', 0, 0, '2017-02-27', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 3, '2009-02-03 21:07:26', '2017-03-21 09:28:42'),
-(42, '1', '', '', '', '', '', '', '', 99999, 7, 'catalog/demo/product/1/1.jpg', 8, 1, '300.0000', 400, 0, '2017-02-27', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 0, 1, 0, 1, 88, '2009-02-03 21:07:37', '2017-03-21 09:22:47'),
-(43, '9', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/18.jpg', 8, 0, '400.0000', 0, 0, '2017-02-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 16, '2009-02-03 21:07:49', '2017-03-21 09:30:48'),
-(44, '14', '', '', '', '', '', '', '', 999999, 7, 'catalog/demo/product/2/1.jpg', 8, 1, '510.0000', 0, 0, '2017-02-27', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 19, '2009-02-03 21:08:00', '2017-03-21 09:36:02'),
-(47, '4', '', '', '', '', '', '', '', 999999, 7, 'catalog/demo/product/1/13.jpg', 7, 1, '230.0000', 400, 0, '2017-02-27', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, 15, '2009-02-03 21:08:40', '2017-03-21 09:26:30'),
-(48, '10', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/24.jpg', 8, 1, '330.0000', 0, 0, '2017-02-27', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 27, '2009-02-08 17:21:51', '2017-03-21 09:31:54'),
-(54, '7', '', '', '', '', '', '', '', 999997, 7, 'catalog/demo/product/1/2.jpg', 8, 1, '250.0000', 0, 0, '2017-02-27', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 20, '2016-07-13 10:03:52', '2017-03-21 09:29:45'),
-(60, '2', '', '', '', '', '', '', '', 999999, 7, 'catalog/demo/product/1/8.jpg', 8, 1, '100.0000', 400, 0, '2017-02-27', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 1, 0, 1, 30, '2016-07-29 17:20:30', '2017-03-21 09:24:05');
+(28, '5', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/6.jpg', 8, 1, 320.0000, 200, 0, '2017-02-27', 146.40000000, 2, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 16:06:50', '2017-03-21 09:27:32'),
+(30, '3', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/10.jpg', 9, 1, 330.0000, 0, 0, '2017-02-27', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 16:59:00', '2017-03-21 09:25:20'),
+(32, '13', '', '', '', '', '', '', '', 999999, 7, 'catalog/demo/product/1/14.jpg', 8, 1, 380.0000, 0, 0, '2017-02-27', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 17:07:26', '2017-03-21 09:34:58'),
+(34, '12', '', '', '', '', '', '', '', 999997, 7, 'catalog/demo/product/1/23.jpg', 8, 1, 400.0000, 0, 0, '2017-02-27', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 18:07:54', '2017-03-21 09:34:00'),
+(36, '11', '', '', '', '', '', '', '', 999997, 7, 'catalog/demo/product/1/18.jpg', 8, 0, 330.0000, 100, 0, '2017-02-27', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 18:09:19', '2017-03-21 09:33:02'),
+(40, '8', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/21.jpg', 8, 1, 340.0000, 0, 0, '2017-02-27', 10.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:12', '2017-03-01 10:30:18'),
+(41, '6', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/14.jpg', 8, 1, 280.0000, 0, 0, '2017-02-27', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:26', '2017-03-21 09:28:42'),
+(42, '1', '', '', '', '', '', '', '', 99999, 7, 'catalog/demo/product/1/1.jpg', 8, 1, 300.0000, 400, 0, '2017-02-27', 12.50000000, 1, 1.00000000, 2.00000000, 3.00000000, 1, 0, 1, 0, 1, 0, '2009-02-03 21:07:37', '2017-03-21 09:22:47'),
+(43, '9', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/18.jpg', 8, 0, 400.0000, 0, 0, '2017-02-27', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 21:07:49', '2017-03-21 09:30:48'),
+(44, '14', '', '', '', '', '', '', '', 999999, 7, 'catalog/demo/product/2/1.jpg', 8, 1, 510.0000, 0, 0, '2017-02-27', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:00', '2017-03-21 09:36:02'),
+(47, '4', '', '', '', '', '', '', '', 999999, 7, 'catalog/demo/product/1/13.jpg', 7, 1, 230.0000, 400, 0, '2017-02-27', 1.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 0, 1, 0, 1, 0, '2009-02-03 21:08:40', '2017-03-21 09:26:30'),
+(48, '10', '', '', '', '', '', '', '', 999998, 7, 'catalog/demo/product/1/24.jpg', 8, 1, 330.0000, 0, 0, '2017-02-27', 1.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-08 17:21:51', '2017-03-21 09:31:54'),
+(54, '7', '', '', '', '', '', '', '', 999997, 7, 'catalog/demo/product/1/2.jpg', 8, 1, 250.0000, 0, 0, '2017-02-27', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2016-07-13 10:03:52', '2017-03-21 09:29:45'),
+(60, '2', '', '', '', '', '', '', '', 999999, 7, 'catalog/demo/product/1/8.jpg', 8, 1, 100.0000, 400, 0, '2017-02-27', 12.50000000, 1, 1.00000000, 2.00000000, 3.00000000, 1, 1, 1, 0, 1, 0, '2016-07-29 17:20:30', '2017-03-21 09:24:05');
 
 -- --------------------------------------------------------
 
@@ -5060,7 +5159,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 -- Table structure for table `oc_product_attribute`
 --
 
-CREATE TABLE `oc_product_attribute` (
+CREATE TABLE IF NOT EXISTS `oc_product_attribute` (
   `product_id` int(11) NOT NULL,
   `attribute_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -5083,7 +5182,13 @@ INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`,
 (43, 4, 2, '8gb'),
 (60, 3, 2, ''),
 (47, 2, 1, '4'),
-(47, 4, 2, '');
+(47, 4, 2, ''),
+(43, 4, 3, '8gb'),
+(42, 3, 3, '100mhz'),
+(47, 4, 3, '16GB'),
+(43, 2, 3, '1'),
+(60, 3, 3, '100mhz'),
+(47, 2, 3, '4');
 
 -- --------------------------------------------------------
 
@@ -5091,7 +5196,7 @@ INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`,
 -- Table structure for table `oc_product_description`
 --
 
-CREATE TABLE `oc_product_description` (
+CREATE TABLE IF NOT EXISTS `oc_product_description` (
   `product_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -5134,7 +5239,22 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (47, 2, 'Donec Non Est', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Donec Non Est', '', ''),
 (41, 2, 'Fusce Aliquam', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Fusce Aliquam', '', ''),
 (54, 1, 'Letraset Sheets', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Letraset Sheets', '', ''),
-(54, 2, 'Letraset Sheets', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Letraset Sheets', '', '');
+(54, 2, 'Letraset Sheets', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Letraset Sheets', '', ''),
+(28, 3, 'Etiam Gravida', '&lt;p&gt;\r\n	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&amp;quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Processor Qualcomm&amp;reg; MSM 7201A&amp;trade; 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows Mobile&amp;reg; 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;\r\n		3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Device Control via HTC TouchFLO&amp;trade; 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;\r\n		GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Bluetooth&amp;reg; 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wi-Fi&amp;reg;: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HTC ExtUSB&amp;trade; (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;\r\n		40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Expansion Slot: microSD&amp;trade; memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', 'Etiam Gravida', '', ''),
+(36, 3, 'Primis In Faucibus', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Video in your pocket.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Sleek and colorful.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		With an anodized aluminum and polished stainless steel enclosure and a choice of five colors, iPod nano is dressed to impress.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;iTunes.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Available as a free download, iTunes makes it easy to browse and buy millions of songs, movies, TV shows, audiobooks, and games and download free podcasts all at the iTunes Store. And you can import your own music, manage your whole media library, and sync your iPod or iPhone with ease.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', 'Primis In Faucibus', '', ''),
+(47, 3, 'Donec Non Est', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Donec Non Est', '', ''),
+(41, 3, 'Fusce Aliquam', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Fusce Aliquam', '', ''),
+(34, 3, 'Proin Lectus Ipsum', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Proin Lectus Ipsum', '', '');
+INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+(42, 3, 'Accumsan Elit', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Accumsan Elit', '', ''),
+(40, 3, 'Lorem Ipsum', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Lorem Ipsum', '', ''),
+(48, 3, 'Nunc Facilisis', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'Nunc Facilisis', '', ''),
+(32, 3, 'Quisque In Arcu', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Quisque In Arcu', '', ''),
+(43, 3, 'Lorem Ipsum Passages', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', 'Lorem Ipsum Passages', '', ''),
+(44, 3, 'Ras Neque Metus', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Ras Neque Metus', '', ''),
+(30, 3, 'Donec Ac Tempus', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Donec Ac Tempus', '', ''),
+(60, 3, 'Aliquam Consequat', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Aliquam Consequat', '', ''),
+(54, 3, 'Letraset Sheets', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Letraset Sheets', '', '');
 
 -- --------------------------------------------------------
 
@@ -5142,7 +5262,7 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 -- Table structure for table `oc_product_discount`
 --
 
-CREATE TABLE `oc_product_discount` (
+CREATE TABLE IF NOT EXISTS `oc_product_discount` (
   `product_discount_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
@@ -5159,7 +5279,7 @@ CREATE TABLE `oc_product_discount` (
 -- Table structure for table `oc_product_filter`
 --
 
-CREATE TABLE `oc_product_filter` (
+CREATE TABLE IF NOT EXISTS `oc_product_filter` (
   `product_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -5404,13 +5524,13 @@ INSERT INTO `oc_product_filter` (`product_id`, `filter_id`) VALUES
 -- Table structure for table `oc_product_image`
 --
 
-CREATE TABLE `oc_product_image` (
+CREATE TABLE IF NOT EXISTS `oc_product_image` (
   `product_image_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   `is_rotator` tinyint(1) DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3530 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product_image`
@@ -5481,13 +5601,13 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 -- Table structure for table `oc_product_option`
 --
 
-CREATE TABLE `oc_product_option` (
+CREATE TABLE IF NOT EXISTS `oc_product_option` (
   `product_option_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `option_id` int(11) NOT NULL,
   `value` text NOT NULL,
   `required` tinyint(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=237 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product_option`
@@ -5521,7 +5641,7 @@ INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`,
 -- Table structure for table `oc_product_option_value`
 --
 
-CREATE TABLE `oc_product_option_value` (
+CREATE TABLE IF NOT EXISTS `oc_product_option_value` (
   `product_option_value_id` int(11) NOT NULL,
   `product_option_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -5535,37 +5655,37 @@ CREATE TABLE `oc_product_option_value` (
   `points_prefix` varchar(1) NOT NULL,
   `weight` decimal(15,8) NOT NULL,
   `weight_prefix` varchar(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product_option_value`
 --
 
 INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
-(7, 218, 42, 1, 43, 300, 1, '30.0000', '+', 3, '+', '30.00000000', '+'),
-(16, 226, 30, 5, 40, 4, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(15, 226, 30, 5, 39, 1, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(5, 218, 42, 1, 32, 94, 1, '10.0000', '+', 1, '+', '10.00000000', '+'),
-(6, 218, 42, 1, 31, 146, 1, '20.0000', '+', 2, '-', '20.00000000', '+'),
-(2, 217, 42, 5, 42, 200, 1, '2.0000', '+', 0, '+', '2.00000000', '+'),
-(27, 233, 60, 2, 44, 2696, 1, '30.0000', '+', 0, '+', '30.00000000', '+'),
-(26, 233, 60, 2, 45, 3998, 1, '40.0000', '+', 0, '+', '40.00000000', '+'),
-(20, 231, 60, 5, 40, 300, 0, '3.0000', '+', 0, '+', '3.00000000', '+'),
-(21, 231, 60, 5, 41, 100, 0, '1.0000', '+', 0, '+', '1.00000000', '+'),
-(23, 231, 60, 5, 42, 200, 1, '2.0000', '+', 0, '+', '2.00000000', '+'),
-(24, 233, 60, 2, 23, 44, 1, '10.0000', '+', 0, '+', '10.00000000', '+'),
-(25, 233, 60, 2, 24, 194, 1, '20.0000', '+', 0, '+', '20.00000000', '+'),
-(3, 217, 42, 5, 40, 300, 0, '3.0000', '+', 0, '+', '3.00000000', '+'),
-(1, 217, 42, 5, 41, 100, 0, '1.0000', '+', 0, '+', '1.00000000', '+'),
-(4, 217, 42, 5, 39, 92, 1, '4.0000', '+', 0, '+', '4.00000000', '+'),
-(11, 223, 42, 2, 45, 3998, 1, '40.0000', '+', 0, '+', '40.00000000', '+'),
-(22, 231, 60, 5, 39, 92, 1, '4.0000', '+', 0, '+', '4.00000000', '+'),
-(19, 230, 60, 1, 43, 300, 1, '30.0000', '+', 3, '+', '30.00000000', '+'),
-(18, 230, 60, 1, 31, 146, 1, '20.0000', '+', 2, '-', '20.00000000', '+'),
-(10, 223, 42, 2, 44, 2696, 1, '30.0000', '+', 0, '+', '30.00000000', '+'),
-(9, 223, 42, 2, 24, 194, 1, '20.0000', '+', 0, '+', '20.00000000', '+'),
-(8, 223, 42, 2, 23, 46, 1, '10.0000', '+', 0, '+', '10.00000000', '+'),
-(17, 230, 60, 1, 32, 92, 1, '10.0000', '+', 1, '+', '10.00000000', '+');
+(7, 218, 42, 1, 43, 300, 1, 30.0000, '+', 3, '+', 30.00000000, '+'),
+(16, 226, 30, 5, 40, 4, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
+(15, 226, 30, 5, 39, 1, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
+(5, 218, 42, 1, 32, 94, 1, 10.0000, '+', 1, '+', 10.00000000, '+'),
+(6, 218, 42, 1, 31, 146, 1, 20.0000, '+', 2, '-', 20.00000000, '+'),
+(2, 217, 42, 5, 42, 200, 1, 2.0000, '+', 0, '+', 2.00000000, '+'),
+(27, 233, 60, 2, 44, 2696, 1, 30.0000, '+', 0, '+', 30.00000000, '+'),
+(26, 233, 60, 2, 45, 3998, 1, 40.0000, '+', 0, '+', 40.00000000, '+'),
+(20, 231, 60, 5, 40, 300, 0, 3.0000, '+', 0, '+', 3.00000000, '+'),
+(21, 231, 60, 5, 41, 100, 0, 1.0000, '+', 0, '+', 1.00000000, '+'),
+(23, 231, 60, 5, 42, 200, 1, 2.0000, '+', 0, '+', 2.00000000, '+'),
+(24, 233, 60, 2, 23, 44, 1, 10.0000, '+', 0, '+', 10.00000000, '+'),
+(25, 233, 60, 2, 24, 194, 1, 20.0000, '+', 0, '+', 20.00000000, '+'),
+(3, 217, 42, 5, 40, 300, 0, 3.0000, '+', 0, '+', 3.00000000, '+'),
+(1, 217, 42, 5, 41, 100, 0, 1.0000, '+', 0, '+', 1.00000000, '+'),
+(4, 217, 42, 5, 39, 92, 1, 4.0000, '+', 0, '+', 4.00000000, '+'),
+(11, 223, 42, 2, 45, 3998, 1, 40.0000, '+', 0, '+', 40.00000000, '+'),
+(22, 231, 60, 5, 39, 92, 1, 4.0000, '+', 0, '+', 4.00000000, '+'),
+(19, 230, 60, 1, 43, 300, 1, 30.0000, '+', 3, '+', 30.00000000, '+'),
+(18, 230, 60, 1, 31, 146, 1, 20.0000, '+', 2, '-', 20.00000000, '+'),
+(10, 223, 42, 2, 44, 2696, 1, 30.0000, '+', 0, '+', 30.00000000, '+'),
+(9, 223, 42, 2, 24, 194, 1, 20.0000, '+', 0, '+', 20.00000000, '+'),
+(8, 223, 42, 2, 23, 46, 1, 10.0000, '+', 0, '+', 10.00000000, '+'),
+(17, 230, 60, 1, 32, 92, 1, 10.0000, '+', 1, '+', 10.00000000, '+');
 
 -- --------------------------------------------------------
 
@@ -5573,7 +5693,7 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 -- Table structure for table `oc_product_recurring`
 --
 
-CREATE TABLE `oc_product_recurring` (
+CREATE TABLE IF NOT EXISTS `oc_product_recurring` (
   `product_id` int(11) NOT NULL,
   `recurring_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL
@@ -5585,7 +5705,7 @@ CREATE TABLE `oc_product_recurring` (
 -- Table structure for table `oc_product_related`
 --
 
-CREATE TABLE `oc_product_related` (
+CREATE TABLE IF NOT EXISTS `oc_product_related` (
   `product_id` int(11) NOT NULL,
   `related_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -5742,12 +5862,12 @@ INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
 -- Table structure for table `oc_product_reward`
 --
 
-CREATE TABLE `oc_product_reward` (
+CREATE TABLE IF NOT EXISTS `oc_product_reward` (
   `product_reward_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL DEFAULT '0',
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=670 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product_reward`
@@ -5768,7 +5888,7 @@ INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_gr
 -- Table structure for table `oc_product_special`
 --
 
-CREATE TABLE `oc_product_special` (
+CREATE TABLE IF NOT EXISTS `oc_product_special` (
   `product_special_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL,
@@ -5776,19 +5896,19 @@ CREATE TABLE `oc_product_special` (
   `price` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `date_start` date NOT NULL DEFAULT '0000-00-00',
   `date_end` date NOT NULL DEFAULT '0000-00-00'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=603 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product_special`
 --
 
 INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(600, 47, 1, 0, '100.0000', '2016-07-22', '2020-02-27'),
-(599, 30, 1, 0, '90.0000', '2016-06-27', '2026-08-06'),
-(597, 42, 1, 0, '80.0000', '2016-07-18', '2017-08-23'),
-(602, 36, 1, 0, '150.0000', '2017-02-27', '2018-02-27'),
-(601, 48, 1, 0, '120.0000', '2017-02-27', '2018-02-27'),
-(598, 60, 1, 0, '80.0000', '2016-07-18', '2017-07-07');
+(600, 47, 1, 0, 100.0000, '2016-07-22', '2020-02-27'),
+(599, 30, 1, 0, 90.0000, '2016-06-27', '2026-08-06'),
+(597, 42, 1, 0, 80.0000, '2016-07-18', '2017-08-23'),
+(602, 36, 1, 0, 150.0000, '2017-02-27', '2018-02-27'),
+(601, 48, 1, 0, 120.0000, '2017-02-27', '2018-02-27'),
+(598, 60, 1, 0, 80.0000, '2016-07-18', '2017-07-07');
 
 -- --------------------------------------------------------
 
@@ -5796,7 +5916,7 @@ INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_
 -- Table structure for table `oc_product_to_category`
 --
 
-CREATE TABLE `oc_product_to_category` (
+CREATE TABLE IF NOT EXISTS `oc_product_to_category` (
   `product_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -6245,7 +6365,7 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 -- Table structure for table `oc_product_to_download`
 --
 
-CREATE TABLE `oc_product_to_download` (
+CREATE TABLE IF NOT EXISTS `oc_product_to_download` (
   `product_id` int(11) NOT NULL,
   `download_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -6256,7 +6376,7 @@ CREATE TABLE `oc_product_to_download` (
 -- Table structure for table `oc_product_to_layout`
 --
 
-CREATE TABLE `oc_product_to_layout` (
+CREATE TABLE IF NOT EXISTS `oc_product_to_layout` (
   `product_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `layout_id` int(11) NOT NULL
@@ -6330,7 +6450,7 @@ INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUE
 -- Table structure for table `oc_product_to_store`
 --
 
-CREATE TABLE `oc_product_to_store` (
+CREATE TABLE IF NOT EXISTS `oc_product_to_store` (
   `product_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -6403,17 +6523,17 @@ INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
 -- Table structure for table `oc_recurring`
 --
 
-CREATE TABLE `oc_recurring` (
+CREATE TABLE IF NOT EXISTS `oc_recurring` (
   `recurring_id` int(11) NOT NULL,
   `price` decimal(10,4) NOT NULL,
   `frequency` enum('day','week','semi_month','month','year') NOT NULL,
-  `duration` int(10) UNSIGNED NOT NULL,
-  `cycle` int(10) UNSIGNED NOT NULL,
+  `duration` int(10) unsigned NOT NULL,
+  `cycle` int(10) unsigned NOT NULL,
   `trial_status` tinyint(4) NOT NULL,
   `trial_price` decimal(10,4) NOT NULL,
   `trial_frequency` enum('day','week','semi_month','month','year') NOT NULL,
-  `trial_duration` int(10) UNSIGNED NOT NULL,
-  `trial_cycle` int(10) UNSIGNED NOT NULL,
+  `trial_duration` int(10) unsigned NOT NULL,
+  `trial_cycle` int(10) unsigned NOT NULL,
   `status` tinyint(4) NOT NULL,
   `sort_order` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -6424,7 +6544,7 @@ CREATE TABLE `oc_recurring` (
 -- Table structure for table `oc_recurring_description`
 --
 
-CREATE TABLE `oc_recurring_description` (
+CREATE TABLE IF NOT EXISTS `oc_recurring_description` (
   `recurring_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
@@ -6436,7 +6556,7 @@ CREATE TABLE `oc_recurring_description` (
 -- Table structure for table `oc_return`
 --
 
-CREATE TABLE `oc_return` (
+CREATE TABLE IF NOT EXISTS `oc_return` (
   `return_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -6464,11 +6584,11 @@ CREATE TABLE `oc_return` (
 -- Table structure for table `oc_return_action`
 --
 
-CREATE TABLE `oc_return_action` (
+CREATE TABLE IF NOT EXISTS `oc_return_action` (
   `return_action_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(64) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_return_action`
@@ -6477,7 +6597,10 @@ CREATE TABLE `oc_return_action` (
 INSERT INTO `oc_return_action` (`return_action_id`, `language_id`, `name`) VALUES
 (1, 1, 'Refunded'),
 (2, 1, 'Credit Issued'),
-(3, 1, 'Replacement Sent');
+(3, 1, 'Replacement Sent'),
+(1, 3, 'Refunded'),
+(2, 3, 'Credit Issued'),
+(3, 3, 'Replacement Sent');
 
 -- --------------------------------------------------------
 
@@ -6485,7 +6608,7 @@ INSERT INTO `oc_return_action` (`return_action_id`, `language_id`, `name`) VALUE
 -- Table structure for table `oc_return_history`
 --
 
-CREATE TABLE `oc_return_history` (
+CREATE TABLE IF NOT EXISTS `oc_return_history` (
   `return_history_id` int(11) NOT NULL,
   `return_id` int(11) NOT NULL,
   `return_status_id` int(11) NOT NULL,
@@ -6500,11 +6623,11 @@ CREATE TABLE `oc_return_history` (
 -- Table structure for table `oc_return_reason`
 --
 
-CREATE TABLE `oc_return_reason` (
+CREATE TABLE IF NOT EXISTS `oc_return_reason` (
   `return_reason_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(128) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_return_reason`
@@ -6515,7 +6638,12 @@ INSERT INTO `oc_return_reason` (`return_reason_id`, `language_id`, `name`) VALUE
 (2, 1, 'Received Wrong Item'),
 (3, 1, 'Order Error'),
 (4, 1, 'Faulty, please supply details'),
-(5, 1, 'Other, please supply details');
+(5, 1, 'Other, please supply details'),
+(1, 3, 'Dead On Arrival'),
+(2, 3, 'Received Wrong Item'),
+(3, 3, 'Order Error'),
+(4, 3, 'Faulty, please supply details'),
+(5, 3, 'Other, please supply details');
 
 -- --------------------------------------------------------
 
@@ -6523,11 +6651,11 @@ INSERT INTO `oc_return_reason` (`return_reason_id`, `language_id`, `name`) VALUE
 -- Table structure for table `oc_return_status`
 --
 
-CREATE TABLE `oc_return_status` (
+CREATE TABLE IF NOT EXISTS `oc_return_status` (
   `return_status_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(32) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_return_status`
@@ -6536,7 +6664,10 @@ CREATE TABLE `oc_return_status` (
 INSERT INTO `oc_return_status` (`return_status_id`, `language_id`, `name`) VALUES
 (1, 1, 'Pending'),
 (3, 1, 'Complete'),
-(2, 1, 'Awaiting Products');
+(2, 1, 'Awaiting Products'),
+(1, 3, 'Pending'),
+(3, 3, 'Complete'),
+(2, 3, 'Awaiting Products');
 
 -- --------------------------------------------------------
 
@@ -6544,7 +6675,7 @@ INSERT INTO `oc_return_status` (`return_status_id`, `language_id`, `name`) VALUE
 -- Table structure for table `oc_review`
 --
 
-CREATE TABLE `oc_review` (
+CREATE TABLE IF NOT EXISTS `oc_review` (
   `review_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
@@ -6554,7 +6685,7 @@ CREATE TABLE `oc_review` (
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_review`
@@ -6583,14 +6714,14 @@ INSERT INTO `oc_review` (`review_id`, `product_id`, `customer_id`, `author`, `te
 -- Table structure for table `oc_setting`
 --
 
-CREATE TABLE `oc_setting` (
+CREATE TABLE IF NOT EXISTS `oc_setting` (
   `setting_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL DEFAULT '0',
   `code` varchar(32) NOT NULL,
   `key` varchar(64) NOT NULL,
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7979 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_setting`
@@ -6629,43 +6760,67 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (1621, 0, 'ocblog', 'ocblog_meta_title', 'Blog', 0),
 (1506, 0, 'oclayerednavigation', 'oclayerednavigation_status', '1', 0),
 (1620, 0, 'ocblog', 'ocblog_article_limit', '5', 0),
-(7629, 2, 'config', 'config_stock_display', '0', 0),
 (2540, 0, 'basic_captcha', 'basic_captcha_status', '1', 0),
 (3807, 0, 'ocsearchcategory', 'ocsearchcategory_product_price', '1', 0),
 (7360, 3, 'theme_default', 'theme_default_image_related_height', '1000', 0),
-(7551, 0, 'config', 'config_compression', '0', 0),
-(7552, 0, 'config', 'config_secure', '0', 0),
-(7553, 0, 'config', 'config_password', '1', 0),
-(7554, 0, 'config', 'config_shared', '0', 0),
-(7555, 0, 'config', 'config_encryption', 'CHqToySaiauNvNY3A7DtqCg32IJJuQyjg5giM9gJXnV6uF5oQhGPzPpkrtlA8ohZHEGqN5UgLm9iG7HIbIT1EeaBXsPTDXBLeo80fHvXvNOq1gamj4nUbk1M96lOy7huh49qcqvVqdBvmvdQixjk4TgTsLlRsU2zFqtqExOmXUhmuqnHTowO7CS9tRPPzVMBmB6QFMrmAnuRiyLX6qw48fu0WZP23tjzIaDMYuRGD6clZtvIMfKv2yn9g3jAojdKaE4xDLxC6YIrcouovG8uAIrIVwB9ODFXFSy8EwybJzTkxg1GhhC8CI90xHbnre24XdtGvcOAP9xYzEA6dGkzvqsyzo49fGjrfM4zkgfWypmOwFCdaPqxDgwJ7yMUHQyW7IZYYrHCzloMBukVEujghu9jVoqqbc75uaYPxJBdlHx4cuPT6i6UbQOHGG17ln2gB9gIw0pv4xiqbDARf87nbq45hJq7boOC7GmE1F4r81swkJWHdEj6idZy7r4HSrKneB68RAdVBaPU9FAzJq3DwiBPsBhTYMtIr47qRxTviAthBMLoZmB8lfpXe8O8PCzNeG4pff6VBFRoi9A0h0xhe91VQuiPkytS3ul8lBH20aXyYGHj4K31S3DyeHuPEo8bx9ukRURm7kpZWGSPBhCiir7XhTFKQz5JCO3HWHvJubUy1I6MBHPffNHLZqvmXE21sgVOYO6Tyo2WjkdqCKEPUTCgrDfItvMjxhuhPiyRNbriteYtij6fWYPyJbhlPximmlUyYFJtAUnPZ2kWRBGxiPeWJJazbSTAxgA6UIirpmR1taMpoyL4UNg7yeGSZaV166CMtMrX459eAyJ0zofdT9B3eG4EmN5zIMGxWBDnhpMDP08FR0kKHPY3bZImMLWudDUJ9m0NWHvrVU1pJeDeSfiCzl13fO9eJBCYCnKyL6mDbycnewwxIlCwdnBK0remjbxNfgmYSIOfTo8U5NUxLIYI6JQs6jl1Fqf5oucx577zu15kIb3K2ZYkm7fyaKy7', 0),
-(7546, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
-(7547, 0, 'config', 'config_mail_alert_email', '', 0),
-(7548, 0, 'config', 'config_maintenance', '0', 0),
-(7549, 0, 'config', 'config_seo_url', '0', 0),
-(7550, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
+(7918, 0, 'config', 'config_tax', '0', 0),
+(7919, 0, 'config', 'config_tax_default', '', 0),
+(7920, 0, 'config', 'config_tax_customer', '', 0),
+(7921, 0, 'config', 'config_customer_online', '0', 0),
+(7922, 0, 'config', 'config_customer_activity', '0', 0),
+(7923, 0, 'config', 'config_customer_search', '0', 0),
+(7924, 0, 'config', 'config_customer_group_id', '1', 0),
+(7925, 0, 'config', 'config_customer_group_display', '["1"]', 1),
+(7926, 0, 'config', 'config_customer_price', '0', 0),
+(7927, 0, 'config', 'config_login_attempts', '5', 0),
+(7928, 0, 'config', 'config_account_id', '3', 0),
+(7929, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
+(7930, 0, 'config', 'config_cart_weight', '1', 0),
+(7931, 0, 'config', 'config_checkout_guest', '1', 0),
+(7932, 0, 'config', 'config_checkout_id', '5', 0),
+(7933, 0, 'config', 'config_order_status_id', '1', 0),
+(7934, 0, 'config', 'config_processing_status', '["5","1","2","12","3"]', 1),
+(7935, 0, 'config', 'config_complete_status', '["5","3"]', 1),
+(7936, 0, 'config', 'config_fraud_status_id', '7', 0),
+(7937, 0, 'config', 'config_api_id', '3', 0),
+(7938, 0, 'config', 'config_stock_display', '0', 0),
+(7939, 0, 'config', 'config_stock_warning', '0', 0),
+(7940, 0, 'config', 'config_stock_checkout', '0', 0),
+(7941, 0, 'config', 'config_affiliate_approval', '0', 0),
+(7942, 0, 'config', 'config_affiliate_auto', '0', 0),
+(7943, 0, 'config', 'config_affiliate_commission', '5', 0),
+(7944, 0, 'config', 'config_affiliate_id', '4', 0),
+(7945, 0, 'config', 'config_return_id', '0', 0),
+(7946, 0, 'config', 'config_return_status_id', '2', 0),
+(7947, 0, 'config', 'config_captcha', 'basic_captcha', 0),
+(7948, 0, 'config', 'config_captcha_page', '["register","guest","review","return","contact"]', 1),
+(7949, 0, 'config', 'config_logo', 'catalog/logo-1.png', 0),
+(7950, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
+(7951, 0, 'config', 'config_ftp_hostname', 'tt_bestmarket1.com', 0),
+(7952, 0, 'config', 'config_ftp_port', '21', 0),
+(7953, 0, 'config', 'config_ftp_username', '', 0),
+(7954, 0, 'config', 'config_ftp_password', '', 0),
+(7955, 0, 'config', 'config_ftp_root', '', 0),
+(7956, 0, 'config', 'config_ftp_status', '0', 0),
+(7957, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(7958, 0, 'config', 'config_mail_parameter', '', 0),
+(7959, 0, 'config', 'config_mail_smtp_hostname', '', 0),
+(7960, 0, 'config', 'config_mail_smtp_username', '', 0),
+(7961, 0, 'config', 'config_mail_smtp_password', '', 0),
+(7962, 0, 'config', 'config_mail_smtp_port', '25', 0),
+(7963, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
+(7964, 0, 'config', 'config_mail_alert_email', '', 0),
+(7965, 0, 'config', 'config_maintenance', '0', 0),
+(7966, 0, 'config', 'config_seo_url', '0', 0),
+(7967, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
 (94, 0, 'voucher', 'voucher_sort_order', '8', 0),
 (95, 0, 'voucher', 'voucher_status', '1', 0),
 (103, 0, 'free_checkout', 'free_checkout_status', '1', 0),
 (104, 0, 'free_checkout', 'free_checkout_order_status_id', '1', 0),
 (7153, 1, 'theme_default', 'theme_default_image_related_height', '1000', 0),
-(7544, 0, 'config', 'config_mail_smtp_password', '', 0),
-(7557, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
-(7556, 0, 'config', 'config_file_max_size', '300000', 0),
-(7545, 0, 'config', 'config_mail_smtp_port', '25', 0),
-(7543, 0, 'config', 'config_mail_smtp_username', '', 0),
-(7542, 0, 'config', 'config_mail_smtp_hostname', '', 0),
-(7541, 0, 'config', 'config_mail_parameter', '', 0),
-(7539, 0, 'config', 'config_ftp_status', '0', 0),
-(7540, 0, 'config', 'config_mail_protocol', 'mail', 0),
-(7538, 0, 'config', 'config_ftp_root', '', 0),
-(7536, 0, 'config', 'config_ftp_username', '', 0),
-(7537, 0, 'config', 'config_ftp_password', '', 0),
-(7533, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
-(7534, 0, 'config', 'config_ftp_hostname', 'tt_bestmarket1.com', 0),
-(7535, 0, 'config', 'config_ftp_port', '21', 0),
-(7532, 0, 'config', 'config_logo', 'catalog/logo-1.png', 0),
-(7531, 0, 'config', 'config_captcha_page', '["register","guest","review","return","contact"]', 1),
-(7705, 1, 'config', 'config_secure', '0', 0),
+(7975, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
+(7973, 0, 'config', 'config_file_max_size', '300000', 0),
+(7974, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
 (7094, 0, 'ocquickview', 'ocquickview_children_element', 'btn-quick-view', 0),
 (7471, 0, 'theme_default', 'theme_default_image_location_height', '50', 0),
 (7468, 0, 'theme_default', 'theme_default_image_cart_width', '80', 0),
@@ -6676,44 +6831,6 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (7465, 0, 'theme_default', 'theme_default_image_compare_height', '100', 0),
 (7464, 0, 'theme_default', 'theme_default_image_compare_width', '80', 0),
 (7463, 0, 'theme_default', 'theme_default_image_related_height', '1000', 0),
-(7703, 1, 'config', 'config_logo', 'catalog/logo-2.png', 0),
-(7704, 1, 'config', 'config_icon', 'catalog/cart.png', 0),
-(7702, 1, 'config', 'config_stock_checkout', '0', 0),
-(7701, 1, 'config', 'config_stock_display', '0', 0),
-(7700, 1, 'config', 'config_order_status_id', '7', 0),
-(7529, 0, 'config', 'config_return_status_id', '2', 0),
-(7530, 0, 'config', 'config_captcha', 'basic_captcha', 0),
-(7528, 0, 'config', 'config_return_id', '0', 0),
-(7527, 0, 'config', 'config_affiliate_id', '4', 0),
-(7628, 2, 'config', 'config_order_status_id', '7', 0),
-(7627, 2, 'config', 'config_checkout_id', '0', 0),
-(7626, 2, 'config', 'config_checkout_guest', '0', 0),
-(7625, 2, 'config', 'config_cart_weight', '0', 0),
-(7623, 2, 'config', 'config_customer_price', '0', 0),
-(7624, 2, 'config', 'config_account_id', '0', 0),
-(7619, 2, 'config', 'config_tax', '0', 0),
-(7668, 3, 'config', 'config_icon', 'catalog/cart.png', 0),
-(7665, 3, 'config', 'config_stock_display', '0', 0),
-(7667, 3, 'config', 'config_logo', 'catalog/logo-4.png', 0),
-(7666, 3, 'config', 'config_stock_checkout', '0', 0),
-(7664, 3, 'config', 'config_order_status_id', '7', 0),
-(7663, 3, 'config', 'config_checkout_id', '0', 0),
-(7662, 3, 'config', 'config_checkout_guest', '0', 0),
-(7622, 2, 'config', 'config_customer_group_id', '1', 0),
-(7621, 2, 'config', 'config_tax_customer', '', 0),
-(7699, 1, 'config', 'config_checkout_id', '0', 0),
-(7698, 1, 'config', 'config_checkout_guest', '0', 0),
-(7695, 1, 'config', 'config_customer_price', '0', 0),
-(7696, 1, 'config', 'config_account_id', '0', 0),
-(7697, 1, 'config', 'config_cart_weight', '0', 0),
-(7526, 0, 'config', 'config_affiliate_commission', '5', 0),
-(7523, 0, 'config', 'config_stock_checkout', '0', 0),
-(7524, 0, 'config', 'config_affiliate_approval', '0', 0),
-(7525, 0, 'config', 'config_affiliate_auto', '0', 0),
-(7522, 0, 'config', 'config_stock_warning', '0', 0),
-(7520, 0, 'config', 'config_api_id', '2', 0),
-(7521, 0, 'config', 'config_stock_display', '0', 0),
-(7519, 0, 'config', 'config_fraud_status_id', '7', 0),
 (594, 0, 'installtemp', 'installtemp', '1', 0),
 (7462, 0, 'theme_default', 'theme_default_image_related_width', '800', 0),
 (7461, 0, 'theme_default', 'theme_default_image_testimonial_height', '100', 0),
@@ -6800,29 +6917,16 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (7458, 0, 'theme_default', 'theme_default_image_blog_width', '370', 0),
 (1622, 0, 'ocblog', 'ocblog_meta_description', 'Blog', 0),
 (1623, 0, 'ocblog', 'ocblog_meta_keyword', 'blogs', 0),
-(7694, 1, 'config', 'config_customer_group_id', '1', 0),
-(7693, 1, 'config', 'config_tax_customer', '', 0),
-(7692, 1, 'config', 'config_tax_default', '', 0),
-(7620, 2, 'config', 'config_tax_default', '', 0),
-(7618, 2, 'config', 'config_currency', 'USD', 0),
 (7457, 0, 'theme_default', 'theme_default_image_article_height', '280', 0),
 (7455, 0, 'theme_default', 'theme_default_image_additional_height', '2000', 0),
 (7090, 0, 'ocquickview', 'ocquickview_status', '1', 0),
 (7091, 0, 'ocquickview', 'ocquickview_loader_img', 'catalog/AjaxLoader.gif', 0),
 (7456, 0, 'theme_default', 'theme_default_image_article_width', '370', 0),
-(7660, 3, 'config', 'config_account_id', '0', 0),
-(7661, 3, 'config', 'config_cart_weight', '0', 0),
-(7659, 3, 'config', 'config_customer_price', '0', 0),
-(7658, 3, 'config', 'config_customer_group_id', '1', 0),
-(7558, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
-(7691, 1, 'config', 'config_tax', '0', 0),
-(7518, 0, 'config', 'config_complete_status', '["5","3"]', 1),
-(7517, 0, 'config', 'config_processing_status', '["5","1","2","12","3"]', 1),
-(7516, 0, 'config', 'config_order_status_id', '1', 0),
-(7515, 0, 'config', 'config_checkout_id', '5', 0),
-(7514, 0, 'config', 'config_checkout_guest', '1', 0),
-(7614, 2, 'config', 'config_comment', '', 0),
-(7615, 2, 'config', 'config_country_id', '222', 0),
+(7972, 0, 'config', 'config_encryption', 'SqatK37ApnZDv8sdDkNWsALsZ3JKXdhDEFzxWlARVdxNf0f3o74UyiqoN8894cC2Ucb1R4TM73ltLzInJbImjkAg8Gw2wjIw6zvhQ92Cj6paO3xoser5mMinwIOjtgE8NWYNKfZ3Uq8GRycn29as4RvD34vpiZv0aaU9Wqic5QD0lE8udVrebONHmMpYfpNpezTLRilWkIrlS4RzZVRIFvhZ7yRuu3hn12ZlREU9DSySZsl9OgMBqMiwzFQgtUVbr2KV4B7BrmFy67SS5UVjmFDYHKgiJXmml8jOOt6CD8ATOTVIJqt5ksWlxA69ymLvDMOG9Zkpz6Y5COdQgmIjmivkwitEqOncHzaG3gN89QRN6V3rvdeIeYfPwgS7chzaoJD1vVEze2TpUk0irUgxYXVR6MU0m6JdYI21ryfTLNawlSKAlcaGxeJDO8RvEWSLtzFwFczXLv1E9xTJXtuHnunFZiWxTtHAolSHduco77XtUYECK4gZsD4QuVost6fNXKk3kJA0UI0O1bL2JOdt7h9U6L2sbQk90yAaHQgOxOrHpzyHamYHrEe9n47oAtt7nPl7LWEJtM3z2GDOAgg17oh1PmpIVgnTFoVFAl78UrvbMPfqFPxUt4ryLL5GsJB2gHsWPhPcY7mpdTxXO5BQByRmmEuW9hFH4Z960gdkgcKgw3oPFHyrOMwdolpWs9o4iB5F37PhxQMpMVFRr2sRyupn7BSK69rAPn5P026sADcYAo3K65FjawvvJn2E2qprr8Nqmf7KBSsG0b2fIWWFXASBFgMeE1XaNWX5fRBb8CJSV8wnw1AOHGSjPj0dfjJWheagnDHfxldCouCoHJI1HPxwhCszptpdiFBO3LoSNu68wHhesYpplwL4qDza1KxzGF0iMe7Y85XQ8CtwAeElIcoCV4aCX2IOhJ4tMGwtGZBijktKW1GaY7lM4bSprUYqpmSXz6hiXgqSZmILjm5sYalEO0hiAs2cw7nW0L7gh15TRVkwI5tcrK5EwFW5mF3x', 0),
+(7971, 0, 'config', 'config_shared', '0', 0),
+(7969, 0, 'config', 'config_secure', '0', 0),
+(7970, 0, 'config', 'config_password', '1', 0),
+(7968, 0, 'config', 'config_compression', '0', 0),
 (7454, 0, 'theme_default', 'theme_default_image_additional_width', '1600', 0),
 (5068, 5, 'theme_default', 'theme_default_image_category_height', '300', 0),
 (5067, 5, 'theme_default', 'theme_default_image_category_width', '870', 0),
@@ -6854,33 +6958,10 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (7452, 0, 'theme_default', 'theme_default_image_product_width', '800', 0),
 (7342, 3, 'theme_default', 'theme_default_product_description_length', '350', 0),
 (7138, 1, 'theme_default', 'theme_default_image_thumb_width', '800', 0),
-(7655, 3, 'config', 'config_tax', '0', 0),
-(7656, 3, 'config', 'config_tax_default', '', 0),
-(7690, 1, 'config', 'config_currency', 'USD', 0),
-(7561, 0, 'config', 'config_error_filename', 'error.log', 0),
-(7560, 0, 'config', 'config_error_log', '1', 0),
-(7559, 0, 'config', 'config_error_display', '1', 0),
 (3480, 0, 'ocbestsellerpage', 'ocbestsellerpage_width', '500', 0),
 (3479, 0, 'ocbestsellerpage', 'ocbestsellerpage_limit', '20', 0),
 (3478, 0, 'ocbestsellerpage', 'ocbestsellerpage_status', '1', 0),
 (3481, 0, 'ocbestsellerpage', 'ocbestsellerpage_height', '500', 0),
-(7513, 0, 'config', 'config_cart_weight', '1', 0),
-(7512, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
-(7511, 0, 'config', 'config_account_id', '3', 0),
-(7510, 0, 'config', 'config_login_attempts', '5', 0),
-(7509, 0, 'config', 'config_customer_price', '0', 0),
-(7508, 0, 'config', 'config_customer_group_display', '["1"]', 1),
-(7507, 0, 'config', 'config_customer_group_id', '1', 0),
-(7506, 0, 'config', 'config_customer_search', '0', 0),
-(7505, 0, 'config', 'config_customer_activity', '0', 0),
-(7689, 1, 'config', 'config_language', 'en-gb', 0),
-(7686, 1, 'config', 'config_comment', '', 0),
-(7687, 1, 'config', 'config_country_id', '222', 0),
-(7688, 1, 'config', 'config_zone_id', '3563', 0),
-(7504, 0, 'config', 'config_customer_online', '0', 0),
-(7683, 1, 'config', 'config_fax', '0123- 456 789', 0),
-(7500, 0, 'config', 'config_voucher_max', '1000', 0),
-(7501, 0, 'config', 'config_tax', '0', 0),
 (7137, 1, 'theme_default', 'theme_default_image_category_height', '280', 0),
 (7136, 1, 'theme_default', 'theme_default_image_category_width', '1920', 0),
 (5088, 5, 'theme_default', 'theme_default_image_wishlist_height', '100', 0),
@@ -6922,83 +7003,39 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (5243, 0, 'dashboard_sale', 'dashboard_sale_width', '3', 0),
 (5230, 0, 'dashboard_customer', 'dashboard_customer_sort_order', '3', 0),
 (5224, 0, 'dashboard_activity', 'dashboard_activity_sort_order', '7', 0),
-(7616, 2, 'config', 'config_zone_id', '3563', 0),
-(7617, 2, 'config', 'config_language', 'en-gb', 0),
-(7657, 3, 'config', 'config_tax_customer', '', 0),
-(7653, 3, 'config', 'config_language', 'en-gb', 0),
-(7654, 3, 'config', 'config_currency', 'USD', 0),
-(7650, 3, 'config', 'config_comment', '', 0),
 (7135, 1, 'theme_default', 'theme_default_product_description_length', '350', 0),
 (7134, 1, 'theme_default', 'theme_default_product_limit', '12', 0),
 (7133, 1, 'theme_default', 'theme_default_testimonial_limit', '15', 0),
-(7652, 3, 'config', 'config_zone_id', '3563', 0),
-(7651, 3, 'config', 'config_country_id', '222', 0),
 (7277, 2, 'theme_default', 'theme_default_image_category_height', '280', 0),
 (7276, 2, 'theme_default', 'theme_default_image_category_width', '1920', 0),
 (7275, 2, 'theme_default', 'theme_default_product_description_length', '350', 0),
 (7274, 2, 'theme_default', 'theme_default_product_limit', '12', 0),
-(7612, 2, 'config', 'config_image', '', 0),
-(7613, 2, 'config', 'config_open', 'Monday - Friday :  9:00-20:00\r\n\r\nSaturday :  10:00-20:00\r\n\r\nSunday : 12:00-20:00 ', 0),
 (7339, 3, 'theme_default', 'theme_default_status', '1', 0),
 (7338, 3, 'theme_default', 'theme_default_directory', 'tt_grand4', 0),
-(7648, 3, 'config', 'config_image', '', 0),
-(7649, 3, 'config', 'config_open', 'Monday - Friday :  9:00-20:00\r\n\r\nSaturday :  10:00-20:00\r\n\r\nSunday : 12:00-20:00 ', 0),
 (7132, 1, 'theme_default', 'theme_default_status', '1', 0),
 (7131, 1, 'theme_default', 'theme_default_directory', 'tt_grand2', 0),
 (7273, 2, 'theme_default', 'theme_default_testimonial_limit', '15', 0),
 (7272, 2, 'theme_default', 'theme_default_status', '1', 0),
 (7271, 2, 'theme_default', 'theme_default_directory', 'tt_grand3', 0),
-(7503, 0, 'config', 'config_tax_customer', '', 0),
-(7502, 0, 'config', 'config_tax_default', '', 0),
-(7499, 0, 'config', 'config_voucher_min', '1', 0),
-(7498, 0, 'config', 'config_review_guest', '1', 0),
-(7497, 0, 'config', 'config_review_status', '1', 0),
-(7496, 0, 'config', 'config_limit_admin', '20', 0),
-(7493, 0, 'config', 'config_length_class_id', '1', 0),
-(7495, 0, 'config', 'config_product_count', '1', 0),
-(7494, 0, 'config', 'config_weight_class_id', '1', 0),
-(7491, 0, 'config', 'config_currency', 'USD', 0),
-(7492, 0, 'config', 'config_currency_auto', '1', 0),
-(7685, 1, 'config', 'config_open', 'Monday - Friday :  9:00-20:00\r\n\r\nSaturday :  10:00-20:00\r\n\r\nSunday : 12:00-20:00 ', 0),
-(7684, 1, 'config', 'config_image', '', 0),
-(7682, 1, 'config', 'config_telephone', '(0123) 456789', 0),
-(7680, 1, 'config', 'config_geocode', '', 0),
-(7681, 1, 'config', 'config_email', 'demo@towerthemes.com', 0),
-(7679, 1, 'config', 'config_address', 'Grand 2 - Furniture Responsive Opencart Theme', 0),
-(7610, 2, 'config', 'config_telephone', '(0123) 456789', 0),
-(7611, 2, 'config', 'config_fax', '(0123) 456 789', 0),
-(7606, 2, 'config', 'config_owner', 'Grand 3 - Furniture Responsive Opencart Theme ', 0),
-(7607, 2, 'config', 'config_address', 'Grand 3 - Furniture Responsive Opencart Theme ', 0),
-(7647, 3, 'config', 'config_fax', '(0123) 456 789', 0),
-(7644, 3, 'config', 'config_geocode', '', 0),
-(7645, 3, 'config', 'config_email', 'demo@towerthemes.com', 0),
-(7646, 3, 'config', 'config_telephone', '(0123) 456789', 0),
-(7642, 3, 'config', 'config_owner', 'Grand 4 - Furniture Responsive Opencart Theme ', 0),
-(7488, 0, 'config', 'config_zone_id', '3563', 0),
-(7489, 0, 'config', 'config_language', 'en-gb', 0),
 (6475, 0, 'ttlasttweeter', 'ttlasttweeter_width', '275', 0),
 (6474, 0, 'ttlasttweeter', 'ttlasttweeter_id', 'plazathemes', 0),
 (6473, 0, 'ttlasttweeter', 'ttlasttweeter_status', '1', 0),
 (6476, 0, 'ttlasttweeter', 'ttlasttweeter_height', '275', 0),
-(7608, 2, 'config', 'config_geocode', '', 0),
-(7609, 2, 'config', 'config_email', 'demo@towerthemes.com', 0),
-(7490, 0, 'config', 'config_admin_language', 'en-gb', 0),
-(7487, 0, 'config', 'config_country_id', '222', 0),
-(7486, 0, 'config', 'config_comment', '', 0),
-(7485, 0, 'config', 'config_open', 'Monday - Friday :  9:00-20:00\r\n\r\nSaturday :  10:00-20:00\r\n\r\nSunday : 12:00-20:00 ', 0),
-(7484, 0, 'config', 'config_image', '', 0),
-(7483, 0, 'config', 'config_fax', '+1 1256 257 4598', 0),
-(7482, 0, 'config', 'config_telephone', '+1 1256 257 4598', 0),
-(7480, 0, 'config', 'config_geocode', '', 0),
-(7481, 0, 'config', 'config_email', 'demo@towerthemes.com', 0),
-(7479, 0, 'config', 'config_address', '617-697 South South Road', 0),
-(7473, 0, 'config', 'config_meta_description', 'My Store', 0),
-(7474, 0, 'config', 'config_meta_keyword', '', 0),
-(7475, 0, 'config', 'config_theme', 'theme_default', 0),
-(7476, 0, 'config', 'config_layout_id', '4', 0),
-(7477, 0, 'config', 'config_name', 'Grand1 - Furniture Responsive Opencart Theme', 0),
-(7478, 0, 'config', 'config_owner', 'Grand1 - Furniture Responsive Opencart Theme', 0),
-(7472, 0, 'config', 'config_meta_title', 'Grand1 - Furniture Responsive Opencart Theme', 0),
+(7917, 0, 'config', 'config_voucher_max', '1000', 0),
+(7916, 0, 'config', 'config_voucher_min', '1', 0),
+(7915, 0, 'config', 'config_review_guest', '1', 0),
+(7914, 0, 'config', 'config_review_status', '1', 0),
+(7913, 0, 'config', 'config_limit_admin', '20', 0),
+(7912, 0, 'config', 'config_product_count', '1', 0),
+(7911, 0, 'config', 'config_weight_class_id', '1', 0),
+(7908, 0, 'config', 'config_currency', 'VND', 0),
+(7909, 0, 'config', 'config_currency_auto', '1', 0),
+(7910, 0, 'config', 'config_length_class_id', '1', 0),
+(7907, 0, 'config', 'config_admin_language', 'vi-vn', 0),
+(7905, 0, 'config', 'config_zone_id', '3765', 0),
+(7906, 0, 'config', 'config_language', 'vi-vn', 0),
+(7903, 0, 'config', 'config_comment', '', 0),
+(7904, 0, 'config', 'config_country_id', '230', 0),
 (7451, 0, 'theme_default', 'theme_default_image_popup_height', '2000', 0),
 (7450, 0, 'theme_default', 'theme_default_image_popup_width', '1600', 0),
 (7449, 0, 'theme_default', 'theme_default_image_thumb_height', '1000', 0),
@@ -7010,10 +7047,6 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (7443, 0, 'theme_default', 'theme_default_testimonial_limit', '15', 0),
 (7442, 0, 'theme_default', 'theme_default_status', '1', 0),
 (7441, 0, 'theme_default', 'theme_default_directory', 'tt_grand1', 0),
-(7676, 1, 'config', 'config_layout_id', '27', 0),
-(7677, 1, 'config', 'config_name', 'Grand 2 - Furniture Responsive Opencart Theme', 0),
-(7678, 1, 'config', 'config_owner', 'Grand 2 - Furniture Responsive Opencart Theme', 0),
-(7673, 1, 'config', 'config_meta_description', '', 0),
 (7154, 1, 'theme_default', 'theme_default_image_compare_width', '80', 0),
 (7155, 1, 'theme_default', 'theme_default_image_compare_height', '100', 0),
 (7156, 1, 'theme_default', 'theme_default_image_wishlist_width', '80', 0),
@@ -7022,18 +7055,6 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (7159, 1, 'theme_default', 'theme_default_image_cart_height', '100', 0),
 (7160, 1, 'theme_default', 'theme_default_image_location_width', '268', 0),
 (7161, 1, 'theme_default', 'theme_default_image_location_height', '50', 0),
-(7674, 1, 'config', 'config_meta_keyword', '', 0),
-(7675, 1, 'config', 'config_theme', 'theme_default', 0),
-(7671, 1, 'config', 'config_ssl', '', 0),
-(7672, 1, 'config', 'config_meta_title', 'Grand 2 - Furniture Responsive Opencart Theme', 0),
-(7605, 2, 'config', 'config_name', 'Grand 3 - Furniture Responsive Opencart Theme ', 0),
-(7604, 2, 'config', 'config_layout_id', '31', 0),
-(7602, 2, 'config', 'config_meta_keyword', '', 0),
-(7603, 2, 'config', 'config_theme', 'theme_default', 0),
-(7601, 2, 'config', 'config_meta_description', '', 0),
-(7600, 2, 'config', 'config_meta_title', 'Grand 3 - Furniture Responsive Opencart Theme ', 0),
-(7599, 2, 'config', 'config_ssl', '', 0),
-(7598, 2, 'config', 'config_url', 'http://tt_grand3.com/', 0),
 (7294, 2, 'theme_default', 'theme_default_image_compare_width', '80', 0),
 (7295, 2, 'theme_default', 'theme_default_image_compare_height', '100', 0),
 (7296, 2, 'theme_default', 'theme_default_image_wishlist_width', '80', 0),
@@ -7042,12 +7063,6 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (7299, 2, 'theme_default', 'theme_default_image_cart_height', '100', 0),
 (7300, 2, 'theme_default', 'theme_default_image_location_width', '268', 0),
 (7301, 2, 'theme_default', 'theme_default_image_location_height', '50', 0),
-(7643, 3, 'config', 'config_address', 'Grand 4 - Furniture Responsive Opencart Theme ', 0),
-(7640, 3, 'config', 'config_layout_id', '36', 0),
-(7641, 3, 'config', 'config_name', 'Grand 4 - Furniture Responsive Opencart Theme ', 0),
-(7639, 3, 'config', 'config_theme', 'theme_default', 0),
-(7638, 3, 'config', 'config_meta_keyword', 'Monday - Friday :  9:00-20:00\r\n\r\nSaturday :  10:00-20:00\r\n\r\nSunday : 12:00-20:00 ', 0),
-(7636, 3, 'config', 'config_meta_title', 'Grand 4 - Furniture Responsive Opencart Theme ', 0),
 (7361, 3, 'theme_default', 'theme_default_image_compare_width', '80', 0),
 (7362, 3, 'theme_default', 'theme_default_image_compare_height', '100', 0),
 (7363, 3, 'theme_default', 'theme_default_image_wishlist_width', '80', 0),
@@ -7056,15 +7071,23 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (7366, 3, 'theme_default', 'theme_default_image_cart_height', '100', 0),
 (7367, 3, 'theme_default', 'theme_default_image_location_width', '268', 0),
 (7368, 3, 'theme_default', 'theme_default_image_location_height', '50', 0),
-(7637, 3, 'config', 'config_meta_description', '', 0),
-(7635, 3, 'config', 'config_ssl', '', 0),
-(7634, 3, 'config', 'config_url', 'http://tt_grand4.com/', 0),
-(7670, 1, 'config', 'config_url', 'http://tt_grand2.com/', 0),
-(7630, 2, 'config', 'config_stock_checkout', '0', 0),
-(7631, 2, 'config', 'config_logo', 'catalog/logo-1.png', 0),
-(7632, 2, 'config', 'config_icon', 'catalog/cart.png', 0),
-(7633, 2, 'config', 'config_secure', '0', 0),
-(7669, 3, 'config', 'config_secure', '0', 0);
+(7976, 0, 'config', 'config_error_display', '1', 0),
+(7977, 0, 'config', 'config_error_log', '1', 0),
+(7978, 0, 'config', 'config_error_filename', 'error.log', 0),
+(7902, 0, 'config', 'config_open', 'Monday - Friday :  9:00-20:00\r\n\r\nSaturday :  10:00-20:00\r\n\r\nSunday : 12:00-20:00 ', 0),
+(7901, 0, 'config', 'config_image', '', 0),
+(7900, 0, 'config', 'config_fax', '', 0),
+(7899, 0, 'config', 'config_telephone', '0968289024', 0),
+(7897, 0, 'config', 'config_geocode', '', 0),
+(7898, 0, 'config', 'config_email', 'mynghethuhadaklak@gmail.com', 0),
+(7896, 0, 'config', 'config_address', '14 Đặng Dung, phường Tân Lợi, TP Buôn Ma Thuột, tỉnh Đăk Lăk', 0),
+(7895, 0, 'config', 'config_owner', 'Ngô Thị Thu Hà', 0),
+(7894, 0, 'config', 'config_name', 'Mỹ Nghệ Thu Hà', 0),
+(7891, 0, 'config', 'config_meta_keyword', '', 0),
+(7892, 0, 'config', 'config_theme', 'theme_default', 0),
+(7893, 0, 'config', 'config_layout_id', '4', 0),
+(7890, 0, 'config', 'config_meta_description', 'Mỹ Nghệ Thu Hà', 0),
+(7889, 0, 'config', 'config_meta_title', 'Mỹ Nghệ Thu Hà', 0);
 
 -- --------------------------------------------------------
 
@@ -7072,11 +7095,11 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 -- Table structure for table `oc_stock_status`
 --
 
-CREATE TABLE `oc_stock_status` (
+CREATE TABLE IF NOT EXISTS `oc_stock_status` (
   `stock_status_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_stock_status`
@@ -7092,7 +7115,12 @@ INSERT INTO `oc_stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
 (8, 1, 'Pre-Order'),
 (5, 1, 'Out Of Stock'),
 (6, 1, '2-3 Days'),
-(9, 1, 'Available Soon');
+(9, 1, 'Available Soon'),
+(7, 3, 'In Stock'),
+(8, 3, 'Pre-Order'),
+(5, 3, 'Out Of Stock'),
+(6, 3, '2-3 Days'),
+(9, 3, 'Available Soon');
 
 -- --------------------------------------------------------
 
@@ -7100,21 +7128,12 @@ INSERT INTO `oc_stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
 -- Table structure for table `oc_store`
 --
 
-CREATE TABLE `oc_store` (
+CREATE TABLE IF NOT EXISTS `oc_store` (
   `store_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
   `url` varchar(255) NOT NULL,
   `ssl` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_store`
---
-
-INSERT INTO `oc_store` (`store_id`, `name`, `url`, `ssl`) VALUES
-(1, 'Grand 2 - Furniture Responsive Opencart Theme', 'http://tt_grand2.com/', ''),
-(2, 'Grand 3 - Furniture Responsive Opencart Theme ', 'http://tt_grand3.com/', ''),
-(3, 'Grand 4 - Furniture Responsive Opencart Theme ', 'http://tt_grand4.com/', '');
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -7122,12 +7141,12 @@ INSERT INTO `oc_store` (`store_id`, `name`, `url`, `ssl`) VALUES
 -- Table structure for table `oc_subscribe`
 --
 
-CREATE TABLE `oc_subscribe` (
-  `id` int(10) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `oc_subscribe` (
+  `id` int(10) unsigned NOT NULL,
   `email_id` varchar(225) NOT NULL,
   `name` varchar(225) NOT NULL,
   `date` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `oc_subscribe`
@@ -7142,13 +7161,13 @@ INSERT INTO `oc_subscribe` (`id`, `email_id`, `name`, `date`) VALUES
 -- Table structure for table `oc_tax_class`
 --
 
-CREATE TABLE `oc_tax_class` (
+CREATE TABLE IF NOT EXISTS `oc_tax_class` (
   `tax_class_id` int(11) NOT NULL,
   `title` varchar(32) NOT NULL,
   `description` varchar(255) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_tax_class`
@@ -7164,7 +7183,7 @@ INSERT INTO `oc_tax_class` (`tax_class_id`, `title`, `description`, `date_added`
 -- Table structure for table `oc_tax_rate`
 --
 
-CREATE TABLE `oc_tax_rate` (
+CREATE TABLE IF NOT EXISTS `oc_tax_rate` (
   `tax_rate_id` int(11) NOT NULL,
   `geo_zone_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(32) NOT NULL,
@@ -7172,15 +7191,15 @@ CREATE TABLE `oc_tax_rate` (
   `type` char(1) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_tax_rate`
 --
 
 INSERT INTO `oc_tax_rate` (`tax_rate_id`, `geo_zone_id`, `name`, `rate`, `type`, `date_added`, `date_modified`) VALUES
-(86, 3, 'VAT (20%)', '20.0000', 'P', '2011-03-09 21:17:10', '2011-09-22 22:24:29'),
-(87, 3, 'Eco Tax (-2.00)', '2.0000', 'F', '2011-09-21 21:49:23', '2011-09-23 00:40:19');
+(86, 3, 'VAT (20%)', 20.0000, 'P', '2011-03-09 21:17:10', '2011-09-22 22:24:29'),
+(87, 3, 'Eco Tax (-2.00)', 2.0000, 'F', '2011-09-21 21:49:23', '2011-09-23 00:40:19');
 
 -- --------------------------------------------------------
 
@@ -7188,7 +7207,7 @@ INSERT INTO `oc_tax_rate` (`tax_rate_id`, `geo_zone_id`, `name`, `rate`, `type`,
 -- Table structure for table `oc_tax_rate_to_customer_group`
 --
 
-CREATE TABLE `oc_tax_rate_to_customer_group` (
+CREATE TABLE IF NOT EXISTS `oc_tax_rate_to_customer_group` (
   `tax_rate_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -7207,13 +7226,13 @@ INSERT INTO `oc_tax_rate_to_customer_group` (`tax_rate_id`, `customer_group_id`)
 -- Table structure for table `oc_tax_rule`
 --
 
-CREATE TABLE `oc_tax_rule` (
+CREATE TABLE IF NOT EXISTS `oc_tax_rule` (
   `tax_rule_id` int(11) NOT NULL,
   `tax_class_id` int(11) NOT NULL,
   `tax_rate_id` int(11) NOT NULL,
   `based` varchar(10) NOT NULL,
   `priority` int(5) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=129 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_tax_rule`
@@ -7231,7 +7250,7 @@ INSERT INTO `oc_tax_rule` (`tax_rule_id`, `tax_class_id`, `tax_rate_id`, `based`
 -- Table structure for table `oc_theme`
 --
 
-CREATE TABLE `oc_theme` (
+CREATE TABLE IF NOT EXISTS `oc_theme` (
   `theme_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `theme` varchar(64) NOT NULL,
@@ -7245,7 +7264,7 @@ CREATE TABLE `oc_theme` (
 -- Table structure for table `oc_translation`
 --
 
-CREATE TABLE `oc_translation` (
+CREATE TABLE IF NOT EXISTS `oc_translation` (
   `translation_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
@@ -7260,7 +7279,7 @@ CREATE TABLE `oc_translation` (
 -- Table structure for table `oc_upload`
 --
 
-CREATE TABLE `oc_upload` (
+CREATE TABLE IF NOT EXISTS `oc_upload` (
   `upload_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `filename` varchar(255) NOT NULL,
@@ -7274,11 +7293,11 @@ CREATE TABLE `oc_upload` (
 -- Table structure for table `oc_url_alias`
 --
 
-CREATE TABLE `oc_url_alias` (
+CREATE TABLE IF NOT EXISTS `oc_url_alias` (
   `url_alias_id` int(11) NOT NULL,
   `query` varchar(255) NOT NULL,
   `keyword` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1002 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_url_alias`
@@ -7391,7 +7410,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 -- Table structure for table `oc_user`
 --
 
-CREATE TABLE `oc_user` (
+CREATE TABLE IF NOT EXISTS `oc_user` (
   `user_id` int(11) NOT NULL,
   `user_group_id` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
@@ -7405,14 +7424,14 @@ CREATE TABLE `oc_user` (
   `ip` varchar(40) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_user`
 --
 
 INSERT INTO `oc_user` (`user_id`, `user_group_id`, `username`, `password`, `salt`, `firstname`, `lastname`, `email`, `image`, `code`, `ip`, `status`, `date_added`) VALUES
-(1, 1, 'admin', 'f3ab27f115e366739614daf2825b98cdb6a74b01', 'Q8LtEO80n', 'John', 'Doe', 'demo@towerthemes.com', '', '', '127.0.0.1', 1, '2017-02-14 01:56:46');
+(1, 1, 'admin', 'cd1f2f2f989325e1851f97a3a7ca3a35f512e6cc', 'McXs0DoGS', 'John', 'Doe', 'lttin0912@gmail.com', '', '', '127.0.0.1', 1, '2017-06-22 16:04:03');
 
 -- --------------------------------------------------------
 
@@ -7420,11 +7439,11 @@ INSERT INTO `oc_user` (`user_id`, `user_group_id`, `username`, `password`, `salt
 -- Table structure for table `oc_user_group`
 --
 
-CREATE TABLE `oc_user_group` (
+CREATE TABLE IF NOT EXISTS `oc_user_group` (
   `user_group_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
   `permission` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_user_group`
@@ -7440,7 +7459,7 @@ INSERT INTO `oc_user_group` (`user_group_id`, `name`, `permission`) VALUES
 -- Table structure for table `oc_voucher`
 --
 
-CREATE TABLE `oc_voucher` (
+CREATE TABLE IF NOT EXISTS `oc_voucher` (
   `voucher_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
   `code` varchar(10) NOT NULL,
@@ -7461,7 +7480,7 @@ CREATE TABLE `oc_voucher` (
 -- Table structure for table `oc_voucher_history`
 --
 
-CREATE TABLE `oc_voucher_history` (
+CREATE TABLE IF NOT EXISTS `oc_voucher_history` (
   `voucher_history_id` int(11) NOT NULL,
   `voucher_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
@@ -7475,10 +7494,10 @@ CREATE TABLE `oc_voucher_history` (
 -- Table structure for table `oc_voucher_theme`
 --
 
-CREATE TABLE `oc_voucher_theme` (
+CREATE TABLE IF NOT EXISTS `oc_voucher_theme` (
   `voucher_theme_id` int(11) NOT NULL,
   `image` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_voucher_theme`
@@ -7495,7 +7514,7 @@ INSERT INTO `oc_voucher_theme` (`voucher_theme_id`, `image`) VALUES
 -- Table structure for table `oc_voucher_theme_description`
 --
 
-CREATE TABLE `oc_voucher_theme_description` (
+CREATE TABLE IF NOT EXISTS `oc_voucher_theme_description` (
   `voucher_theme_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL
@@ -7508,7 +7527,10 @@ CREATE TABLE `oc_voucher_theme_description` (
 INSERT INTO `oc_voucher_theme_description` (`voucher_theme_id`, `language_id`, `name`) VALUES
 (6, 1, 'Christmas'),
 (7, 1, 'Birthday'),
-(8, 1, 'General');
+(8, 1, 'General'),
+(6, 3, 'Christmas'),
+(7, 3, 'Birthday'),
+(8, 3, 'General');
 
 -- --------------------------------------------------------
 
@@ -7516,20 +7538,20 @@ INSERT INTO `oc_voucher_theme_description` (`voucher_theme_id`, `language_id`, `
 -- Table structure for table `oc_weight_class`
 --
 
-CREATE TABLE `oc_weight_class` (
+CREATE TABLE IF NOT EXISTS `oc_weight_class` (
   `weight_class_id` int(11) NOT NULL,
   `value` decimal(15,8) NOT NULL DEFAULT '0.00000000'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_weight_class`
 --
 
 INSERT INTO `oc_weight_class` (`weight_class_id`, `value`) VALUES
-(1, '1.00000000'),
-(2, '1000.00000000'),
-(5, '2.20460000'),
-(6, '35.27400000');
+(1, 1.00000000),
+(2, 1000.00000000),
+(5, 2.20460000),
+(6, 35.27400000);
 
 -- --------------------------------------------------------
 
@@ -7537,7 +7559,7 @@ INSERT INTO `oc_weight_class` (`weight_class_id`, `value`) VALUES
 -- Table structure for table `oc_weight_class_description`
 --
 
-CREATE TABLE `oc_weight_class_description` (
+CREATE TABLE IF NOT EXISTS `oc_weight_class_description` (
   `weight_class_id` int(11) NOT NULL,
   `language_id` int(11) NOT NULL,
   `title` varchar(32) NOT NULL,
@@ -7552,7 +7574,11 @@ INSERT INTO `oc_weight_class_description` (`weight_class_id`, `language_id`, `ti
 (1, 1, 'Kilogram', 'kg'),
 (2, 1, 'Gram', 'g'),
 (5, 1, 'Pound ', 'lb'),
-(6, 1, 'Ounce', 'oz');
+(6, 1, 'Ounce', 'oz'),
+(1, 3, 'Kilogram', 'kg'),
+(2, 3, 'Gram', 'g'),
+(5, 3, 'Pound ', 'lb'),
+(6, 3, 'Ounce', 'oz');
 
 -- --------------------------------------------------------
 
@@ -7560,13 +7586,13 @@ INSERT INTO `oc_weight_class_description` (`weight_class_id`, `language_id`, `ti
 -- Table structure for table `oc_zone`
 --
 
-CREATE TABLE `oc_zone` (
+CREATE TABLE IF NOT EXISTS `oc_zone` (
   `zone_id` int(11) NOT NULL,
   `country_id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
   `code` varchar(32) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4236 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_zone`
@@ -11691,14 +11717,14 @@ INSERT INTO `oc_zone` (`zone_id`, `country_id`, `name`, `code`, `status`) VALUES
 -- Table structure for table `oc_zone_to_geo_zone`
 --
 
-CREATE TABLE `oc_zone_to_geo_zone` (
+CREATE TABLE IF NOT EXISTS `oc_zone_to_geo_zone` (
   `zone_to_geo_zone_id` int(11) NOT NULL,
   `country_id` int(11) NOT NULL,
   `zone_id` int(11) NOT NULL DEFAULT '0',
   `geo_zone_id` int(11) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_zone_to_geo_zone`
@@ -12691,7 +12717,7 @@ ALTER TABLE `oc_zone_to_geo_zone`
 -- AUTO_INCREMENT for table `oc_address`
 --
 ALTER TABLE `oc_address`
-  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_affiliate`
 --
@@ -12716,7 +12742,7 @@ ALTER TABLE `oc_affiliate_transaction`
 -- AUTO_INCREMENT for table `oc_api`
 --
 ALTER TABLE `oc_api`
-  MODIFY `api_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `api_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_api_ip`
 --
@@ -12731,62 +12757,62 @@ ALTER TABLE `oc_api_session`
 -- AUTO_INCREMENT for table `oc_article`
 --
 ALTER TABLE `oc_article`
-  MODIFY `article_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `article_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `oc_article_list`
 --
 ALTER TABLE `oc_article_list`
-  MODIFY `article_list_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `article_list_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=46;
 --
 -- AUTO_INCREMENT for table `oc_attribute`
 --
 ALTER TABLE `oc_attribute`
-  MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `oc_attribute_group`
 --
 ALTER TABLE `oc_attribute_group`
-  MODIFY `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `oc_banner`
 --
 ALTER TABLE `oc_banner`
-  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
-  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=166;
 --
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `cart_id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `oc_category`
 --
 ALTER TABLE `oc_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=252;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=252;
 --
 -- AUTO_INCREMENT for table `oc_cmsblock`
 --
 ALTER TABLE `oc_cmsblock`
-  MODIFY `cmsblock_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `cmsblock_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT for table `oc_cmsblock_description`
 --
 ALTER TABLE `oc_cmsblock_description`
-  MODIFY `cmsblock_des_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=231;
+  MODIFY `cmsblock_des_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=231;
 --
 -- AUTO_INCREMENT for table `oc_country`
 --
 ALTER TABLE `oc_country`
-  MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=258;
+  MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=258;
 --
 -- AUTO_INCREMENT for table `oc_coupon`
 --
 ALTER TABLE `oc_coupon`
-  MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `oc_coupon_history`
 --
@@ -12801,12 +12827,12 @@ ALTER TABLE `oc_coupon_product`
 -- AUTO_INCREMENT for table `oc_currency`
 --
 ALTER TABLE `oc_currency`
-  MODIFY `currency_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `currency_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `oc_customer`
 --
 ALTER TABLE `oc_customer`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_customer_activity`
 --
@@ -12816,7 +12842,7 @@ ALTER TABLE `oc_customer_activity`
 -- AUTO_INCREMENT for table `oc_customer_group`
 --
 ALTER TABLE `oc_customer_group`
-  MODIFY `customer_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `customer_group_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_customer_history`
 --
@@ -12826,12 +12852,12 @@ ALTER TABLE `oc_customer_history`
 -- AUTO_INCREMENT for table `oc_customer_ip`
 --
 ALTER TABLE `oc_customer_ip`
-  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_customer_login`
 --
 ALTER TABLE `oc_customer_login`
-  MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_customer_reward`
 --
@@ -12866,57 +12892,57 @@ ALTER TABLE `oc_download`
 -- AUTO_INCREMENT for table `oc_event`
 --
 ALTER TABLE `oc_event`
-  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_extension`
 --
 ALTER TABLE `oc_extension`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=79;
 --
 -- AUTO_INCREMENT for table `oc_filter`
 --
 ALTER TABLE `oc_filter`
-  MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT for table `oc_filter_group`
 --
 ALTER TABLE `oc_filter_group`
-  MODIFY `filter_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `filter_group_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `oc_geo_zone`
 --
 ALTER TABLE `oc_geo_zone`
-  MODIFY `geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `geo_zone_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `oc_information`
 --
 ALTER TABLE `oc_information`
-  MODIFY `information_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `information_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `oc_language`
 --
 ALTER TABLE `oc_language`
-  MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_layout`
 --
 ALTER TABLE `oc_layout`
-  MODIFY `layout_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `layout_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=40;
 --
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
-  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=809;
+  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=809;
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
-  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=530;
+  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=530;
 --
 -- AUTO_INCREMENT for table `oc_length_class`
 --
 ALTER TABLE `oc_length_class`
-  MODIFY `length_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `length_class_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_location`
 --
@@ -12926,7 +12952,7 @@ ALTER TABLE `oc_location`
 -- AUTO_INCREMENT for table `oc_manufacturer`
 --
 ALTER TABLE `oc_manufacturer`
-  MODIFY `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `oc_marketing`
 --
@@ -12941,37 +12967,37 @@ ALTER TABLE `oc_menu`
 -- AUTO_INCREMENT for table `oc_modification`
 --
 ALTER TABLE `oc_modification`
-  MODIFY `modification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `modification_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `oc_module`
 --
 ALTER TABLE `oc_module`
-  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
+  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=139;
 --
 -- AUTO_INCREMENT for table `oc_ocslideshow`
 --
 ALTER TABLE `oc_ocslideshow`
-  MODIFY `ocslideshow_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `ocslideshow_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `oc_ocslideshow_image`
 --
 ALTER TABLE `oc_ocslideshow_image`
-  MODIFY `ocslideshow_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=238;
+  MODIFY `ocslideshow_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=238;
 --
 -- AUTO_INCREMENT for table `oc_option`
 --
 ALTER TABLE `oc_option`
-  MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `oc_option_value`
 --
 ALTER TABLE `oc_option_value`
-  MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `oc_order`
 --
 ALTER TABLE `oc_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `oc_order_custom_field`
 --
@@ -12981,17 +13007,17 @@ ALTER TABLE `oc_order_custom_field`
 -- AUTO_INCREMENT for table `oc_order_history`
 --
 ALTER TABLE `oc_order_history`
-  MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `oc_order_option`
 --
 ALTER TABLE `oc_order_option`
-  MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `oc_order_product`
 --
 ALTER TABLE `oc_order_product`
-  MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `oc_order_recurring`
 --
@@ -13006,12 +13032,12 @@ ALTER TABLE `oc_order_recurring_transaction`
 -- AUTO_INCREMENT for table `oc_order_status`
 --
 ALTER TABLE `oc_order_status`
-  MODIFY `order_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `order_status_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `oc_order_total`
 --
 ALTER TABLE `oc_order_total`
-  MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `oc_order_voucher`
 --
@@ -13021,7 +13047,7 @@ ALTER TABLE `oc_order_voucher`
 -- AUTO_INCREMENT for table `oc_product`
 --
 ALTER TABLE `oc_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=65;
 --
 -- AUTO_INCREMENT for table `oc_product_discount`
 --
@@ -13031,27 +13057,27 @@ ALTER TABLE `oc_product_discount`
 -- AUTO_INCREMENT for table `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3530;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3530;
 --
 -- AUTO_INCREMENT for table `oc_product_option`
 --
 ALTER TABLE `oc_product_option`
-  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=237;
+  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=237;
 --
 -- AUTO_INCREMENT for table `oc_product_option_value`
 --
 ALTER TABLE `oc_product_option_value`
-  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `oc_product_reward`
 --
 ALTER TABLE `oc_product_reward`
-  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=670;
+  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=670;
 --
 -- AUTO_INCREMENT for table `oc_product_special`
 --
 ALTER TABLE `oc_product_special`
-  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=603;
+  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=603;
 --
 -- AUTO_INCREMENT for table `oc_recurring`
 --
@@ -13066,7 +13092,7 @@ ALTER TABLE `oc_return`
 -- AUTO_INCREMENT for table `oc_return_action`
 --
 ALTER TABLE `oc_return_action`
-  MODIFY `return_action_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `return_action_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_return_history`
 --
@@ -13076,52 +13102,52 @@ ALTER TABLE `oc_return_history`
 -- AUTO_INCREMENT for table `oc_return_reason`
 --
 ALTER TABLE `oc_return_reason`
-  MODIFY `return_reason_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `return_reason_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `oc_return_status`
 --
 ALTER TABLE `oc_return_status`
-  MODIFY `return_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `return_status_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_review`
 --
 ALTER TABLE `oc_review`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `oc_setting`
 --
 ALTER TABLE `oc_setting`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7706;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7979;
 --
 -- AUTO_INCREMENT for table `oc_stock_status`
 --
 ALTER TABLE `oc_stock_status`
-  MODIFY `stock_status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `stock_status_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `oc_store`
 --
 ALTER TABLE `oc_store`
-  MODIFY `store_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `store_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_subscribe`
 --
 ALTER TABLE `oc_subscribe`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_tax_class`
 --
 ALTER TABLE `oc_tax_class`
-  MODIFY `tax_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `tax_class_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `oc_tax_rate`
 --
 ALTER TABLE `oc_tax_rate`
-  MODIFY `tax_rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `tax_rate_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=88;
 --
 -- AUTO_INCREMENT for table `oc_tax_rule`
 --
 ALTER TABLE `oc_tax_rule`
-  MODIFY `tax_rule_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `tax_rule_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=129;
 --
 -- AUTO_INCREMENT for table `oc_theme`
 --
@@ -13141,17 +13167,17 @@ ALTER TABLE `oc_upload`
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1002;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1002;
 --
 -- AUTO_INCREMENT for table `oc_user`
 --
 ALTER TABLE `oc_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_user_group`
 --
 ALTER TABLE `oc_user_group`
-  MODIFY `user_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `user_group_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `oc_voucher`
 --
@@ -13166,22 +13192,22 @@ ALTER TABLE `oc_voucher_history`
 -- AUTO_INCREMENT for table `oc_voucher_theme`
 --
 ALTER TABLE `oc_voucher_theme`
-  MODIFY `voucher_theme_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `voucher_theme_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `oc_weight_class`
 --
 ALTER TABLE `oc_weight_class`
-  MODIFY `weight_class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `weight_class_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `oc_zone`
 --
 ALTER TABLE `oc_zone`
-  MODIFY `zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4236;
+  MODIFY `zone_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4236;
 --
 -- AUTO_INCREMENT for table `oc_zone_to_geo_zone`
 --
 ALTER TABLE `oc_zone_to_geo_zone`
-  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=110;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
