@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c468eda-b042-46e8-b3cf-03534db6287a" name="Default" comment="update database">
+    <list default="true" id="9c468eda-b042-46e8-b3cf-03534db6287a" name="Default" comment="update .gitignore">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitnignore" afterPath="$PROJECT_DIR$/.gitnignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -59,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/.gitnignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
-              <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+              <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -388,7 +388,7 @@
       <option name="presentableId" value="Default" />
       <updated>1498143344468</updated>
       <workItem from="1498143345545" duration="1363000" />
-      <workItem from="1498147527261" duration="763000" />
+      <workItem from="1498147527261" duration="837000" />
     </task>
     <task id="LOCAL-00001" summary="update source">
       <created>1498147677883</created>
@@ -425,11 +425,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498148523923</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update .gitignore">
+      <created>1498148559156</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1498148559156</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2392000" />
+    <option name="totallyTimeSpent" value="2466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="23" width="1388" height="797" extended-state="0" />
@@ -559,7 +566,7 @@
     <entry file="file://$PROJECT_DIR$/.gitnignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
           <folding />
         </state>
       </provider>
