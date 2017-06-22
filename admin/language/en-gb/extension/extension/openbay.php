@@ -90,6 +90,6 @@ $_['lang_error_vqmod']             		= 'Your vqmod folder contains older OpenBay
 // Help
 $_['help_clear_faq']					= 'Show all of the help notifications again';
 $_['help_empty_data']					= 'This can cause serious damage, do not use it if you do not know what it does!';
-$_['help_easy_update']					= 'Click update to install the latest version of OpenBay Pro automatically';
+$_['help_easy_update']					= 'Click update to install_ the latest version of OpenBay Pro automatically';
 $_['help_patch']						= 'Click to run the patch scripts';
 $_['help_beta']							= 'Caution! The beta version is the latest development version. It may not be stable and could contain bugs.';

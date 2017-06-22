@@ -27,8 +27,8 @@ class ControllerExtensionExtensionCaptcha extends Controller {
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'access', 'captcha/' . $this->request->get['extension']);
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'modify', 'captcha/' . $this->request->get['extension']);
 
-			// Call install method if it exsits
-			$this->load->controller('extension/captcha/' . $this->request->get['extension'] . '/install');
+			// Call install_ method if it exsits
+			$this->load->controller('extension/captcha/' . $this->request->get['extension'] . '/install_');
 
 			$this->session->data['success'] = $this->language->get('text_success');
 		}
@@ -104,7 +104,7 @@ class ControllerExtensionExtensionCaptcha extends Controller {
 				$data['extensions'][] = array(
 					'name'      => $this->language->get('heading_title') . (($extension == $this->config->get('config_captcha')) ? $this->language->get('text_default') : null),
 					'status'    => $this->config->get($extension . '_status') ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
-					'install'   => $this->url->link('extension/extension/captcha/install', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
+					'install_'   => $this->url->link('extension/extension/captcha/install_', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'uninstall' => $this->url->link('extension/extension/captcha/uninstall', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'installed' => in_array($extension, $extensions),
 					'edit'      => $this->url->link('extension/captcha/' . $extension, 'token=' . $this->session->data['token'], true)

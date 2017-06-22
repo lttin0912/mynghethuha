@@ -2,7 +2,7 @@
 class ControllerExtensionModuleInstalltemp extends Controller {
 	private $error = array(); 
 	public function install() { 
-		$this->load->model('installtemp/install');
+		$this->load->model('installtemp/install_');
        	$this->model_installtemp_install->settup();
 		
        	$this->load->model('setting/setting');
@@ -11,7 +11,7 @@ class ControllerExtensionModuleInstalltemp extends Controller {
 	
 
 	public function uninstall() { 
-		$this->load->model('installtemp/install');
+		$this->load->model('installtemp/install_');
 		$this->model_installtemp_install->reset(); 
 	}
 	

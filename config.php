@@ -9,6 +9,7 @@ define('HTTPS_SERVER', 'http://mynghethuha.dev/');
 define('DIR_APPLICATION', '/Applications/AMPPS/www/mynghethuha/catalog/');
 define('DIR_SYSTEM', '/Applications/AMPPS/www/mynghethuha/system/');
 define('DIR_IMAGE', '/Applications/AMPPS/www/mynghethuha/image/');
+define('DIR_LANGUAGE', '/Applications/AMPPS/www/mynghethuha/catalog/language/');
 define('DIR_TEMPLATE', '/Applications/AMPPS/www/mynghethuha/catalog/view/theme/');
 define('DIR_CONFIG', '/Applications/AMPPS/www/mynghethuha/system/config/');
 define('DIR_CACHE', '/Applications/AMPPS/www/mynghethuha/system/storage/cache/');

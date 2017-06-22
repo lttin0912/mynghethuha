@@ -23,8 +23,8 @@ class ControllerExtensionExtensionFeed extends Controller {
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'access', 'extension/feed/' . $this->request->get['extension']);
 			$this->model_user_user_group->addPermission($this->user->getGroupId(), 'modify', 'extension/feed/' . $this->request->get['extension']);
 
-			// Call install method if it exsits
-			$this->load->controller('extension/feed/' . $this->request->get['extension'] . '/install');
+			// Call install_ method if it exsits
+			$this->load->controller('extension/feed/' . $this->request->get['extension'] . '/install_');
 
 			$this->session->data['success'] = $this->language->get('text_success');
 		}
@@ -100,7 +100,7 @@ class ControllerExtensionExtensionFeed extends Controller {
 				$data['extensions'][] = array(
 					'name'      => $this->language->get('heading_title'),
 					'status'    => $this->config->get($extension . '_status') ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
-					'install'   => $this->url->link('extension/extension/feed/install', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
+					'install_'   => $this->url->link('extension/extension/feed/install_', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'uninstall' => $this->url->link('extension/extension/feed/uninstall', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 					'installed' => in_array($extension, $extensions),
 					'edit'      => $this->url->link('extension/feed/' . $extension, 'token=' . $this->session->data['token'], true)

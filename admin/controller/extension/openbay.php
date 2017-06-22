@@ -26,7 +26,7 @@ class ControllerExtensionOpenbay extends Controller {
 			$class = 'ControllerExtensionOpenbay' . str_replace('_', '', $this->request->get['extension']);
 			$class = new $class($this->registry);
 
-			if (method_exists($class, 'install')) {
+			if (method_exists($class, 'install_')) {
 				$class->install();
 			}
 
@@ -129,7 +129,7 @@ class ControllerExtensionOpenbay extends Controller {
 				'name' => $this->language->get('heading_title'),
 				'edit' => $this->url->link('extension/openbay/' . $extension . '', 'token=' . $this->session->data['token'], true),
 				'status' => ($this->config->get('openbay_' . $extension . '_status') || $this->config->get($extension . '_status')) ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
-				'install' => $this->url->link('extension/openbay/install', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
+				'install_' => $this->url->link('extension/openbay/install_', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 				'uninstall' => $this->url->link('extension/openbay/uninstall', 'token=' . $this->session->data['token'] . '&extension=' . $extension, true),
 				'installed' => in_array($extension, $extensions),
 				'code' => $extension

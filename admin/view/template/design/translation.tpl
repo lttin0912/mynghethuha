@@ -74,10 +74,10 @@
 </div>
 
  <!-- <script type="text/javascript"><!--
-function install(code) {
+functinstall_tall(code) {
 
           $.ajax({
-              url: 'index.php?route=design/translation/install&token=<?php echo $token; ?>',
+              url: 'index.php?route=design/translatinstall_tall&token=<?php echo $token; ?>',
               method: 'post',
               dataType: 'json',
               data: {code: code},

@@ -9,7 +9,7 @@ if (is_file('config.php')) {
 
 // Install
 if (!defined('DIR_APPLICATION')) {
-	header('Location: ../install/index.php');
+	header('Location: ../install_/index.php');
 	exit;
 }
 
