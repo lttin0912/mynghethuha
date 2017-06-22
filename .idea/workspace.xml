@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c468eda-b042-46e8-b3cf-03534db6287a" name="Default" comment="update .gitignore">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitnignore" afterPath="$PROJECT_DIR$/.gitnignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/mynghethuha.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,6 +98,7 @@
       <command text="git add ." />
       <command text="git commit -m &quot;fix&quot;" />
       <command text="git push origin master" />
+      <command text="git rm -r --cached .idea" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -388,7 +392,7 @@
       <option name="presentableId" value="Default" />
       <updated>1498143344468</updated>
       <workItem from="1498143345545" duration="1363000" />
-      <workItem from="1498147527261" duration="837000" />
+      <workItem from="1498147527261" duration="879000" />
     </task>
     <task id="LOCAL-00001" summary="update source">
       <created>1498147677883</created>
@@ -432,11 +436,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498148559156</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update .gitignore">
+      <created>1498148619627</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1498148619627</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2466000" />
+    <option name="totallyTimeSpent" value="2508000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="23" width="1388" height="797" extended-state="0" />
