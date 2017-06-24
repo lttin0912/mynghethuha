@@ -60,7 +60,7 @@
 </head>
 <body class="<?php echo $class; ?>">
 <div class="header-content">
-  <nav id="top">
+  <!--<nav id="top" style="display: none;">
     <div class="container">
       <div class="container-ink">
         <div class="row">
@@ -104,7 +104,7 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav>-->
 	<header class="header">
     <div class="container">
       <div class="row">
@@ -121,7 +121,7 @@
 			<?php if(isset($block1)){ echo $block1; }?>
         </div>
 		<div class="col-md-3 col-sm-3 col-sms-12">
-			<div class="quick-access">
+			<div class="quick-access" style="visibility:hidden;">
 				<div class="button-link-top">
 				  <?php echo $cart; ?>
 				</div>
