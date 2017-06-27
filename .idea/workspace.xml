@@ -1,29 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c468eda-b042-46e8-b3cf-03534db6287a" name="Default" comment="update .gitignore">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.cmsblock.1.1498151380" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.cmsblock.2.1498151179" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.cmsblock.3.1498152441" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.country.admin.1498151510" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.currency.1498152441" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.information.1.1498151510" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.information.3.1498151657" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.language.1498152441" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.length_class.1.1498151510" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.length_class.3.1498151657" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.order_status.1.1498151503" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.order_status.3.1498151533" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.product.bestseller.3.0.1.10.1498152789" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.return_status.1.1498151510" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.return_status.3.1498151657" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.store.1498152626" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.weight_class.1.1498151510" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.weight_class.3.1498151657" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.zone.222.1498151510" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/storage/cache/cache.zone.230.1498151525" afterPath="" />
+    <list default="true" id="9c468eda-b042-46e8-b3cf-03534db6287a" name="Default" comment="hide top">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/captcha/basic_captcha.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/captcha/google_captcha.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/credit_card/sagepay_direct.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/credit_card/sagepay_server.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/account.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/affiliate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/amazon_login.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/amazon_pay.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/bestseller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/divido_calculator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ebay_listing.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/featured.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/filter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/google_hangouts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/information.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/latest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/laybuy_layout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/newslettersubscribe.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocbestproductslider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocblog.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/occountdown.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocfeaturedcategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocfeatureslider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ochozmegamenu.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocinstagram.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/oclayerednavigation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocmostproduct.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocnewproductslider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocquickview.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocrandomslider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocsearchcategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocslideshow.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocspecialproductslider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/octabcategoryslider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/special.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/store.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ttlasttweeter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/openbay/amazon_order.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/openbay/amazonus_order.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/openbay/ebay_order.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/openbay/etsy_order.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/amazon_login_pay.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/authorizenet_aim.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/authorizenet_sim.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/bank_transfer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/bluepay_hosted.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/bluepay_redirect.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/cardconnect.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/cardinity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/cheque.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/cod.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/divido.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/eway.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/firstdata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/firstdata_remote.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/free_checkout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/g2apay.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/globalpay.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/globalpay_remote.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/klarna_account.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/klarna_checkout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/klarna_invoice.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/laybuy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/liqpay.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/nochex.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/paymate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/paypoint.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/payza.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/perpetual_payments.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/pilibaba.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/pp_express.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/pp_payflow.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/pp_payflow_iframe.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/pp_pro.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/pp_pro_iframe.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/pp_standard.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/realex.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/realex_remote.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/sagepay_direct.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/sagepay_server.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/sagepay_us.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/securetrading_pp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/securetrading_ws.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/skrill.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/twocheckout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/web_payment_software.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/payment/worldpay.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/recurring/pp_express.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/auspost.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/citylink.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/fedex.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/flat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/free.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/item.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/parcelforce_48.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/pickup.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/pilibaba.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/royal_mail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/ups.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/usps.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/shipping/weight.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/total/coupon.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/total/credit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/total/handling.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/total/klarna_fee.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/total/low_order_fee.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/total/reward.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/total/shipping.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/total/sub_total.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/total/total.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/extension/total/voucher.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.htaccess.txt" afterPath="$PROJECT_DIR$/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/tt_grand1/template/common/header.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/tt_grand1/template/common/header.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/language/en-gb/blog/article.php" afterPath="$PROJECT_DIR$/catalog/language/en-gb/blog/article.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/language/en-gb/blog/blog.php" afterPath="$PROJECT_DIR$/catalog/language/en-gb/blog/blog.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/language/vi-vn/blog/blog.php" afterPath="$PROJECT_DIR$/catalog/language/vi-vn/blog/blog.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/tt_grand1/stylesheet/theme.css" afterPath="$PROJECT_DIR$/catalog/view/theme/tt_grand1/stylesheet/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/storage/logs/error.log" afterPath="$PROJECT_DIR$/system/storage/logs/error.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,81 +132,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="language.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/storage/modification/system/library/language.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitnignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitnignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitingnore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/storage/.gitingnore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cart.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/api/cart.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shipping_address.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/shipping_address.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shipping_method.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/shipping_method.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="payment_address.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/payment_address.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="11" column="74" lean-forward="true" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+            <state relative-caret-position="209">
+              <caret line="11" column="74" lean-forward="false" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -119,21 +145,89 @@
       <file leaf-file-name="confirm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/confirm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1648">
+            <state relative-caret-position="2204">
               <caret line="116" column="38" lean-forward="false" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/tt_grand1/template/common/header.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="116" column="22" lean-forward="true" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="2204">
+              <caret line="116" column="22" lean-forward="false" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="total.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/extension/total/total.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ocnewproductslider.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocnewproductslider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="96" lean-forward="false" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/tt_grand1/stylesheet/theme.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15257">
+              <caret line="803" column="18" lean-forward="false" selection-start-line="803" selection-start-column="18" selection-end-line="803" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ocbestproductslider.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocbestproductslider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="107" lean-forward="false" selection-start-line="9" selection-start-column="107" selection-end-line="9" selection-end-column="107" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ocblog.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocblog.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blog.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/blog/blog.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="69" column="68" lean-forward="true" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="68" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,20 +239,41 @@
       <find>mynghethuha</find>
       <find>SQL_MODE</find>
       <find>D:/Ampps/www/mynghethuha/</find>
-      <find>$this-&gt;url-&gt;https('account/login')</find>
       <find>login</find>
+      <find>l</find>
+      <find>R</find>
+      <find>Rea</find>
+      <find>Readmo</find>
+      <find>Readm</find>
+      <find>Read</find>
+      <find>Read M</find>
+      <find>Read Moẻ</find>
+      <find>Read Mo</find>
+      <find>Read Mỏ</find>
+      <find>Read Mor</find>
+      <find>Read More</find>
+      <find>$this-&gt;url-&gt;https('account/login')</find>
+      <find>Sofas and Sectionals</find>
+      <find>Sofas</find>
+      <find>so</find>
+      <find>sò</find>
+      <find>sof</find>
+      <find>sofas</find>
+      <find>sofa</find>
+      <find>s</find>
     </findStrings>
     <replaceStrings>
       <replace>$PROJECT_DIR$/</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/catalog/language/en-gb</dir>
+      <dir>$PROJECT_DIR$/catalog/view/theme</dir>
+      <dir>$PROJECT_DIR$/catalog</dir>
     </dirStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git add README.md" />
-      <command text="echo &quot;# mynghethuha&quot; &gt;&gt; README.md" />
       <command text="git add README.md" />
       <command text="git commit -m &quot;first commit&quot;" />
       <command text="git reset --hard" />
@@ -182,6 +297,8 @@
       <command text="git add ." />
       <command text="git commit -m &quot;source&quot;" />
       <command text="git push" />
+      <command text="reset --hard" />
+      <command text="git reset --hard" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -197,6 +314,12 @@
         <option value="$PROJECT_DIR$/.gitnignore" />
         <option value="$PROJECT_DIR$/system/storage/.gitingnore" />
         <option value="$PROJECT_DIR$/catalog/view/theme/tt_grand1/template/common/header.tpl" />
+        <option value="$PROJECT_DIR$/catalog/language/en-gb/blog/article.php" />
+        <option value="$PROJECT_DIR$/catalog/language/en-gb/blog/blog.php" />
+        <option value="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocnewproductslider.php" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/tt_grand1/stylesheet/theme.css" />
+        <option value="$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocbestproductslider.php" />
+        <option value="$PROJECT_DIR$/catalog/language/vi-vn/blog/blog.php" />
       </list>
     </option>
   </component>
@@ -209,8 +332,8 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="797" />
+    <option name="width" value="1680" />
+    <option name="height" value="947" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -230,6 +353,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,11 +394,227 @@
               <option name="myItemId" value="catalog" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tt_grand1" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tt_grand1" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheet" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="language" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vi-vn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="language" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vi-vn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extension" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="language" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vi-vn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extension" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="language" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vi-vn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="language" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,11 +622,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/catalog/language" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/database" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/catalog/language/vi-vn" />
+      <recent name="$PROJECT_DIR$/catalog/language" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -384,6 +726,8 @@
       <workItem from="1498184618983" duration="18000" />
       <workItem from="1498270371729" duration="430000" />
       <workItem from="1498274355362" duration="843000" />
+      <workItem from="1498401573422" duration="1390000" />
+      <workItem from="1498529052999" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="update source">
       <created>1498147677883</created>
@@ -473,27 +817,27 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4937000" />
+    <option name="totallyTimeSpent" value="8611000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34652779" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34642857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31181318" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31043956" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -520,7 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -528,7 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -552,7 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -560,7 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -568,7 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -576,7 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -584,7 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,7 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,7 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,7 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,7 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,7 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -664,7 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,7 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,7 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,7 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,7 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,7 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -768,7 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,15 +1100,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/shipping_address.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
-          <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-          <folding />
+          <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -792,21 +1114,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-27">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/payment_address.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="11" column="74" lean-forward="true" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+        <state relative-caret-position="209">
+          <caret line="11" column="74" lean-forward="false" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/checkout/confirm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1648">
+        <state relative-caret-position="2204">
           <caret line="116" column="38" lean-forward="false" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
           <folding />
         </state>
@@ -814,11 +1135,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/tt_grand1/template/common/header.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="116" column="22" lean-forward="true" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="2204">
+          <caret line="116" column="22" lean-forward="false" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/language/en-gb/extension/module/ocblog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/language/en-gb/blog/article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="68" lean-forward="false" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/extension/module/bestseller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/language/en-gb/blog/blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="119" lean-forward="false" selection-start-line="7" selection-start-column="119" selection-end-line="7" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/extension/total/total.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocnewproductslider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="96" lean-forward="false" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/tt_grand1/stylesheet/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15257">
+          <caret line="803" column="18" lean-forward="false" selection-start-line="803" selection-start-column="18" selection-end-line="803" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocbestproductslider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="107" lean-forward="false" selection-start-line="9" selection-start-column="107" selection-end-line="9" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/extension/module/ocblog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/language/vi-vn/blog/blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="69" column="68" lean-forward="true" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>

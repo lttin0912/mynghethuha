@@ -83,4 +83,10 @@ $_['date_format']          = 'F d, Y';
 $_['date_format_short']    = '%2 d, Y'; // M d, Y = Jun 10, 2013
 $_['date_format_long']     = '%1 d, Y'; // F d, Y = Juni 10, 2013
 $_['date_time_format']     = '%1 d, Y H:i'; // M d, Y H:i = Jun 10, 2013 17:25
+$_['button_read_more']  = 'Đọc thêm';
+$_['text_empty']        = 'Không có bài viết nào!';
+$_['text_headingtitle'] = 'Bài viết mới nhất';
+$_['text_limit']        = 'Hiển thị';
+$_['text_blog']         = 'Blog';
+$_['desc_blog']         = 'Những bài viết mới nhất sẽ được Mỹ Nghệ Thu Hà cập nhật thường xuyên.<br>Hi vọng sẽ cung cấp được những thông tin mới nhất cho quý khách.';
 ?>
