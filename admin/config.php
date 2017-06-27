@@ -26,6 +26,6 @@ define('DB_DRIVER', 'mysqli');
 define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'mysql');
-define('DB_DATABASE', 'mynghethuha');
+define('DB_DATABASE', 'mynghe_thuha');
 define('DB_PORT', '3306');
 define('DB_PREFIX', 'oc_');
