@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c468eda-b042-46e8-b3cf-03534db6287a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/catalog/f-logo.png" afterPath="$PROJECT_DIR$/image/catalog/f-logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/catalog/logo-1.png" afterPath="$PROJECT_DIR$/image/catalog/logo-1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/tt_grand1/stylesheet/theme.css" afterPath="$PROJECT_DIR$/catalog/view/theme/tt_grand1/stylesheet/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/storage/logs/error.log" afterPath="$PROJECT_DIR$/system/storage/logs/error.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,16 +39,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
               <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="banner.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/controller/extension/module/banner.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,11 +84,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="theme.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/tt_grand1/stylesheet/theme.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="367">
               <caret line="453" column="17" lean-forward="true" selection-start-line="453" selection-start-column="17" selection-end-line="453" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/tt_grand1/template/common/footer.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="66" column="64" lean-forward="true" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -233,6 +229,7 @@
         <option value="$PROJECT_DIR$/.gitnignore" />
         <option value="$PROJECT_DIR$/admin/.gitignore" />
         <option value="$PROJECT_DIR$/catalog/view/theme/tt_grand1/stylesheet/theme.css" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/tt_grand1/template/common/footer.tpl" />
       </list>
     </option>
   </component>
@@ -374,6 +371,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mynghethuha" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tt_grand1" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -602,7 +633,7 @@
       <workItem from="1498542160914" duration="2333000" />
       <workItem from="1498555382015" duration="677000" />
       <workItem from="1498573433011" duration="2711000" />
-      <workItem from="1498655159281" duration="1609000" />
+      <workItem from="1498655159281" duration="1869000" />
     </task>
     <task id="LOCAL-00001" summary="update source">
       <created>1498147677883</created>
@@ -737,11 +768,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498580525837</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix logo">
+      <created>1498657161460</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1498657161460</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16563000" />
+    <option name="totallyTimeSpent" value="16823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="6" />
@@ -785,20 +823,14 @@
     <MESSAGE value="background product" />
     <MESSAGE value="change language" />
     <MESSAGE value="upload .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload .gitignore" />
+    <MESSAGE value="fix logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix logo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/system/startup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/storage/modification/system/library/language.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -1159,6 +1191,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
           <caret line="453" column="17" lean-forward="true" selection-start-line="453" selection-start-column="17" selection-end-line="453" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/tt_grand1/template/common/footer.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="66" column="64" lean-forward="true" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="87" />
           <folding />
         </state>
       </provider>
