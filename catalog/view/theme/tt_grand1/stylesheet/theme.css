@@ -447,7 +447,7 @@ header .quick-access {
 .top-search-content {
     position: absolute;
     right: 0;
-    bottom: -98px;
+    bottom: -115px;
 	z-index:999;
 }
 .top-search-content .input-group input {
