@@ -2,7 +2,7 @@
 <footer>
   <div class="container">
     <div class="row">
-		<div class="col-md-4 col-sm-7 col-xs-12">
+		<div class="col-md-12 col-sm-12 col-xs-12 text-center">
 			<div class="col col1">
 				<div class="footer-logo">
 				  <a href="#" class="logo-bottom">
@@ -24,7 +24,7 @@
 				<?php if(isset($block5)){ echo $block5; }?>
 			</div>
 		</div>
-		<div class="col-md-2 col-sm-5 col-xs-12">
+		<!--<div class="col-md-2 col-sm-5 col-xs-12">
 			<div class="col col2">
 				<div class="footer-static-title">
 				  <h3 class="title title-group footer-title"><?php echo $text_account; ?></h3>
@@ -56,7 +56,7 @@
 				</div> 
 				<?php if(isset($block7)){ echo $block7; }?>
 			</div>
-		</div>
+		</div>-->
     </div>
   </div>
 </footer>
